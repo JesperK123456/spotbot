@@ -1,0 +1,20 @@
+
+- AIML files in alic2 vinden die we kunnen gebruiken
+- Python code execution fixen
+
+- Alle commando's die we willen kunnen uitvoeren implementeren
+    -> in AIML 
+    -> in Python
+
+- Context bewaren
+
+- Graceful Degradation maken
+    -> in AIML (denk aan feedback over verkeerd gegeven liedjes opvangen)
+    -> in Python (denk aan errors catchen)
+
+?- iets van informatie structuur maken zoals in de pdf van onze presentatie?
+
+
+(- koetjes en kalfjes toevoegen)
+
+- !!! VERSLAG SCHRIJVEN !!! (<- dus al het bovenstaande is idealiter donderdag af...)

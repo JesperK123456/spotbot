@@ -1,0 +1,30 @@
+<aiml version="2.0" encoding="UTF-8">
+    <category>
+		<pattern>CONVERSATION SENTIMENT</pattern>
+		<template>
+			Current positivity is <get name="positivity" />, and subjectivity is
+			<get name="subjectivity" />.
+		</template>
+    </category>
+
+    <category>
+		<pattern>IS SENTIMENT ENABLED</pattern>
+		<template>
+			<extension path="programy.nlp.sentiment.extension.SentimentExtension" >SENTIMENT ENABLED</extension>
+		</template>
+	</category>
+
+    <category>
+		<pattern>CURRENT SENTIMENT NUMERIC *</pattern>
+		<template>
+			<extension path="programy.nlp.sentiment.extension.SentimentExtension" >SENTIMENT CURRENT NUMERIC <star/></extension>
+		</template>
+	</category>
+
+    <category>
+        <pattern>WHAT DO YOU THINK ABOUT *</pattern>
+		<template>
+			<extension path="programy.nlp.sentiment.extension.SentimentExtension" >SENTIMENT SCORE <star/></extension>
+		</template>
+    </category>
+</aiml>
