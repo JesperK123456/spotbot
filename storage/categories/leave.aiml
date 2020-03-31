@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>ask</pattern>
+        <template>
+            what
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>what</that>
+        <template>
+            I dont know!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>test</pattern>
+        <template>
+            <extension path='templatey.extensions.spotifyy.SpotifyExtension'>
+                turn it off
+            </extension>
+        </template>
+    </category>
+
+
+</aiml>

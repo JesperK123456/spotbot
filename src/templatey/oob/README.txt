@@ -3,7 +3,7 @@ Out of Band (OOB)
 
 Inherit from the abstract base class
 
-    programy.oob.oob.OutOfBandProcessor
+    programy.oob.callmom.oob.OutOfBandProcessor
 
 This class is the base class for a OOB processors. A single method must be implemented in your versions. This method
 execute_oob_command should process the xml object contained in _xml object attribute.

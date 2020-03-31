@@ -49,6 +49,8 @@ webchat:
 
       usergroups: file
 
+      oobs: file
+
     stores:
 
       file:
@@ -125,6 +127,14 @@ webchat:
 
           usergroups_storage:
             file: ..\..\storage\security\usergroups.yaml
+
+          oob_storage:
+            file: ..\..\storage/oob/spotify.conf
+            extension: null
+            subdirs: false
+            format: text
+            encoding: utf-8
+            delete_on_start: false
 
       logger:
         type:   logger

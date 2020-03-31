@@ -46,6 +46,8 @@ console:
 
       usergroups: file
 
+      oobs: file
+
     stores:
 
       file:
@@ -122,6 +124,14 @@ console:
 
           usergroups_storage:
             file: ..\..\storage/security/usergroups.yaml
+
+          oobs_storage:
+            file: ..\..\storage/oob/spotify.conf
+            extension: null
+            subdirs: false
+            format: text
+            encoding: utf-8
+            delete_on_start: false
 
       logger:
         type:   logger
