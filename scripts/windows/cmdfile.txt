@@ -1,0 +1,14 @@
+cmd: self.login()
+params: LOGIN
+cmd: self.login(' leandervboven ')
+params: LOGIN , ' leandervboven '
+cmd: self.login()
+params: LOGIN
+cmd: self.pause()
+params: PAUSE
+cmd: self.login()
+params: LOGIN
+cmd: self.pause()
+params: PAUSE
+cmd: self.play()
+params: PLAY
