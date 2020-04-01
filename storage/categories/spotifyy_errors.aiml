@@ -26,7 +26,7 @@
     -->
 
     <category>
-        <pattern>ERR FAIL</pattern>
+        <pattern>ERRFAIL</pattern>
         <template>
             <random>
                 <li> i'm so confused, I don't even know what went wrong </li>
@@ -41,66 +41,74 @@
     </category>
 
     <category>
-        <pattern>LOGIN FIRST</pattern>
+        <pattern>LOGINFIRST</pattern>
         <template>
-            <think><set name="logged_in">False</set></think>
+            <think>
+                <set name="logged-in">No</set>
+            </think>
             you are not logged in yet. Would you like to login now?
         </template>
     </category>
     <category>
-        <pattern>LOGIN FAIL</pattern>
+        <pattern>LOGINFAIL</pattern>
         <template>
             Trying to log you in failed, sorry.
         </template>
     </category>
     <category>
-        <pattern>LOGIN FAIL *</pattern>
+        <pattern>LOGINFAIL *</pattern>
         <template>
+            <think>
+                <set name="logged-in">No</set>
+            </think>
             something went wrong trying to log you in: <star/>
         </template>
     </category>
     <category>
-        <pattern>LOGIN FAIL NONAME</pattern>
+        <pattern>LOGINFAILNONAME</pattern>
         <template>
+            <think>
+                <set name="logged-in">No</set>
+            </think>
             you first need to give me your username.
             What is your spotify username?
         </template>
     </category>
 
     <category>
-        <pattern>PLAYB FAIL</pattern>
+        <pattern>PLAYBFAIL</pattern>
         <template>
             too bad! Something went wrong with your playback.
         </template>
     </category>
     <category>
-        <pattern>PLAYB FAIL *</pattern>
+        <pattern>PLAYBFAIL *</pattern>
         <template>
             too bad! Something went wrong with your playback: <star/>
         </template>
     </category>
 
     <category>
-        <pattern>PMOD FAIL</pattern>
+        <pattern>PMODFAIL</pattern>
         <template>
             shoot. modifiying your playback was not so easy as it seemed.
         </template>
     </category>
     <category>
-        <pattern>PMOD FAIL *</pattern>
+        <pattern>PMODFAIL *</pattern>
         <template>
             shoot. modifiying your playback was not so easy as it seemed: <star/>
         </template>
     </category>
 
     <category>
-        <pattern>ADD FAIL</pattern>
+        <pattern>ADDFAIL</pattern>
         <template>
             i'm sorry, Something went wrong trying to add this song to your library.
         </template>
     </category>
     <category>
-        <pattern>ADD FAIL *</pattern>
+        <pattern>ADDFAIL *</pattern>
         <template>
             i'm sorry, Something went wrong trying to add this song to your library: <star/>
         </template>
@@ -108,39 +116,39 @@
 
 
     <category>
-        <pattern>FIND FAIL</pattern>
+        <pattern>FINDFAIL</pattern>
         <template>
             finding this item didn't go quite right
         </template>
     </category>
     <category>
-        <pattern>FIND FAIL *</pattern>
+        <pattern>FINDFAIL *</pattern>
         <template>
             finding this item didn't go quite right, this is what went wrong: <star/>
         </template>
     </category>
     <category>
-        <pattern>FIND FAIL TYPE</pattern>
+        <pattern>FINDFAILTYPE</pattern>
         <template>
-            i did not quite understand what you meant with <get name="item_type"/>. 
+            i did not quite understand what you meant with <get name="item-type"/>. 
             Please only ask me to look for a 'song', an 'album', an 'artist' or a 'playlist'
         </template>
     </category>
     <category>
-        <pattern>FIND FAIL NORESULTS</pattern>
+        <pattern>FINDFAILNORESULTS</pattern>
         <template>
             oh no, I could not find any results for that :(
         </template>
     </category>
 
     <category>
-        <pattern>PLAY FAIL</pattern>
+        <pattern>PLAYFAIL</pattern>
         <template>
             i didn't do that quite right, my bad.
         </template>
     </category>
     <category>
-        <pattern>PLAY FAIL *</pattern>
+        <pattern>PLAYFAIL *</pattern>
         <template>
             i didn't do that quite right, this is what went wrong: <star/>
         </template>

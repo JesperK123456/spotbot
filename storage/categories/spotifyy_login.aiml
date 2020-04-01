@@ -3,7 +3,10 @@
 
     <category>
         <pattern>YINITIALQUESTION</pattern>
-        <template><srai>LOGIN</srai></template>
+        <template>
+            initial question bitch
+            <srai>LOGIN</srai>
+        </template>
     </category>
 
     <!--LOGIN -->
@@ -20,7 +23,7 @@
         <pattern>LOGIN *</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN , <star/>
+                LOGIN , '<star/>'
             </extension></srai>
         </template>
     </category>
@@ -63,27 +66,21 @@
         <pattern>*</pattern>
         <that> what is your spotify username </that>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN , <star/>>
-            </extension></srai>
+            <srai>LOGIN <star/></srai>
         </template>
     </category>
     <category>
         <pattern>MY USERNAME IS *</pattern>
         <that> what is your spotify username </that>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN , <star/>>
-            </extension></srai>
+            <srai>LOGIN <star/></srai>
         </template>
     </category>
     <category>
         <pattern>MY SPOTIFY USERNAME IS *</pattern>
         <that> what is your spotify username </that>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN , <star/>>
-            </extension></srai>
+            <srai>LOGIN <star/></srai>
         </template>
     </category>
 </aiml>
