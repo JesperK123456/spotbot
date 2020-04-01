@@ -20,7 +20,7 @@
         <pattern>LOGIN *</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN , <star/>
+                LOGIN , '<star/>'
             </extension></srai>
         </template>
     </category>
@@ -63,27 +63,28 @@
         <pattern>*</pattern>
         <that> what is your spotify username </that>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN , <star/>>
-            </extension></srai>
+            <srai>LOGIN <star/></srai>
         </template>
     </category>
     <category>
         <pattern>MY USERNAME IS *</pattern>
         <that> what is your spotify username </that>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN , <star/>>
-            </extension></srai>
+            <srai>LOGIN <star/></srai>
         </template>
     </category>
     <category>
         <pattern>MY SPOTIFY USERNAME IS *</pattern>
         <that> what is your spotify username </that>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN , <star/>>
-            </extension></srai>
+            <srai>LOGIN <star/></srai>
         </template>
+    </category>
+
+    <category>
+        <pattern>YEXITRESPONSE</pattern>
+        <template><think><extension path="spotifyy.extensions.SpotifyExtension">
+            CLOSE
+        </extension></think></template>
     </category>
 </aiml>

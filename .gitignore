@@ -107,3 +107,6 @@ ENV/
 storage/debug
 storage/conversations
 *.log
+
+.cache-*
+session.pickle

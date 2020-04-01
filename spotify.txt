@@ -1,8 +1,4 @@
-Hoe roep ik een methode aan in spotifyy.SpotifyExtension vanuit AIML:
-    <extension path="spotifyy.spotifyy.SpotifyExtension">
-        [naam van de def die gerunned moet worden] (, [parameter value])*
-    </extension>
-
+path='spotifyy.spotifyy.SpotifyExtension'
 
 Alle *-FAIL S: <pattern []-FAIL ^> met optionele error message
 
@@ -11,16 +7,13 @@ LOGINFIRST
 login(username), returns: LOGIN-OK, LOGIN-FAIL
 isloggedin(), returns: LOGINFIRST, LOGIN-OK
 
-play(), pause(), stop(), next_track(), prev_track(), returns: PLAYB-OK, PLAYB-FAIL
+play(), pause(), nexttrack(), prevtrack(), returns: PLAYB-OK, PLAYB-FAIL, PAUSE-OK
 
-shuffle(), returns: SHUFFLE-OFF, SHUFFLE-ON
-repeat(), returns: REPEAT-ON, REPEAT-OFF
+shuffle(state=[TRUE, FALSE]), returns: PMOD-OK, PMOD-FAIL
+repeat(state=[TRACK, CONTEXT, OFF]), returns: PMOD-OK, PMOD-FAIL
 
-add_curr_to_fav(), returns: ADD-OK, ADD-FAIL + [songname]
-curr_on_saved(), returns: ONSAVED-YES, ONSAVED-NO, ONSAVED-FAIL + [error]
+add_curr_to_fav(), returns: ADD-OK + [song_name]
+,                            ADD-FAIL
 
-find(query, kind, offset, limit, play),  returns: PLAY-OK [song], PLAY-FAIL
-                                                FIND-OK [results], FIND-FAIL, FIND-FAIL-NORESULTS
+play_item(query), returns: PLAY-OK, PLAY-FAIL
 
-
-take: 8
