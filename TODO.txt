@@ -1,4 +1,6 @@
-
+=============
+=== BASIC ===
+=============
 - AIML files in alic2 vinden die we kunnen gebruiken
 - Python code execution fixen
 
@@ -18,3 +20,9 @@
 (- koetjes en kalfjes toevoegen)
 
 - !!! VERSLAG SCHRIJVEN !!! (<- dus al het bovenstaande is idealiter donderdag af...)
+
+================
+=== SPECIFIC ===
+================
+- now playing command maken
+- error handling in python code
