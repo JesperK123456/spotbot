@@ -60,7 +60,7 @@
         <template>
             <think><set name="curr_on_saved">
                 <extension path="spotifyy.spotifyy.SpotifyExtension">
-                    CURR_ON_SAVED
+                    curr_on_saved
                 </extension>
             </set></think>
             <condition name="curr_on_saved">

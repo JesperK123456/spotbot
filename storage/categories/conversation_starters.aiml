@@ -6,7 +6,7 @@
   <li>What did you do today?</li>
   <li>How do you feel?</li>
   <li>What is your mood at the moment?</li>
-  <li>Do you want me to play you a song?</li>
+  <li>Tell me more</li>
 </random></template>
 </category>
 
@@ -30,8 +30,8 @@
 <template><srai># SURPRISE ME #</srai></template>
 </category>
 
-<category><pattern>PLAY ME *</pattern>
+<!-- <category><pattern>PLAY ME *</pattern>
 <template>I will play you <star></star> </template>
-</category>
+</category> -->
 
 </aiml>
