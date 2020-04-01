@@ -1,5 +1,7 @@
 from programy.utils.logging.ylogger import YLogger
 from programy.extensions.base import Extension
+import os
+import sys
 
 class SpotifyExtension(Extension):
     def __init__(self):
