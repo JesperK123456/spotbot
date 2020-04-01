@@ -4,13 +4,12 @@ LOGINFIRST
 
 login(username), returns: LOGIN-OK, LOGIN-FAIL
 
-play(), pause(), stop(), next(), previous(), returns: PLAYB-OK, PLAYB-FAIL
+play(), pause(), stop(), next_track(), prev_track(), returns: PLAYB-OK, PLAYB-FAIL
 
 shuffle(), returns: SHUFFLE-OFF, SHUFFLE-ON
 repeat(), returns: REPEAT-ON, REPEAT-OFF
 
 add_curr_to_fav(), returns: ADD-OK, ADD-FAIL + [songname]
+curr_on_saved(), returns: ONSAVED-YES, ONSAVED-NO, ONSAVED-FAIL + [error]
 
-playsong(songname), playartist(artist, shuffle='unshuffle'), playplaylist(playlist, shuffle='unshuffle'), playalbum(album, shuffle='unshuffle'),  returns: PLAY-OK, PLAY-FAIL
-
-
+play_item(query),  returns: PLAY-OK, PLAY-FAIL

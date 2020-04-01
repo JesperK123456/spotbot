@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0" encoding="UTF-8">
+
+    <!-- LOGIN -->
+    <category>
+        <pattern>LOGIN-OK</pattern>
+        <template>
+            <think><set name="item_type">SONG</set></think>
+            <random>
+                <li> You are logged in! Want to hear a song? </li>
+                <li> Login succesful, what would you like to hear?</li>
+                <li> Login succeeded, how are you feeling today?</li>
+            </random>
+        </template>
+    </category>
+
+
+    <!-- PLAYBACK -->
+    <category>
+        <pattern>PLAYB-OK</pattern>
+        <template>
+            <random>
+                <li> enjoy it! </li>
+                <li> here you go </li>
+                <li> done </li>
+                <li> no problem </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PAUSE-OK</pattern>
+        <template>
+            <random>
+                <li> i've paused your music </li>
+                <li> music is paused </li>
+                <li> done </li>
+                <li> here you go </li>
+            </random>
+        </template>
+    </category>
+
+
+    <!-- SHUFFLE -->
+    <category>
+        <pattern>SHUFFLE-OK *</pattern>
+        <template>
+            <random>
+                <li> shuffle is now <star/> </li>
+                <li> i have turned shuffle <star/> for you </li>
+                <li> done </li>
+            </random>
+        </template>
+    </category>
+
+
+    <!-- REPEAT -->
+    <category>
+        <pattern>REPEAT-OK-TRACK</pattern>
+        <template>
+            <think><set name="curr_on_saved">
+                <extension path="spotifyy.spotifyy.SpotifyExtension">
+                    curr_on_saved
+                </extension>
+            </set></think>
+            <condition name="curr_on_saved">
+                <li value="ONSAVED-NO">
+                    it seems you like this song, and it is not in your saved songs. 
+                    Would you like to add it now?
+                </li>
+                <li>
+                    <random>
+                        <li> repeating the current track </li>
+                        <li> repeat is on </li>
+                        <li> repeat is now set to track</li>
+                    </random>
+                </li>
+            </condition>
+        </template>
+    </category>
+    <category>
+        <pattern>YES</pattern>
+        <that>
+            would you like to add it now
+        </that>
+        <template>
+            <srai>ADD-CURR-TO-SAVED</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>REPEAT-OK-CONTEXT</pattern>
+        <template>
+            <random>
+                <li> repeat is now set to context </li>
+                <li> repeating current context from now </li>
+                <li> here you go</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>REPEAT-OK-OFF</pattern>
+        <template>
+            <random>
+                <li> repeat is now off </li>
+                <li> i have turned repeat off for you </li>
+                <li> let's listen to some new songs </li>
+            </random>
+        </template>
+    </category>
+
+
+    <!-- ADD TO SAVED -->
+    <category>
+        <pattern>ADD-OK *</pattern>
+        <template>
+            <random>
+                <li> <star/> has been added to your music library </li>
+                <li> i have saved <star/> for you </li>
+                <li> done </li>
+                <li> no problem </li>
+            </random>
+        </template>
+    </category>
+
+
+    <!-- PLAY ITEM -->
+
+</aiml>
