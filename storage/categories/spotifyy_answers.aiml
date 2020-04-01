@@ -6,7 +6,7 @@
         <pattern>LOGINOK</pattern>
         <template>
             <think>
-                <set name="item-type">SONG</set>
+                <set name="item-type">track</set>
                 <set name="logged-in">Yes</set>
             </think>
             <random>
@@ -62,7 +62,7 @@
         <pattern>REPEATOK TRACK</pattern>
         <template>
             <think><set name="curr-on-saved">
-                <extension path="spotifyy.spotifyy.SpotifyExtension">
+                <extension path="spotifyy.extensions.SpotifyExtension">
                     curr_on_saved
                 </extension>
             </set></think>
@@ -132,10 +132,15 @@
     <category>
         <pattern>FINDOK *</pattern>
         <template>
-            i have found <star/> items for you, showing the first 5:
-            <extension path="spotifyy.spotifyy.SpotifyExtension">
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 PRINT_QUERY_RESULT
-            </extension>
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PRINTRESULTSOK</pattern>
+        <template>
             Which item would you like to hear?
         </template>
     </category>
@@ -144,14 +149,14 @@
         <pattern>ITEM *</pattern>
         <that>which item would you like to hear</that>
         <template>
-            <srai>PLAY ITEM QUERY <star index="2"/></srai>
+            <srai>PLAY ITEM QUERY <star index="1"/></srai>
         </template>
     </category>  
 
     <category>
         <pattern>PLAY ITEM QUERY *</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 PLAY_FROM_QUERY , <star/>
             </extension></srai>
         </template>
@@ -161,9 +166,16 @@
         <pattern>SHOW NEXT PAGE</pattern>
         <that>which item would you like to hear</that>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 PRINT_NEXT_QUERY_PAGE
             </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PLAYOK *</pattern>
+        <template>
+            Alright, playing <star/>!
         </template>
     </category>
 </aiml>

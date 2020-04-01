@@ -5,7 +5,7 @@
         <pattern>YINITIALQUESTION</pattern>
         <template>
             initial question bitch
-            <srai>LOGIN</srai>
+            <!-- <srai>LOGIN</srai> -->
         </template>
     </category>
 
@@ -13,7 +13,7 @@
     <category>
         <pattern>LOGIN</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 LOGIN
             </extension></srai>
         </template>
@@ -22,7 +22,7 @@
     <category>
         <pattern>LOGIN *</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 LOGIN , '<star/>'
             </extension></srai>
         </template>

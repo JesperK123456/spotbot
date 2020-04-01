@@ -5,7 +5,7 @@
     <category>
         <pattern>PLAY</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 PLAY
             </extension></srai>
         </template>
@@ -14,7 +14,7 @@
     <category>
         <pattern>PAUSE</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 PAUSE
             </extension></srai>
         </template>
@@ -23,7 +23,7 @@
     <category>
         <pattern>NEXT TRACK</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 NEXT_TRACK
             </extension></srai>
         </template>
@@ -32,7 +32,7 @@
     <category>
         <pattern>PREV TRACK</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 PREV_TRACK
             </extension></srai>
         </template>
@@ -43,8 +43,8 @@
     <category>
         <pattern>SHUFFLE OFF</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                SHUFFLE OFF
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                SHUFFLE , 'OFF'
             </extension></srai>
         </template>
     </category>
@@ -52,8 +52,8 @@
     <category>
         <pattern>SHUFFLE ON</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                SHUFFLE ON
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                SHUFFLE , 'ON'
             </extension></srai>
         </template>
     </category>
@@ -63,8 +63,8 @@
     <category>
         <pattern>REPEAT TRACK</pattern>      
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                REPEAT TRACK
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                REPEAT , 'TRACK'
             </extension></srai>
         </template>
     </category>
@@ -72,8 +72,8 @@
     <category>
         <pattern>REPEAT CONTEXT</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                REPEAT CONTEXT
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                REPEAT , 'CONTEXT'
             </extension></srai>
         </template>
     </category>
@@ -81,8 +81,8 @@
     <category>
         <pattern>REPEAT OFF</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                REPEAT OFF
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                REPEAT , 'OFF'
             </extension></srai>
         </template>
     </category>
@@ -92,7 +92,7 @@
     <category>
         <pattern>ADD TO SAVED</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 ADD_CURR_TO_FAV
             </extension></srai>
         </template>
@@ -103,8 +103,8 @@
     <category>
         <pattern>FIND ITEM *</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                FIND , * , <get name="item-type"/>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                FIND , '<star/>' , '<get name="item-type"/>'
             </extension></srai>
         </template>
     </category>
@@ -112,8 +112,8 @@
     <category>
         <pattern>PLAY ITEM *</pattern>
         <template>
-            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                FIND , * , <get name="item-type"/> , play=1
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                FIND , '<star/>' , '<get name="item-type"/>' , play=1
             </extension></srai>
         </template>
     </category>

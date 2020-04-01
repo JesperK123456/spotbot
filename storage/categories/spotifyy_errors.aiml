@@ -10,7 +10,7 @@
     <category>
         <pattern></pattern>
         <template>
-            <extension path="spotifyy.spotifyy.SpotifyExtension">
+            <extension path="spotifyy.extensions.SpotifyExtension">
 
             </extension>
         </template>
@@ -131,7 +131,7 @@
         <pattern>FINDFAILTYPE</pattern>
         <template>
             i did not quite understand what you meant with <get name="item-type"/>. 
-            Please only ask me to look for a 'song', an 'album', an 'artist' or a 'playlist'
+            Please only ask me to look for a track, an album, an artist or a playlist
         </template>
     </category>
     <category>
