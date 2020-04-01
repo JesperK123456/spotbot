@@ -8,6 +8,13 @@
         </template>
     </category>
 
+   <category>
+        <pattern>I FEEL *</pattern>
+        <template>
+        <srai>I AM FEELING *</srai>
+        </template>
+    </category>
+
     <category>
         <pattern># SAD #</pattern>
         <template>
@@ -89,6 +96,24 @@
         <pattern># SURPRISE ME #</pattern>
         <template>
         I will surprise you! Check this out. 
+        </template>
+    </category>
+
+    <category>
+        <pattern># EXPLORE #</pattern>
+        <template><srai># SURPRISE ME #</srai> 
+        </template>
+    </category>
+
+    <category>
+        <pattern># RELAX #</pattern>
+        <template>This music is really relaxed, check it out: 
+        </template>
+    </category>
+
+    <category>
+        <pattern># STUDY #</pattern>
+        <template> I'm always listening to this when I'm studying. SONG
         </template>
     </category>
 

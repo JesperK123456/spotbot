@@ -12,10 +12,9 @@
 
 <category><pattern># SONG #</pattern>
 <template><random>
-  <li>What kind of genre are you thinking about?</li>
+  <li>Do you have a certain genre in mind?</li>
   <li>Do you want a song of a specific artist?</li>
   <li>Do you know a specific song?</li>
-  <li>What is your mood at the moment?</li>
 </random></template>
 </category>
 
