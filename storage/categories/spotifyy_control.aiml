@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0" encoding="UTF-8">
+
+    <!-- PLAYBACK -->
+    <category>
+        <pattern>PLAY</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                PLAY
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PAUSE</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                PAUSE
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NEXT-TRACK</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                NEXT_TRACK
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PREV-TRACK</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                PREV_TRACK
+            </extension></srai>
+        </template>
+    </category>
+
+
+    <!-- SHUFFLE -->
+    <category>
+        <pattern>SHUFFLE-OFF</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                SHUFFLE OFF
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SHUFFLE-ON</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                SHUFFLE ON
+            </extension></srai>
+        </template>
+    </category>
+
+
+    <!-- REPEAT -->
+    <category>
+        <pattern>REPEAT-TRACK</pattern>      
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                REPEAT TRACK
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>REPEAT-CONTEXT</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                REPEAT CONTEXT
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>REPEAT-OFF</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                REPEAT OFF
+            </extension></srai>
+        </template>
+    </category>
+
+
+    <!-- ADD TO SAVED -->
+    <category>
+        <pattern>ADD-TO-SAVED</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                ADD_CURR_TO_FAV
+            </extension></srai>
+        </template>
+    </category>
+
+
+    <!-- FIND / PLAY ITEM -->
+    <category>
+        <pattern>FIND-ITEM *</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                FIND , * , <get name="item_type"/>
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PLAY-ITEM *</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                FIND , * , <get name="item_type"/> , play=1
+            </extension></srai>
+        </template>
+    </category>
+</aiml>

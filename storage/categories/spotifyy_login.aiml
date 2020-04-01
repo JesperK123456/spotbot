@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0" encoding="UTF-8">
+
+    <category>
+        <pattern>YINITIALQUESTION</pattern>
+        <template><srai>LOGIN</srai></template>
+    </category>
+
+    <!--LOGIN -->
+    <category>
+        <patter>LOGIN</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                LOGIN
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LOGIN *</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                LOGIN , <star/>
+            </extension></srai>
+        </template>
+    </category>
+
+    <!-- not logged in yet -->
+    <category>
+        <pattern>YES</pattern>
+        <that> would you like to login now </that>
+        <template> what is your spotify username? </template>
+    </category> 
+
+    <category>
+        <pattern>NO</pattern>
+        <that> would you like to login now </that>
+        <template> 
+            then you will not be able to use most of my functions. 
+            Are you sure you don't want to login?
+        </template>
+    </category> 
+
+    <!-- not logged in yet, reassure login rejection -->
+    <category>
+        <pattern>YES</pattern>
+        <that> are you sure you don't want to login </that>
+        <template> 
+            then I will keep chit chatting with you untill you are bored of me
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that> are you sure you don't want to login </that>
+        <template> 
+            <srai>LOGIN</srai>
+        </template>
+    </category>
+
+    <!-- catch and handle spotify username prompt -->
+    <category>
+        <pattern>*</pattern>
+        <that> what is your spotify username </that>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                LOGIN , <star/>>
+            </extension></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>MY USERNAME IS *</pattern>
+        <that> what is your spotify username </that>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                LOGIN , <star/>>
+            </extension></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>MY SPOTIFY USERNAME IS *</pattern>
+        <that> what is your spotify username </that>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                LOGIN , <star/>>
+            </extension></srai>
+        </template>
+    </category>
+</aiml>

@@ -2,23 +2,40 @@
 <aiml version="2.0">
 
     <category>
+        <pattern>I AM FEELING *</pattern>
+        <template>
+        Tell me more about your feelings.
+        </template>
+    </category>
+
+   <category>
+        <pattern>I FEEL *</pattern>
+        <template>
+        <srai>I AM FEELING *</srai>
+        </template>
+    </category>
+
+    <category>
         <pattern># SAD #</pattern>
         <template>
-        Oh no! Can I cheer you up with a song?
+        Sometimes it is ok to feel sad. This music fits your mood:
+        <extension path="spotifyy.spotifyy.SpotifyExtension">
+                play_song_emotion, SAD
+        </extension>
         </template>
     </category>
 
     <category>
         <pattern># BAD #</pattern>
         <template>
-        Oh no! Can I cheer you up with a song?
+        Oh no! Do you want me to cheer you up or do you want to hear some sad music?
         </template>
     </category>
 
     <category>
         <pattern># NOT GOOD #</pattern>
         <template>
-        Oh no! Can I cheer you up with a song?
+        Oh no! Do you want me to cheer you up or do you want to hear some sad music?
         </template>
     </category>
 
@@ -26,6 +43,9 @@
         <pattern># HAPPY #</pattern>
         <template>
         Yeah! Let's celebrate it with a song!
+        <extension path="spotifyy.spotifyy.SpotifyExtension">
+                play_song_emotion, HAPPY
+        </extension>
         </template>
     </category>
 
@@ -33,13 +53,19 @@
         <pattern># GOOD #</pattern>
         <template>
         Yeah! That's sound good! Let's celebrate it with a song!
+        <extension path="spotifyy.spotifyy.SpotifyExtension">
+                play_song_emotion, HAPPY
+        </extension>
         </template>
     </category>
 
     <category>
         <pattern># ANGRY #</pattern>
         <template>
-        It's ok to be angry somethimes. With this song you could let go of all your aggression. 
+        It's ok to be angry somethimes. With this song you could let go of all your aggression.
+        <extension path="spotifyy.spotifyy.SpotifyExtension">
+                play_song_emotion, Angry
+        </extension>
         </template>
     </category>
 
@@ -53,21 +79,71 @@
     <category>
         <pattern># ENERGETIC #</pattern>
         <template>
-         This will give you a boost: 
+         This will give you a boost:
+        <extension path="spotifyy.spotifyy.SpotifyExtension">
+                play_song_emotion, ENERGETIC
+        </extension>
         </template>
     </category>
 
     <category>
         <pattern># SLEEPY #</pattern>
         <template>
-         People need sleep! Let me give you a song to fall asleep with. 
+         People need sleep! Let me give you a song to fall asleep with.
+        <extension path="spotifyy.spotifyy.SpotifyExtension">
+                play_song_emotion, SLEEPY
+        </extension>
+        </template>
+    </category>
+
+    <category>
+        <pattern># LUCKY #</pattern>
+        <template>
+         Yeah! Let's celebrate it with a song!
+        <extension path="spotifyy.spotifyy.SpotifyExtension">
+                play_song_emotion, HAPPY
+        </extension>
         </template>
     </category>
 
     <category>
         <pattern># FINE #</pattern>
         <template>
-        <srai>TALK TO ME</srai> 
+        <srai>*</srai> 
+        </template>
+    </category>
+
+    <category>
+        <pattern># SURPRISE ME #</pattern>
+        <template>
+        I will surprise you! This song is based the mood from our conversation.
+        <extension path="spotifyy.spotifyy.SpotifyExtension">
+                play_song_positiviy, <get name="positivity"/>
+        </extension>
+        </template>
+    </category>
+
+    <category>
+        <pattern># EXPLORE #</pattern>
+        <template><srai># SURPRISE ME #</srai> 
+        </template>
+    </category>
+
+    <category>
+        <pattern># RELAX #</pattern>
+        <template>This music is really relaxed, check it out:
+        <extension path="spotifyy.spotifyy.SpotifyExtension">
+                play_song_emotion, RELAX
+        </extension>
+        </template>
+    </category>
+
+    <category>
+        <pattern># STUDY #</pattern>
+        <template> I'm always listening to this when I'm studying.
+        <extension path="spotifyy.spotifyy.SpotifyExtension">
+                play_song_emotion, STUDY
+        </extension>
         </template>
     </category>
 
