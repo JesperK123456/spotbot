@@ -83,4 +83,11 @@
             <srai>LOGIN <star/></srai>
         </template>
     </category>
+
+    <category>
+        <pattern>YEXITRESPONSE</pattern>
+        <template><think><extension path="spotifyy.extensions.SpotifyExtension">
+            CLOSE
+        </extension></think></template>
+    </category>
 </aiml>
