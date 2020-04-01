@@ -1,6 +1,6 @@
 Hoe roep ik een methode aan in spotifyy.SpotifyExtension vanuit AIML:
     <extension path="spotifyy.spotifyy.SpotifyExtension">
-        [naam van de def die gerunned moet worden] [parameter value]*
+        [naam van de def die gerunned moet worden] (, [parameter value])*
     </extension>
 
 
@@ -18,4 +18,5 @@ repeat(), returns: REPEAT-ON, REPEAT-OFF
 add_curr_to_fav(), returns: ADD-OK, ADD-FAIL + [songname]
 curr_on_saved(), returns: ONSAVED-YES, ONSAVED-NO, ONSAVED-FAIL + [error]
 
-play_item(query),  returns: PLAY-OK, PLAY-FAIL
+find(query, kind, offset, limit, play),  returns: PLAY-OK [song], PLAY-FAIL
+                                                FIND-OK [results], FIND-FAIL, FIND-FAIL-NORESULTS

@@ -99,6 +99,22 @@
     </category>
 
 
-    <!-- PLAY ITEM -->
+    <!-- FIND / PLAY ITEM -->
+    <category>
+        <pattern>FIND-ITEM *</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                FIND , * , <get name="item_type"/>
+            </extension></srai>
+        </template>
+    </category>
 
+    <category>
+        <pattern>PLAY-ITEM *</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                FIND , * , <get name="item_type"/> , play=1
+            </extension></srai>
+        </template>
+    </category>
 </aiml>

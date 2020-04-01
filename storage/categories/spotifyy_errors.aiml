@@ -96,13 +96,40 @@
     <category>
         <pattern>ADD-FAIL</pattern>
         <template>
-            i'm sorry, Something went wrong trying to add this song to your liked songs.
+            i'm sorry, Something went wrong trying to add this song to your library.
         </template>
     </category>
     <category>
         <pattern>ADD-FAIL *</pattern>
         <template>
-            i'm sorry, Something went wrong trying to add this song to your liked songs: <star/>
+            i'm sorry, Something went wrong trying to add this song to your library: <star/>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>FIND-FAIL</pattern>
+        <template>
+            finding this item didn't go quite right
+        </template>
+    </category>
+    <category>
+        <pattern>FIND-FAIL *</pattern>
+        <template>
+            finding this item didn't go quite right, this is what went wrong: <star/>
+        </template>
+    </category>
+    <category>
+        <pattern>FIND-FAIL-TYPE</pattern>
+        <template>
+            i did not quite understand what you meant with <get name="item_type"/>. 
+            Please only ask me to look for a 'song', an 'album', an 'artist' or a 'playlist'
+        </template>
+    </category>
+    <category>
+        <pattern>FIND-FAIL-NORESULTS</pattern>
+        <template>
+            oh no, I could not find any results for that :(
         </template>
     </category>
 

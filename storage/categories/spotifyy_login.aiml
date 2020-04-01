@@ -20,7 +20,7 @@
         <pattern>LOGIN *</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN <star/>
+                LOGIN , <star/>
             </extension></srai>
         </template>
     </category>
@@ -64,7 +64,7 @@
         <that> what is your spotify username </that>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN <star/>>
+                LOGIN , <star/>>
             </extension></srai>
         </template>
     </category>
@@ -73,7 +73,7 @@
         <that> what is your spotify username </that>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN <star/>>
+                LOGIN , <star/>>
             </extension></srai>
         </template>
     </category>
@@ -82,7 +82,7 @@
         <that> what is your spotify username </that>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
-                LOGIN <star/>>
+                LOGIN , <star/>>
             </extension></srai>
         </template>
     </category>

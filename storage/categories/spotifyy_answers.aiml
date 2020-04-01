@@ -125,6 +125,42 @@
     </category>
 
 
-    <!-- PLAY ITEM -->
+    <!-- FIND / PLAY ITEM -->
+    <category>
+        <pattern>FIND-OK *</pattern>
+        <template>
+            i have found <star/> items for you, showing the first 5:
+            <extension path="spotifyy.spotifyy.SpotifyExtension">
+                PRINT_QUERY_RESULT
+            </extension>
+            Which item would you like to hear?
+        </template>
+    </category>
 
+    <category>
+        <pattern># *</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>PLAY-ITEM-QUERY <star index="2"/></srai>
+        </template>
+    </category>  
+
+    <category>
+        <pattern>PLAY-ITEM-QUERY *</pattern>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                PLAY_FROM_QUERY , <star/>
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ $NEXT ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
+                PRINT_NEXT_QUERY_PAGE
+            </extension></srai>
+        </template>
+    </category>
 </aiml>
