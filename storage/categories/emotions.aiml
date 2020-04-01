@@ -2,6 +2,13 @@
 <aiml version="2.0">
 
     <category>
+        <pattern>I AM FEELING *</pattern>
+        <template>
+        Tell me more about your feelings.
+        </template>
+    </category>
+
+    <category>
         <pattern># SAD #</pattern>
         <template>
         Oh no! Can I cheer you up with a song?
@@ -65,9 +72,23 @@
     </category>
 
     <category>
+        <pattern># LUCKY #</pattern>
+        <template>
+         Yeah! Let's celebrate it with a song! 
+        </template>
+    </category>
+
+    <category>
         <pattern># FINE #</pattern>
         <template>
-        <srai>TALK TO ME</srai> 
+        <srai>*</srai> 
+        </template>
+    </category>
+
+    <category>
+        <pattern># SURPRISE ME #</pattern>
+        <template>
+        I will surprise you! Check this out. 
         </template>
     </category>
 
