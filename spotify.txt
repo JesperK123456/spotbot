@@ -20,3 +20,6 @@ curr_on_saved(), returns: ONSAVED-YES, ONSAVED-NO, ONSAVED-FAIL + [error]
 
 find(query, kind, offset, limit, play),  returns: PLAY-OK [song], PLAY-FAIL
                                                 FIND-OK [results], FIND-FAIL, FIND-FAIL-NORESULTS
+
+
+take: 4

@@ -10,7 +10,7 @@
 </random></template>
 </category>
 
-<category><pattern># SONG #</pattern>
+<category><pattern>^ SONG ^</pattern>
 <template><random>
   <li>Do you have a certain genre in mind?</li>
   <li>Do you want a song of a specific artist?</li>
@@ -18,16 +18,16 @@
 </random></template>
 </category>
 
-<category><pattern># MUSIC #</pattern>
-<template><srai># SONG #</srai></template>
+<category><pattern>^ MUSIC ^</pattern>
+<template><srai>^ SONG ^</srai></template>
 </category>
 
-<category><pattern># YES #</pattern>
-<template><srai># SONG #</srai></template>
+<category><pattern>^ YES ^</pattern>
+<template><srai>^ SONG ^</srai></template>
 </category>
 
-<category><pattern># NO #</pattern>
-<template><srai># SURPRISE ME #</srai></template>
+<category><pattern>^ NO ^</pattern>
+<template><srai>^ SURPRISE ME ^</srai></template>
 </category>
 
 <!-- <category><pattern>PLAY ME *</pattern>
