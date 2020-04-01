@@ -1,2 +1,16 @@
-login()
-play(), pause(), stop()
+Alle *-FAIL S: <pattern []-FAIL ^> met optionele error message
+
+LOGINFIRST
+
+login(username), returns: LOGIN-OK, LOGIN-FAIL
+
+play(), pause(), stop(), next(), previous(), returns: PLAYB-OK, PLAYB-FAIL
+
+shuffle(), returns: SHUFFLE-OFF, SHUFFLE-ON
+repeat(), returns: REPEAT-ON, REPEAT-OFF
+
+add_curr_to_fav(), returns: ADD-OK, ADD-FAIL + [songname]
+
+playsong(songname), playartist(artist, shuffle='unshuffle'), playplaylist(playlist, shuffle='unshuffle'), playalbum(album, shuffle='unshuffle'),  returns: PLAY-OK, PLAY-FAIL
+
+
