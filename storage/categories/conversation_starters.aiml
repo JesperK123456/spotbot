@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-<category>
-  <pattern>_</pattern>
+<!-- <category>
+  <pattern>*</pattern>
   <template>
     <random>
       <li>What did you do today?</li>
@@ -11,7 +11,7 @@
       <li>Tell me more</li>
     </random>
   </template>
-</category>
+</category> -->
 
 <category><pattern>^ SONG ^</pattern>
 <template><random>

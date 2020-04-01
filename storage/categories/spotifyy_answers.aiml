@@ -43,6 +43,13 @@
         </template>
     </category>
 
+    <category>
+        <pattern>PLAYBOK *</pattern>
+        <template>
+            Alright, playing <star/>!
+        </template>
+    </category>
+
 
     <!-- SHUFFLE -->
     <category>
