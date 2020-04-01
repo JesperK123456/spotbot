@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern># SAD #</pattern>
+        <template>
+        Oh no! Can I cheer you up with a song?
+        </template>
+    </category>
+
+    <category>
+        <pattern># BAD #</pattern>
+        <template>
+        Oh no! Can I cheer you up with a song?
+        </template>
+    </category>
+
+    <category>
+        <pattern># NOT GOOD #</pattern>
+        <template>
+        Oh no! Can I cheer you up with a song?
+        </template>
+    </category>
+
+    <category>
+        <pattern># HAPPY #</pattern>
+        <template>
+        Yeah! Let's celebrate it with a song!
+        </template>
+    </category>
+
+    <category>
+        <pattern># GOOD #</pattern>
+        <template>
+        Yeah! That's sound good! Let's celebrate it with a song!
+        </template>
+    </category>
+
+    <category>
+        <pattern># ANGRY #</pattern>
+        <template>
+        It's ok to be angry somethimes. With this song you could let go of all your aggression. 
+        </template>
+    </category>
+
+    <category>
+        <pattern># TIRED #</pattern>
+        <template>
+         Aha! I can play you a energetic song or a sleepy song. What do you want?
+        </template>
+    </category>
+
+    <category>
+        <pattern># ENERGETIC #</pattern>
+        <template>
+         This will give you a boost: 
+        </template>
+    </category>
+
+    <category>
+        <pattern># SLEEPY #</pattern>
+        <template>
+         People need sleep! Let me give you a song to fall asleep with. 
+        </template>
+    </category>
+
+    <category>
+        <pattern># FINE #</pattern>
+        <template>
+        <srai>TALK TO ME</srai> 
+        </template>
+    </category>
+
+</aiml>

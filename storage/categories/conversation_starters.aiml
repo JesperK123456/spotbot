@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category><pattern>*</pattern>
+<template><random>
+  <li>Hey</li>
+  <li>Hi,</li>
+  <li>Hi there</li>
+  <li>Hi! What's up,</li>
+  <li>Hi! How are you,</li>
+  <li>Hi! Glad to see you,</li>
+  <li>Hi! How can I help you,</li>
+  <li>Hi! How are you doing,</li>
+  <li>Hi! How is your day?</li>
+  <li>Hi! It's good to see you,</li>
+  <li>Hi! I am very pleased to see you again</li>
+  <li>Hi! How do you feel today?</li>
+  <li>Hi there! Whats up?</li>
+</random></template>
+</category>
+
+<category><pattern># TALK TO ME #</pattern>
+<template><random>
+  <li>What did you do today?</li>
+  <li>How do you feel?</li>
+  <li>What is your mood at the moment?</li>
+</random></template>
+</category>
+
+</aiml>
