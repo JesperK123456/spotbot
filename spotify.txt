@@ -9,6 +9,7 @@ Alle *-FAIL S: <pattern []-FAIL ^> met optionele error message
 LOGINFIRST
 
 login(username), returns: LOGIN-OK, LOGIN-FAIL
+isloggedin(), returns: LOGINFIRST, LOGIN-OK
 
 play(), pause(), stop(), next_track(), prev_track(), returns: PLAYB-OK, PLAYB-FAIL
 
