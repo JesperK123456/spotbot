@@ -1,3 +1,9 @@
+Hoe roep ik een methode aan in spotifyy.SpotifyExtension vanuit AIML:
+    <extension path="spotifyy.spotifyy.SpotifyExtension">
+        [naam van de def die gerunned moet worden] [parameter value]*
+    </extension>
+
+
 Alle *-FAIL S: <pattern []-FAIL ^> met optionele error message
 
 LOGINFIRST
