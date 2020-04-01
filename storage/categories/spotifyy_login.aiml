@@ -8,7 +8,7 @@
 
     <!--LOGIN -->
     <category>
-        <patter>LOGIN</pattern>
+        <pattern>LOGIN</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 LOGIN
