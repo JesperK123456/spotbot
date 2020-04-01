@@ -16,10 +16,11 @@
     </category>
     
     <category>
-        <pattern>test</pattern>
+        <pattern>test * *</pattern>
         <template>
-            <extension path='templatey.extensions.spotifyy.SpotifyExtension'>
-                turn it off
+            Hey jochie
+            <extension path='spotifyy.spotifyy.SpotifyExtension'>
+                TEST <star index="1"/> <star index="2"/>
             </extension>
         </template>
     </category>
