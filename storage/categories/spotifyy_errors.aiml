@@ -44,7 +44,7 @@
         <pattern>LOGINFIRST</pattern>
         <template>
             <think><set name="logged_in">False</set></think>
-            you are not logged in yet, would you like to login now?
+            you are not logged in yet. Would you like to login now?
         </template>
     </category>
     <category>
