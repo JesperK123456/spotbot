@@ -21,7 +21,7 @@
     </category>
 
     <category>
-        <pattern>NEXT-TRACK</pattern>
+        <pattern>NEXT TRACK</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 NEXT_TRACK
@@ -30,7 +30,7 @@
     </category>
 
     <category>
-        <pattern>PREV-TRACK</pattern>
+        <pattern>PREV TRACK</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 PREV_TRACK
@@ -41,7 +41,7 @@
 
     <!-- SHUFFLE -->
     <category>
-        <pattern>SHUFFLE-OFF</pattern>
+        <pattern>SHUFFLE OFF</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 SHUFFLE OFF
@@ -50,7 +50,7 @@
     </category>
 
     <category>
-        <pattern>SHUFFLE-ON</pattern>
+        <pattern>SHUFFLE ON</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 SHUFFLE ON
@@ -61,7 +61,7 @@
 
     <!-- REPEAT -->
     <category>
-        <pattern>REPEAT-TRACK</pattern>      
+        <pattern>REPEAT TRACK</pattern>      
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 REPEAT TRACK
@@ -70,7 +70,7 @@
     </category>
 
     <category>
-        <pattern>REPEAT-CONTEXT</pattern>
+        <pattern>REPEAT CONTEXT</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 REPEAT CONTEXT
@@ -79,7 +79,7 @@
     </category>
 
     <category>
-        <pattern>REPEAT-OFF</pattern>
+        <pattern>REPEAT OFF</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 REPEAT OFF
@@ -90,7 +90,7 @@
 
     <!-- ADD TO SAVED -->
     <category>
-        <pattern>ADD-TO-SAVED</pattern>
+        <pattern>ADD TO SAVED</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 ADD_CURR_TO_FAV
@@ -101,7 +101,7 @@
 
     <!-- FIND / PLAY ITEM -->
     <category>
-        <pattern>FIND-ITEM *</pattern>
+        <pattern>FIND ITEM *</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 FIND , * , <get name="item_type"/>
@@ -110,7 +110,7 @@
     </category>
 
     <category>
-        <pattern>PLAY-ITEM *</pattern>
+        <pattern>PLAY ITEM *</pattern>
         <template>
             <srai><extension path="spotifyy.spotifyy.SpotifyExtension">
                 FIND , * , <get name="item_type"/> , play=1

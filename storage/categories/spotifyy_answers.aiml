@@ -3,7 +3,7 @@
 
     <!-- LOGIN -->
     <category>
-        <pattern>LOGIN-OK</pattern>
+        <pattern>LOGIN OK</pattern>
         <template>
             <think><set name="item_type">SONG</set></think>
             <random>
@@ -17,7 +17,7 @@
 
     <!-- PLAYBACK -->
     <category>
-        <pattern>PLAYB-OK</pattern>
+        <pattern>PLAYB OK</pattern>
         <template>
             <random>
                 <li> enjoy it! </li>
@@ -29,7 +29,7 @@
     </category>
 
     <category>
-        <pattern>PAUSE-OK</pattern>
+        <pattern>PAUSE OK</pattern>
         <template>
             <random>
                 <li> i've paused your music </li>
@@ -43,7 +43,7 @@
 
     <!-- SHUFFLE -->
     <category>
-        <pattern>SHUFFLE-OK *</pattern>
+        <pattern>SHUFFLE OK *</pattern>
         <template>
             <random>
                 <li> shuffle is now <star/> </li>
@@ -56,7 +56,7 @@
 
     <!-- REPEAT -->
     <category>
-        <pattern>REPEAT-OK-TRACK</pattern>
+        <pattern>REPEAT OK TRACK</pattern>
         <template>
             <think><set name="curr_on_saved">
                 <extension path="spotifyy.spotifyy.SpotifyExtension">
@@ -84,12 +84,12 @@
             would you like to add it now
         </that>
         <template>
-            <srai>ADD-CURR-TO-SAVED</srai>
+            <srai>ADD CURR TO SAVED</srai>
         </template>
     </category>
 
     <category>
-        <pattern>REPEAT-OK-CONTEXT</pattern>
+        <pattern>REPEAT OK CONTEXT</pattern>
         <template>
             <random>
                 <li> repeat is now set to context </li>
@@ -100,7 +100,7 @@
     </category>
 
     <category>
-        <pattern>REPEAT-OK-OFF</pattern>
+        <pattern>REPEAT OK OFF</pattern>
         <template>
             <random>
                 <li> repeat is now off </li>
@@ -113,7 +113,7 @@
 
     <!-- ADD TO SAVED -->
     <category>
-        <pattern>ADD-OK *</pattern>
+        <pattern>ADD OK *</pattern>
         <template>
             <random>
                 <li> <star/> has been added to your music library </li>
@@ -127,7 +127,7 @@
 
     <!-- FIND / PLAY ITEM -->
     <category>
-        <pattern>FIND-OK *</pattern>
+        <pattern>FIND OK *</pattern>
         <template>
             i have found <star/> items for you, showing the first 5:
             <extension path="spotifyy.spotifyy.SpotifyExtension">
@@ -141,7 +141,7 @@
         <pattern># *</pattern>
         <that>which item would you like to hear</that>
         <template>
-            <srai>PLAY-ITEM-QUERY <star index="2"/></srai>
+            <srai>PLAY ITEM QUERY <star index="2"/></srai>
         </template>
     </category>  
 

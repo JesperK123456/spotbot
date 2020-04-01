@@ -23,4 +23,4 @@ find(query, kind, offset, limit, play),  returns: PLAY-OK [song], PLAY-FAIL
                                                 FIND-OK [results], FIND-FAIL, FIND-FAIL-NORESULTS
 
 
-take: 6
+take: 8
