@@ -4,35 +4,34 @@ import spotipy
 import spotipy.util as util
 from spotipy.oauth2 import SpotifyClientCredentials
 
-def play_song_emotion(emotion, token):
-    # takes as input a string from one of the emotions and token
+def play_song_emotion(emotion):
+    # takes as input a string from one of the emotions
     # returns None if emotion is not known
     # plays a song with that mood if emotion is known and prints text
     emotion = str(emotion).upper()  
-    emotion_list = ["HAPPY", "SAD", "RELAX", "ANGRY", "SLEEP", "ENERGETIC"]
+    emotion_list = ["HAPPY", "SAD", "RELAX", "ANGRY", "SLEEP", "ENERGETIC", "STUDY"]
     
     if emotion not in emotion_list:
-        return None
+        return "weird, this emotion is not found"
     
     else:
     
-        sp = spotipy.Spotify(auth=token)
         options = {"HAPPY" : ("sp.start_playback(None, 'spotify:playlist:37i9dQZF1DWSf2RDTDayIx')", "What do you think of this song?")
                 ,"SAD" : ("sp.start_playback(None, 'spotify:playlist:54ozEbxQMa0OeozoSoRvcL')", "What do you think of this song?")
                 ,"RELAX" : ("sp.start_playback(None, 'spotify:playlist:0RD0iLzkUjrjFKNUHu2cle')", "What do you think of this song?")
                 ,"ANGRY" : ("sp.start_playback(None, 'spotify:playlist:6ft4ijUITtTeVC0dUCDdvH')", "What do you think of this song?")
                 ,"SLEEP" : ("sp.start_playback(None, 'spotify:playlist:37i9dQZF1DWStLt4f1zJ6I')", "What do you think of this song?")
                 ,"ENERGETIC" : ("sp.start_playback(None, 'spotify:playlist:0gFLYrJoh1tLxJvlKcd5Lv')", "What do you think of this song?")
+                ,"STUDY" : ("sp.start_playback(None, 'spotify:playlist:37i9dQZF1DX9sIqqvKsjG8')", "What do you think of this song?")
                 }
         cmd, mess = options[emotion]
-        print(mess)
         sp.shuffle(True, device_id=None)
         exec(cmd)
-        return
+        return mess
 
-def play_song_positiviy(score, token):
+def play_song_positiviy(score):
     score = float(score)
-    sp = spotipy.Spotify(auth=token)
+
     if score < -0.9:
         mood = 'EXTREMELY NEGATIVE'
     if score > -0.9 and score <= -0.7:
@@ -56,18 +55,17 @@ def play_song_positiviy(score, token):
     if score > 0.9:
         mood = 'EXTREMELY POSITIVE'
 
-    print('You seem {}'.format(mood))
+    response = 'You seem {}'.format(mood)
     if score < 0:
         sp.shuffle(True, device_id=None)
         sp.start_playback(None, 'spotify:playlist:7HCXp5mTEkbwb9hYq2JTmO') # starts playing a song from a negative playlist
-        print('What do you think about this? It is a song from a Sad-playlist')
+        return response.join('What do you think about this? It is a song from a Sad-playlist')
     elif score > 0.1:
         sp.shuffle(True, device_id=None)
         sp.start_playback(None, 'spotify:playlist:37i9dQZF1DWUAZoWydCivZ') # starts playing a song from a positive
-        print('What do you think about this? It is a song from a Positive-playlist')
+        return response.join('What do you think about this? It is a song from a Positive-playlist')
     else:
         sp.shuffle(True, device_id=None)
         sp.start_playback(None, 'spotify:playlist:0RD0iLzkUjrjFKNUHu2cle') # starts playing a song from the Relax playlist
-        print('What do you think about this? It is a song from a Relax-playlist')
-    return
+        return response.join('What do you think about this? It is a song from a Relax-playlist')
 

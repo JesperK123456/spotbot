@@ -156,6 +156,9 @@ console:
         save: true
         load: false
 
+      sentiment:
+        classname: programy.nlp.sentiment.textblob_sentiment.TextBlobSentimentAnalyser
+        scores: programy.nlp.sentiment.scores.SentimentScores
 
       brains:
         brain:
