@@ -269,7 +269,7 @@
     </category>
 
     <category>
-        <pattern>^ VOLUME TO * ^</pattern>
+        <pattern>^ SET VOLUME TO * ^</pattern>
         <template><srai>SET VOLUME <star index="2"/></srai></template>
     </category>
 
@@ -393,6 +393,21 @@
     <!-- ========================================== -->
     <!-- ADD SONG / ALBUM TO SAVED SONGS / PLAYLIST -->
     <!-- ========================================== -->
+    <category>
+        <pattern>^ CURRENT ^</pattern>
+        <template><srai>CURRENTLY PLAYING</srai></template>
+	</category>
+
+    <category>
+        <pattern>^ NOW PLAYING ^</pattern>
+        <template><srai>CURRENTLY PLAYING</srai></template>
+	</category>
+
+    <category>
+        <pattern>^ CURRENTLY PLAYING ^</pattern>
+        <template><srai>CURRENTLY PLAYING</srai></template>
+	</category>
+
 
     <!-- ================= -->
     <!-- ADD SONG TO QUEUE -->
