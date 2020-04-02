@@ -174,12 +174,12 @@
 
     <category>
         <pattern>^ SET VOLUME TO * ^</pattern>
-        <template><srai>VOLUME <star/></srai></template>
+        <template><srai>VOLUME <star index="2"/></srai></template>
     </category>
 
     <category>
         <pattern>^ VOLUME TO * ^</pattern>
-        <template><srai>VOLUME <star/></srai></template>
+        <template><srai>VOLUME <star index="2"/></srai></template>
     </category>
 
     <category>

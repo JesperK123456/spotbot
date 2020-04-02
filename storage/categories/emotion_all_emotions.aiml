@@ -146,4 +146,9 @@
         </template>
     </category>
 
+    <!--PLAY RELAXING SONG WHEN USER USES PROFANITY-->
+    <category><pattern>PYOK COOLDOWN</pattern>
+    <template>
+        I think you need to calm down, listen to this relaxing song.
+    </template></category>
 </aiml>
