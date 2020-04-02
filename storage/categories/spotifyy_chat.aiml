@@ -1,6 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0" encoding="UTF-8">
 
+    <!-- ==== -->
+    <!-- HELP -->
+    <!-- ==== -->
+    <category>
+        <pattern>HELP</pattern>
+        <template>
+            Hello I am SpotBot, I am able to have a conversation with you and control your Spotify.
+            Before you can use my full capabilities you first need to login.
+            <condition name="logged-in">
+                <li value="Yes">It seems you are already logged in, nice!
+                Want to know more about my other functions?</li>
+                <li value="No">It seems you are not logged in yet. 
+                Do you want to know how to login?</li>
+            </condition>           
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELP LOGIN</pattern>
+        <template>
+            I you have not logged in yet, you can either type in "login", 
+            I will then ask for you Spotify username with which you can reply: "my username is [username]" or "my spotify username is [username]".
+            Or you spare yourself some typing and type: "login [spotify username]".
+            <split/>
+            If the username provided is already registered with me I will take care of the rest.
+            If not, I will direct you to your browser in which you need to give me permission to control your Spotify.
+            When you have given the permission, you will be directed to a webpage that does not seem to work, however I only need the link of that page.
+            You will be prompted to give me an url, it is this url you need to give.
+            When this is done, all should be ok and I will be able to control your Spotify for you!
+            <split/>
+            <condition>
+                <li value="No">You are not logged in yet. Would you like to login now?</li>
+                <li value="Yes">You are already logged in. Want to know more about my other functions?</li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>do you want to know how to login</that>
+        <template><srai>HELP LOGIN</srai></template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>do you want to know how to login</that>
+        <template>ok, no problem. Want to know more about my other functions?</template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>want to know more about my other functions</that>
+        <template><srai>HELP LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>HELP FUNCTIONS</pattern>
+        <template>
+            My main aim is to hold a conversation with you to assist you with Spotify.
+            I have the following control over your Spotify (if you are logged in). I can
+            <li>Play/Resume your Spotify.</li>
+            <li>Pause your Spotify.</li>
+            <li>Skip to the next track.</li>
+            <li>Go back to the previous track.</li>
+            <li>Turn shuffle on and off.</li>
+            <li>Set repeat to track, context or off.</li>
+            <li>Save the track you are currently listening to.</li>
+            <li>Find a track, album, artist or playlist for you. You can then choose which item you want to play from a list of results.</li>
+            <li>Play a track, album, artist or playlist for you.</li>
+            <li>Tell you to which song you are currently listening.</li>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELP ME</pattern>
+        <template><srai>HELP</srai></template>
+    </category>
+
+    <category>
+        <pattern>PLEASE HELP ME</pattern>
+        <template><srai>HELP</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template><srai>HELP</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHO ARE YOU</pattern>
+        <template><srai>HELP</srai></template>
+    </category>
+
+    <category>
+        <pattern>HOW TO LOG IN</pattern>
+        <template><srai>HELP LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>HOW TO LOGIN</pattern>
+        <template><srai>HELP LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>HELP ME LOGIN</pattern>
+        <template><srai>HELP LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHAT CAN YOU DO</pattern>
+        <template><srai>HELP FUNCTIONS</srai></template>
+    </category>
+
+
     <!-- =================== -->
     <!-- LOGIN / USER CHANGE -->
     <!-- =================== -->
