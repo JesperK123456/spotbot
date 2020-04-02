@@ -2,7 +2,7 @@
 <aiml version="2.0" encoding="UTF-8">
     <!-- GENERAL -->
     <category>
-        <pattern>YES</pattern>
+        <pattern>^YES ^</pattern>
         <template>
             <random>
                 <li> Ok! </li>
@@ -16,7 +16,7 @@
         </template>
     </category>
     <category>
-        <pattern>NO</pattern>
+        <pattern>^ NO ^</pattern>
         <template>
             <random>
                 <li> To bad </li>

@@ -40,6 +40,10 @@ AIML:
 - emotions
 - spotifyy_chat
 - device control in spotifyy_control
+<<<<<<< HEAD
+- add to queue
+- add song to playlist
+=======
 
 
 === DISCUSSIESTRUCTUUR ===
@@ -84,3 +88,4 @@ OBV WAT:
 ==========================
 HOE VOELT USER ZICH?
     - Text/score
+>>>>>>> 662e768378da001a5e9d5a6c59f9111c257e95f8
