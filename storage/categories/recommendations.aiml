@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0" encoding="UTF-8">
+
+<category>
+        <pattern>^ genre ^</pattern>
+        <template>
+        I know a lot of genre's. Which one do you prefer?
+        <extension path="spotifyy.extensions.SpotifyExtension">
+                recommendations
+        </extension>
+        </template>
+</category>
+
+<category>
+        <pattern>THE GENRE IS *</pattern>
+        <template>
+        Let's find <star/>!
+        <extension path="spotifyy.extensions.SpotifyExtension">
+                recommendations , '<star/>'
+        </extension>
+        </template>
+</category>
+
+</aiml>

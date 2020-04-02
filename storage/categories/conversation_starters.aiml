@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-
 <category>
   <pattern>TALK</pattern>
   <template>
@@ -15,10 +14,10 @@
 </category>
 
 <category><pattern>^ MUSIC ^</pattern>
-<template><srai>^ track ^</srai></template>
+<template><srai>^ TRACK ^</srai></template>
 </category>
 
-<category><pattern>^ track ^</pattern>
+<category><pattern>^ TRACK ^</pattern>
 <template><random>
   <li>Do you have a certain genre in mind?</li>
   <li>Do you want a track of a specific artist?</li>
@@ -37,7 +36,7 @@
       <pattern>_</pattern>
       <that>Which genre do you like</that>
       <template>Ok! Let's play some: <set name = "genre"> <star/>! </set>
-      <extension path="spotifyy.extensions.SpotifyExtension">
+      <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 play_track_genre, <get name = "genre"></get>
         </extension></srai>
       </template>
@@ -93,10 +92,7 @@
 <category>
       <pattern>YES</pattern>
       <that>Ok No problem, do you want me to surprise you</that>
-      <template>OK! I will surprise you! This track is based the mood from our conversation.
-        <extension path="spotifyy.extensions.SpotifyExtension">
-                play_track_positiviy, '<get name="positivity"/>'
-        </extension>
+      <template><srai>^ SURPRISE ME ^</srai>
       </template>
 </category>
 <category>
