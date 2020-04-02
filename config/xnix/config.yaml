@@ -130,8 +130,8 @@ console:
 
   bots:
     bot:
-      initial_question: Hi, how can I help you today?
-      # initial_question_srai: YINITIALQUESTION
+      initial_question: Hey there! My name is Spotbot. Are you feeling okay?
+      initial_question_srai: YINITIALQUESTION
       default_response: Sorry, I don't have an answer for that!
       default_response_srai: YEMPTY
       empty_string: YEMPTY

@@ -12,7 +12,7 @@
 
 - Graceful Degradation maken
     -> in AIML (denk aan feedback over verkeerd gegeven liedjes opvangen)
-    -> in Python (denk aan errors catchen)
+    -> in Python (denk aan errors catchen) (DONE)
 
 ?- iets van informatie structuur maken zoals in de pdf van onze presentatie?
 
@@ -40,5 +40,52 @@ AIML:
 - emotions
 - spotifyy_chat
 - device control in spotifyy_control
+<<<<<<< HEAD
 - add to queue
 - add song to playlist
+=======
+
+
+=== DISCUSSIESTRUCTUUR ===
+
+- how are you feeling today
+--> antwoord: positivitiy +/-
+- response based on positivity (3 scenario's: sad/neutral/happy):
+    sad:
+        - would you like to be cheered up
+    neutral:
+        - what would you like to hear
+    happy:
+        - ferrie goed, some happy tunes then
+--> antwoord: ja/nee
+- MUZIEK! (als tijd diepere vragen)
+
+(escape path: Just want to hear music) ==> What would you like to hear
+
+
+
+======================
+=== RECOMMENDATION ===
+======================
+TYPE COMMANDS:
+    - surprise me
+    - play something related to *
+    - explore something new
+
+WAT TE RECOMMENDEN:
+    - track
+    - playlist
+    - album
+    - genre
+    - artist
+
+OBV WAT:
+    - evt. input van command
+    - obv conversatie
+
+==========================
+=== EMOTION EXTRACTION ===
+==========================
+HOE VOELT USER ZICH?
+    - Text/score
+>>>>>>> 662e768378da001a5e9d5a6c59f9111c257e95f8
