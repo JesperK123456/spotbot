@@ -52,7 +52,8 @@
     <category>
         <pattern>PYFAIL LOGIN</pattern>
         <template>
-            Trying to log you in PYFAILed, sorry.
+            Trying to log you in failed, sorry.
+            Would you like to try to login again?
         </template>
     </category>
     <category>
@@ -61,7 +62,8 @@
             <think>
                 <set name="logged-in">No</set>
             </think>
-            something went wrong trying to log you in: <star/>
+            something went wrong trying to log you in: <star/>.
+            Would you like to try to login again?
         </template>
     </category>
     <category>
@@ -71,7 +73,7 @@
                 <set name="logged-in">No</set>
             </think>
             you first need to give me your username.
-            What is your spotify username?
+            What's your spotify username?
         </template>
     </category>
 

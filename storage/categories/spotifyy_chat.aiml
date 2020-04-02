@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0" encoding="UTF-8">
 
+    <!-- ==== -->
+    <!-- HELP -->
+    <!-- ==== -->
+    <category>
+        <pattern>HELP</pattern>
+        <template>
+            <extension path="spotifyy.extensions.SpotifyExtension">
+                HELP
+            </extension>
+            <condition name="logged-in">
+                <li value="Yes">It seems you are already logged in, nice.
+                Want to know more about my other functions?</li>
+                <li value="No">It seems you are not logged in yet. 
+                Do you want to know how to login?</li>
+            </condition>           
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELP LOGIN</pattern>
+        <template>
+            <extension path="spotifyy.extensions.SpotifyExtension">
+                HELP_LOGIN
+            </extension>
+            <condition name="logged-in">
+                <li value="No">You are not logged in yet. Would you like to login now?</li>
+                <li value="Yes">You are already logged in. Want to know more about my other functions?</li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>do you want to know how to login</that>
+        <template><srai>HELP LOGIN</srai></template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>do you want to know how to login</that>
+        <template>ok, no problem. Want to know more about my other functions?</template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>want to know more about my other functions</that>
+        <template><srai>HELP FUNCTIONS</srai></template>
+    </category>
+
+    <category>
+        <pattern>HELP FUNCTIONS</pattern>
+        <template>
+            <extension path="spotifyy.extensions.SpotifyExtension">
+                HELP_FUNCTIONS
+            </extension>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELP ME</pattern>
+        <template><srai>HELP</srai></template>
+    </category>
+
+    <category>
+        <pattern>PLEASE HELP ME</pattern>
+        <template><srai>HELP</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template><srai>HELP</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHO ARE YOU</pattern>
+        <template><srai>HELP</srai></template>
+    </category>
+
+    <category>
+        <pattern>HOW TO LOG IN</pattern>
+        <template><srai>HELP LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>HOW TO LOGIN</pattern>
+        <template><srai>HELP LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>HELP ME LOGIN</pattern>
+        <template><srai>HELP LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHAT CAN YOU DO</pattern>
+        <template><srai>HELP FUNCTIONS</srai></template>
+    </category>
+
+
     <!-- =================== -->
     <!-- LOGIN / USER CHANGE -->
     <!-- =================== -->

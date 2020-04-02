@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0" encoding="UTF-8">
+
+<category>
+        <pattern>EMOTIONFAIL</pattern>
+        <template>
+            I do not know this emotion! All the emotions I have are:
+            Happy, Sad, Relax, Angry, Sleepy, Energetic and Study. 
+        </template>
+</category>
+
+<category>
+        <pattern>EMOTIONOK</pattern>
+        <template>
+            Do you like this track?
+        </template>
+</category>
+
+<category>
+        <pattern>POSITIVITYOK</pattern>
+        <template>
+            Do you like this track?
+        </template>
+</category>
+
+<!-- To handle: Do you like this track -->
+<category>
+      <pattern>YES</pattern>
+      <that>Do you like this track</that>
+      <template>Nice! enjoy it!</template>
+</category>
+<category>
+      <pattern>NO</pattern>
+      <that>Do you like this track</that>
+      <template>Too bad! Maybe this is better NEXT SONG!</template>
+</category>
+
+</aiml>
