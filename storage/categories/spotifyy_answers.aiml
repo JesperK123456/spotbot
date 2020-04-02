@@ -374,31 +374,41 @@
     <category>
         <pattern>^ DONE ^</pattern>
         <that>Could you open spotify for me</that>
-        <template><srai>SET DEVICE</srai></template>
+        <template><srai>SELECT DEVICE</srai></template>
     </category>
     <category>
         <pattern>^ DID ^</pattern>
         <that>Could you open spotify for me</that>
-        <template><srai>SET DEVICE</srai></template>
+        <template><srai>SELECT DEVICE</srai></template>
     </category>
     <category>
         <pattern>^ YES ^</pattern>
         <that>Could you open spotify for me</that>
-        <template><srai>SET DEVICE</srai></template>
+        <template><srai>SELECT DEVICE</srai></template>
     </category>
     <category>
         <pattern>^ SURE ^</pattern>
         <that>Could you open spotify for me</that>
-        <template><srai>SET DEVICE</srai></template>
+        <template><srai>SELECT DEVICE</srai></template>
     </category>
     <category>
         <pattern>^ OK ^</pattern>
         <that>Could you open spotify for me</that>
-        <template><srai>SET DEVICE</srai></template>
+        <template><srai>SELECT DEVICE</srai></template>
     </category>
 
     <category>
         <pattern>^ ITEM * ^</pattern>
+        <that>What device would you like to listen to</that>
+        <template>
+            <srai>
+                SET DEVICE <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ DEVICE * ^</pattern>
         <that>What device would you like to listen to</that>
         <template>
             <srai>
