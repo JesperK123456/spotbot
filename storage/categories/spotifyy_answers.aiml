@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0" encoding="UTF-8">
+    <!-- GENERAL PYOK -->
+    <category><pattern>PYOK *</pattern>
+    <template>That worked, yay!</template></category>
 
     <!-- LOGIN -->
     <category>
-        <pattern>LOGINOK</pattern>
+        <pattern>PYOK LOGIN</pattern>
         <template>
             <think>
                 <set name="item-type">track</set>
@@ -20,7 +23,7 @@
 
     <!-- PLAYBACK -->
     <category>
-        <pattern>PLAYBOK</pattern>
+        <pattern>PYOK PLAYB</pattern>
         <template>
             <random>
                 <li> enjoy it! </li>
@@ -32,7 +35,7 @@
     </category>
 
     <category>
-        <pattern>PAUSEOK</pattern>
+        <pattern>PYOK PAUSE</pattern>
         <template>
             <random>
                 <li> i've paused your music </li>
@@ -44,16 +47,17 @@
     </category>
 
     <category>
-        <pattern>PLAYBOK *</pattern>
-        <template>
-            Alright, playing <star/>!
-        </template>
+        <pattern>PYOK CURRPLAYB *</pattern>
+        <template><random>
+        <li>You're currently listening to <star/>!</li>
+        <li>This song is called <star/></li>
+        </random></template>
     </category>
 
 
     <!-- SHUFFLE -->
     <category>
-        <pattern>SHUFFLEOK *</pattern>
+        <pattern>PYOK PAUSE *</pattern>
         <template>
             <random>
                 <li> shuffle is now <star/> </li>
@@ -66,15 +70,11 @@
 
     <!-- REPEAT -->
     <category>
-        <pattern>REPEATOK TRACK</pattern>
+        <pattern>PYOK REPEAT TRACK</pattern>
         <template>
-            <think><set name="curr-on-saved">
-                <extension path="spotifyy.extensions.SpotifyExtension">
-                    curr_on_saved
-                </extension>
-            </set></think>
-            <condition name="curr-on-saved">
-                <li value="ONSAVED-NO">
+            <think><srai>IS CURR ON SAVED</srai></think>
+            <condition name="is-curr-on-saved">
+                <li value="NO">
                     it seems you like this song, and it is not in your saved songs. 
                     Would you like to add it now?
                 </li>
@@ -99,7 +99,7 @@
     </category>
 
     <category>
-        <pattern>REPEATOK CONTEXT</pattern>
+        <pattern>PYOK REPEAT CONTEXT</pattern>
         <template>
             <random>
                 <li> repeat is now set to context </li>
@@ -110,7 +110,7 @@
     </category>
 
     <category>
-        <pattern>REPEATOK OFF</pattern>
+        <pattern>PYOK REPEAT OFF</pattern>
         <template>
             <random>
                 <li> repeat is now off </li>
@@ -123,7 +123,7 @@
 
     <!-- ADD TO SAVED -->
     <category>
-        <pattern>ADDOK *</pattern>
+        <pattern>PYOK ADD *</pattern>
         <template>
             <random>
                 <li> <star/> has been added to your music library </li>
@@ -133,11 +133,69 @@
             </random>
         </template>
     </category>
+    <!-- CURRENT TRACK AND SAVED MUSIC-->
+    <category>
+        <pattern>PYOK ISONSAVED YES</pattern>
+        <template>
+            <think><set name="is-curr-on-saved">YES</set></think>
+            The currently playing track is already in you music library. 
+            Would you like to delete it from your library?
+        </template>
+    </category>
+    <category>
+        <pattern>PYOK ISONSAVED NO</pattern>
+        <template>
+            <think><set name="is-curr-on-saved">NO</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>would you like to delete it from your library</that>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                REMOVE_CURR_FROM_SAVED
+            </extension></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>would you like to delete it from your library</that>
+        <template>ok no problem, enjoy the song!</template>
+    </category>
+
+    <category>
+        <pattern>PYOK ISONSAVED YES</pattern>
+        <template>
+            <think><set name="is-curr-on-saved">YES</set></think>
+            The currently playing track is already in you music library. 
+            Would you like to delete it from your library?
+        </template>
+    </category>
+    <category>
+        <pattern>PYOK ISONSAVED NO</pattern>
+        <template>
+            <think><set name="is-curr-on-saved">NO</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>would you like to delete it from your library</that>
+        <template>
+
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>would you like to delete it from your library</that>
+        <template>ok no problem, enjoy the song!</template>
+    </category>
 
 
     <!-- FIND / PLAY ITEM -->
     <category>
-        <pattern>FINDOK *</pattern>
+        <pattern>PYOK FIND *</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 PRINT_QUERY_RESULT
@@ -146,7 +204,7 @@
     </category>
 
     <category>
-        <pattern>PRINTRESULTSOK</pattern>
+        <pattern>PYOK PRINTRESULTS</pattern>
         <template>
             Which item would you like to hear?
         </template>
@@ -180,7 +238,7 @@
     </category>
 
     <category>
-        <pattern>PLAYOK *</pattern>
+        <pattern>PYOK PLAY *</pattern>
         <template>
             Alright, playing <star/>!
         </template>

@@ -20,7 +20,7 @@
         <template>
             Hey jochie
             <extension path="spotifyy.extensions.SpotifyExtension">
-                TEST
+                TEST Poo
             </extension>
         </template>
     </category>

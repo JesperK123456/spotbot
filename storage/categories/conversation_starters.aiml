@@ -37,7 +37,7 @@
       <pattern>_</pattern>
       <that>Which genre do you like</that>
       <template>Ok! Let's play some: <set name = "genre"> <star/>! </set>
-      <srai><extension path="spotifyy.extensions.SpotifyExtension">
+      <extension path="spotifyy.extensions.SpotifyExtension">
                 play_track_genre, <get name = "genre"></get>
         </extension></srai>
       </template>
