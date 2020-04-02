@@ -242,7 +242,7 @@
                 </li>
                 <li>
                     <srai>
-                        <extension path="spotifyy.extensions.SpotifyExtension">RETRY, SET_DEVICE , <star/>
+                        <extension path="spotifyy.extensions.SpotifyExtension">SET_DEVICE , <star/>
                         </extension>
                     </srai>
                 </li>
