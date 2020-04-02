@@ -4,7 +4,6 @@
     <category>
         <pattern>YINITIALQUESTION</pattern>
         <template>
-            initial question bitch
             <!-- <srai>LOGIN</srai> -->
         </template>
     </category>
