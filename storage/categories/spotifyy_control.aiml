@@ -88,12 +88,39 @@
     </category>
 
 
-    <!-- ADD TO SAVED -->
+    <!-- CURRENTLY PLAYING TRACK -->
     <category>
-        <pattern>ADD TO SAVED</pattern>
+        <pattern>CURRENTLY PLAYING</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                ADD_CURR_TO_FAV
+                CURRENT_PLAYBACK
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>IS CURR ON SAVED</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                IS_CURR_ON_SAVED
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ADD CURR TO SAVED</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                ADD_CURR_TO_SAVED
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>REMOVE CURR FROM SAVED</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                REMOVE_CURR_FROM_SAVED
             </extension></srai>
         </template>
     </category>
@@ -114,15 +141,6 @@
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 FIND , '<star/>' , '<get name="item-type"/>' , play=1
-            </extension></srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>CURRENTLY PLAYING</pattern>
-        <template>
-            <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                CURRENT_PLAYBACK
             </extension></srai>
         </template>
     </category>

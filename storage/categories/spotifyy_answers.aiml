@@ -68,13 +68,9 @@
     <category>
         <pattern>REPEATOK TRACK</pattern>
         <template>
-            <think><set name="curr-on-saved">
-                <extension path="spotifyy.extensions.SpotifyExtension">
-                    curr_on_saved
-                </extension>
-            </set></think>
-            <condition name="curr-on-saved">
-                <li value="ONSAVED-NO">
+            <think><srai>IS CURR ON SAVED</srai></think>
+            <condition name="is-curr-on-saved">
+                <li value="NO">
                     it seems you like this song, and it is not in your saved songs. 
                     Would you like to add it now?
                 </li>
@@ -184,5 +180,65 @@
         <template>
             Alright, playing <star/>!
         </template>
+    </category>
+
+
+    <!-- CURRENT TRACK AND SAVED MUSIC-->
+    <category>
+        <pattern>PYOK ISONSAVED YES</pattern>
+        <template>
+            <think><set name="is-curr-on-saved">YES</set></think>
+            The currently playing track is already in you music library. 
+            Would you like to delete it from your library?
+        </template>
+    </category>
+    <category>
+        <pattern>PYOK ISONSAVED NO</pattern>
+        <template>
+            <think><set name="is-curr-on-saved">NO</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>would you like to delete it from your library</that>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                REMOVE_CURR_FROM_SAVED
+            </extension></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>would you like to delete it from your library</that>
+        <template>ok no problem, enjoy the song!</template>
+    </category>
+
+    <category>
+        <pattern>PYOK ISONSAVED YES</pattern>
+        <template>
+            <think><set name="is-curr-on-saved">YES</set></think>
+            The currently playing track is already in you music library. 
+            Would you like to delete it from your library?
+        </template>
+    </category>
+    <category>
+        <pattern>PYOK ISONSAVED NO</pattern>
+        <template>
+            <think><set name="is-curr-on-saved">NO</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>would you like to delete it from your library</that>
+        <template>
+
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>would you like to delete it from your library</that>
+        <template>ok no problem, enjoy the song!</template>
     </category>
 </aiml>
