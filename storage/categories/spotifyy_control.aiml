@@ -48,7 +48,7 @@
     </category>
 
     <category>
-        <pattern>VOLUME *</pattern>
+        <pattern>SET VOLUME *</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 SET_VOLUME , '<star/>'
@@ -70,6 +70,24 @@
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 CHANGE_VOLUME , 1
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DECREASE VOLUME *</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                CHANGE_VOLUME , 0, <star/>
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>INCREASE VOLUME *</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                CHANGE_VOLUME , 1 , <star/>
             </extension></srai>
         </template>
     </category>
