@@ -52,7 +52,7 @@
     <category>
         <pattern>^ GOOD ^</pattern>
         <template>
-        Yeah! That's sound good! Let's celebrate it with a track.
+        Yeah! That sound good! Let's celebrate it with a track.
         <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 play_track_emotion , 'HAPPY'
         </extension></srai>
@@ -72,7 +72,7 @@
     <category>
         <pattern>^ TIRED ^</pattern>
         <template>
-         Aha! I can play you a energetic track or a sleepy track. What do you want?
+         Aha! I can play you an energetic track or a sleepy track. What do you want?
         </template>
     </category>
 
