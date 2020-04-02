@@ -133,60 +133,6 @@
             </random>
         </template>
     </category>
-
-
-    <!-- FIND / PLAY ITEM -->
-    <category>
-        <pattern>PYOK FIND *</pattern>
-        <template>
-            <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                PRINT_QUERY_RESULT
-            </extension></srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>PYOK PRINTRESULTS</pattern>
-        <template>
-            Which item would you like to hear?
-        </template>
-    </category>
-
-    <category>
-        <pattern>ITEM *</pattern>
-        <that>which item would you like to hear</that>
-        <template>
-            <srai>PLAY ITEM QUERY <star index="1"/></srai>
-        </template>
-    </category>  
-
-    <category>
-        <pattern>PLAY ITEM QUERY *</pattern>
-        <template>
-            <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                PLAY_FROM_QUERY , <star/>
-            </extension></srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>SHOW NEXT PAGE</pattern>
-        <that>which item would you like to hear</that>
-        <template>
-            <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                PRINT_NEXT_QUERY_PAGE
-            </extension></srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>PYOK PLAY *</pattern>
-        <template>
-            Alright, playing <star/>!
-        </template>
-    </category>
-
-
     <!-- CURRENT TRACK AND SAVED MUSIC-->
     <category>
         <pattern>PYOK ISONSAVED YES</pattern>
@@ -244,5 +190,57 @@
         <pattern>NO</pattern>
         <that>would you like to delete it from your library</that>
         <template>ok no problem, enjoy the song!</template>
+    </category>
+
+
+    <!-- FIND / PLAY ITEM -->
+    <category>
+        <pattern>PYOK FIND *</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                PRINT_QUERY_RESULT
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PYOK PRINTRESULTS</pattern>
+        <template>
+            Which item would you like to hear?
+        </template>
+    </category>
+
+    <category>
+        <pattern>ITEM *</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>PLAY ITEM QUERY <star index="1"/></srai>
+        </template>
+    </category>  
+
+    <category>
+        <pattern>PLAY ITEM QUERY *</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                PLAY_FROM_QUERY , <star/>
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SHOW NEXT PAGE</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                PRINT_NEXT_QUERY_PAGE
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PYOK PLAY *</pattern>
+        <template>
+            Alright, playing <star/>!
+        </template>
     </category>
 </aiml>
