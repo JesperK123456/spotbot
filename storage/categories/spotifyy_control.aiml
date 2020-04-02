@@ -198,4 +198,65 @@
             </extension></srai>
         </template>
     </category>
+
+    <!-- DEVICE SELECTION AND CONTROL -->
+    <category>
+        <pattern>CURRENT DEVICE</pattern>
+        <template>
+            <srai>
+                <extension path="spotifyy.extensions.SpotifyExtension">CURRENT_DEVICE</extension>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SELECT DEVICE</pattern>
+        <template>
+            <srai>
+                <extension path="spotifyy.extensions.SpotifyExtension">REFRESH_PRINT_DEVICES</extension>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>RESET DEVICE</pattern>
+        <template>
+            <srai>
+                <extension path="spotifyy.extensions.SpotifyExtension">RESET_DEVICE</extension>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SET DEVICE *</pattern>
+        <template>
+            <condition name="retry_after_device">
+                <li value="True">
+                    <think>
+                        <set name="retry_after_device">False</set>
+                    </think>
+                    <srai>
+                        <extension path="spotifyy.extensions.SpotifyExtension">RETRY, SET_DEVICE , <star/>
+                        </extension>
+                    </srai>
+                </li>
+                <li>
+                    <srai>
+                        <extension path="spotifyy.extensions.SpotifyExtension">RETRY, SET_DEVICE , <star/>
+                        </extension>
+                    </srai>
+                </li>
+            </condition>
+        </template>
+    </category>
+
+    <!-- RETRY LAST FAILED COMMAND -->
+    <category>
+        <pattern>PYRETRY</pattern>
+        <template>
+            <think><srai>
+                <extension path="spotifyy.extensions.SpotifyExtension">RETRY</extension>
+            </srai></think>
+        </template>
+    </category>
 </aiml>

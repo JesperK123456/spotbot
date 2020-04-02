@@ -92,7 +92,6 @@
     </category>
 
 <!-- SPOTIFYY PYFAILS -->
-
     <!-- GENERIC -->
     <category>
         <pattern>PYFAIL SPOTIFYY *</pattern>
@@ -102,8 +101,15 @@
     </category>
 
     <!-- NODEVICE -->
-    <category><pattern>PYFAIL SPOTIFYY NODEVICE *</pattern>
-    <template>TODO srai select device</template></category>
+    <category>
+        <pattern>PYFAIL SPOTIFYY NODEVICE *</pattern>
+        <template>
+            <think>
+                <set name="retry_after_device">True</set>
+            </think>
+            <srai>SELECT DEVICE</srai>
+        </template>
+    </category>
 
     <!-- RESTRICTIONVIOLATED -->
     <category><pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED *</pattern>
@@ -127,7 +133,7 @@
     <category><template>PYFAIL SPOTIFYY TOKENEXPIRED *</template>
     <template>TODO srai refresh token</template></category>
 
-
+<!-- PLAYBACK FAIL -->
     <category>
         <pattern>PYFAIL PLAYB</pattern>
         <template>
@@ -141,33 +147,7 @@
         </template>
     </category>
 
-    <category>
-        <pattern>PMODPYFAIL</pattern>
-        <template>
-            shoot. modifiying your playback was not so easy as it seemed.
-        </template>
-    </category>
-    <category>
-        <pattern>PMODPYFAIL *</pattern>
-        <template>
-            shoot. modifiying your playback was not so easy as it seemed: <star/>
-        </template>
-    </category>
-
-    <category>
-        <pattern>ADDPYFAIL</pattern>
-        <template>
-            i'm sorry, Something went wrong trying to add this song to your library.
-        </template>
-    </category>
-    <category>
-        <pattern>ADDPYFAIL *</pattern>
-        <template>
-            i'm sorry, Something went wrong trying to add this song to your library: <star/>
-        </template>
-    </category>
-
-
+<!-- FIND PLAY FAIL -->
     <category>
         <pattern>PYFAIL FIND</pattern>
         <template>
@@ -194,16 +174,12 @@
         </template>
     </category>
 
+<!-- DEVICE FAILS -->
     <category>
-        <pattern>PLAYPYFAIL</pattern>
+        <pattern>PYFAIL SETDEVICE OUTOFRANGE *</pattern>
         <template>
-            i didn't do that quite right, my bad.
-        </template>
-    </category>
-    <category>
-        <pattern>PLAYPYFAIL *</pattern>
-        <template>
-            i didn't do that quite right, this is what went wrong: <star/>
+            That one doen't exist! Please only select an item up to and including <star/>
+            <srai>SELECT DEVICE</srai>
         </template>
     </category>
 </aiml>

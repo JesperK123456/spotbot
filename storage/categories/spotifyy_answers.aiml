@@ -342,4 +342,89 @@
             Alright, playing <star/>!
         </template>
     </category>
+
+<!-- DEVICE SELECTION AND CONTROL -->
+    <category>
+        <pattern>PYOK CURRDEVICE NONE</pattern>
+        <template>No specific device is currently set, I will play on the first device that becomes active!</template>
+    </category>
+
+    <category>
+        <pattern>PYOK CURRDEVICE *</pattern>
+        <template>
+            <random>
+                <li>That's <star/>!</li>
+                <li>Currently, the device I play on is <star/></li>
+                <li>The current device is <star/></li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PYOK DEVICESREFRESH *</pattern>
+        <template>
+            <think><set name="no"><star/></set></think>
+            <condition name="no">
+                <li value="0">It seems like there are no devices available. Could you open spotify for me?</li>
+                <li value="1"><srai>SET DEVICE 0</srai></li>
+                <li>What device would you like to listen to?</li>
+            </condition>
+        </template>
+    </category>
+    <category>
+        <pattern>^ DONE ^</pattern>
+        <that>Could you open spotify for me</that>
+        <template><srai>SET DEVICE</srai></template>
+    </category>
+    <category>
+        <pattern>^ DID ^</pattern>
+        <that>Could you open spotify for me</that>
+        <template><srai>SET DEVICE</srai></template>
+    </category>
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>Could you open spotify for me</that>
+        <template><srai>SET DEVICE</srai></template>
+    </category>
+    <category>
+        <pattern>^ SURE ^</pattern>
+        <that>Could you open spotify for me</that>
+        <template><srai>SET DEVICE</srai></template>
+    </category>
+    <category>
+        <pattern>^ OK ^</pattern>
+        <that>Could you open spotify for me</that>
+        <template><srai>SET DEVICE</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ ITEM * ^</pattern>
+        <that>What device would you like to listen to</that>
+        <template>
+            <srai>
+                SET DEVICE <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PYOK SETDEVICE NONE</pattern>
+        <template>
+            <random>
+                <li>Alright, the device is set to default</li>
+                <li>Current device is set back to default!</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PYOK SETDEVICE *</pattern>
+        <template>
+            <random>
+                <li><star/> is now the active device</li>
+                <li>Active device set to <star/>, let's get some tunes going!</li>
+                <li>I will send my music to <star/> now.</li>
+            </random>
+        </template>
+    </category>
 </aiml>
