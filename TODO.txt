@@ -26,3 +26,11 @@
 ================
 - now playing command maken
 - error handling in python code
+
+
+SPOTIFYY:
+- devices
+- refreshtoken
+- add to queue
+- recommendations (op basis van artist, genre, track)
+    -> kan print_query_results() en play_from_query() gebruiken

@@ -55,7 +55,7 @@
             <extension path="spotifyy.extensions.SpotifyExtension">
                 HELP_FUNCTIONS
             </extension>
-            i hope this will understand what I can and what I do.
+            i hope this has helped you understand what I can and what I do.
         </template>
     </category>
 
@@ -103,10 +103,94 @@
     <!-- =================== -->
     <!-- LOGIN / USER CHANGE -->
     <!-- =================== -->
+    <category>
+        <pattern>I WANT TO LOGIN</pattern>
+        <template><srai>LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO LOGIN *</pattern>
+        <template><srai>LOGIN <star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>CAN YOU LOG ME IN</pattern>
+        <template><srai>LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>CAN YOU LOG ME OUT</pattern>
+        <template><srai>LOGOUT</srai></template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO REMOVE YOU</pattern>
+        <template><srai>LOGOUT ALL</srai></template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO REMOVE *</pattern>
+        <template><srai>LOGOUT ALL <star/></srai></template>
+    </category>
+
 
     <!-- ======== -->
     <!-- PLAYBACK -->
     <!-- ======== -->
+    <category>
+        <pattern>PLEASE PLAY</pattern>
+        <template><srai>PLAY</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ RESUME ^</pattern>
+        <template><srai>PLAY</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ PAUSE ^</pattern>
+        <template><srai>PAUSE</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ NEXT ^</pattern>
+        <template><srai>NEXT TRACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ SKIP ^</pattern>
+        <template><srai>NEXT TRACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ PREVIOUS ^</pattern>
+        <template><srai>PREV TRACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ REWIND ^</pattern>
+        <template><srai>REWIND</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ SET VOLUME TO * ^</pattern>
+        <template><srai>VOLUME <star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>^ VOLUME TO * ^</pattern>
+        <template><srai>VOLUME <star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>^ DECREASE VOLUME ^</pattern>
+        <template><srai>DECREASE VOLUME</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ INCREASE VOLUME ^</pattern>
+        <template><srai>INCREASE VOLUME</srai></template>
+    </category>
 
     <!-- ================ -->
     <!-- SHUFFLE / REPEAT -->

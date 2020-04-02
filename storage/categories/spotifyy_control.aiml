@@ -38,6 +38,42 @@
         </template>
     </category>
 
+    <category>
+        <pattern>REWIND</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                REWIND
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>VOLUME *</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                SET_VOLUME , '<star/>'
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DECREASE VOLUME</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                CHANGE_VOLUME , 0
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>INCREASE VOLUME</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                CHANGE_VOLUME , 1
+            </extension></srai>
+        </template>
+    </category>
+
 
     <!-- SHUFFLE -->
     <category>

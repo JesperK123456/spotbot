@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0" encoding="UTF-8">
 
+    <!-- ===== -->
+    <!-- LOGIN -->
+    <!-- ===== -->
     <category>
         <pattern>YINITIALQUESTION</pattern>
         <template>
@@ -83,6 +86,78 @@
         </template>
     </category>
 
+
+    <!-- ====== -->
+    <!-- LOGOUT -->
+    <!-- ====== -->
+    <category>
+        <pattern>LOGOUT</pattern>
+        <template>
+            What is the name of the user you want to logout?
+        </template>
+    </category>
+
+    <category>
+        <pattern>LOGOUT ALL</pattern>
+        <template>
+            What is the name of the user you want to remove?
+        </template>
+    </category>
+
+    <category>
+        <pattern>THE USERNAME IS *</pattern>
+        <that>what is the name of the user you want to logout</that>
+        <template>
+            <srai>LOGOUT <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LOGOUT *</pattern>
+        <template>
+            <think><set name="user-to-logout"><star/></set></think>
+            Do you want to remove me from your authorized apps too?
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>do you want to remove me from your authorized apps too</that>
+        <template>
+            I understand, here you go.
+            <srai>LOGOUT ALL <get name="user-to-logout"/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>do you want to remove me from your authorized apps too</that>
+        <template>
+            Thank you, here you go.
+            <srai>LOGOUT NORMAL <get name="user-to-logout"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LOGOUT NORMAL *</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                LOGOUT , '<star/>' , 0
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LOGOUT ALL *</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                LOGOUT , '<star/>' , 1
+            </extension></srai>
+        </template>
+    </category>
+
+    <!-- ==== -->
+    <!-- EXIT -->
+    <!-- ==== -->
     <category>
         <pattern>YEXITRESPONSE</pattern>
         <template><think><extension path="spotifyy.extensions.SpotifyExtension">

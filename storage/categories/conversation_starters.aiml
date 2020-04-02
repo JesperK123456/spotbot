@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
+  <category>
+    <pattern>TALK</pattern>
+    <template>
+      <random>
+        <li>What did you do today?</li>
+        <li>How do you feel?</li>
+        <li>What is your mood at the moment?</li>
+        <li>Tell me more</li>
+      </random>
+    </template>
+  </category>
 
-<category>
-  <pattern>TALK</pattern>
-  <template>
-    <random>
-      <li>What did you do today?</li>
-      <li>How do you feel?</li>
-      <li>What is your mood at the moment?</li>
-      <li>Tell me more</li>
-    </random>
-</template>
-</category>
+  <category><pattern>^ MUSIC ^</pattern>
+    <template><srai>^ track ^</srai></template>
+  </category>
 
-<category><pattern>^ MUSIC ^</pattern>
-<template><srai>^ track ^</srai></template>
-</category>
-
-<category><pattern>^ track ^</pattern>
-<template><random>
-  <li>Do you have a certain genre in mind?</li>
-  <li>Do you want a track of a specific artist?</li>
-  <li>Do you know a specific track?</li>
-</random></template>
-</category>
+  <category><pattern>^ TRACK ^</pattern>
+    <template><random>
+      <li>Do you have a certain genre in mind?</li>
+      <li>Do you want a track of a specific artist?</li>
+      <li>Do you know a specific track?</li>
+    </random></template>
+  </category>
 
 <!-- To handle: Do you have a certain genre in mind? -->
    <category>
