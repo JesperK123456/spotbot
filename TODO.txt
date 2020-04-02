@@ -40,3 +40,5 @@ AIML:
 - emotions
 - spotifyy_chat
 - device control in spotifyy_control
+- add to queue
+- add song to playlist
