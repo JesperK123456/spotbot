@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-
     <category>
         <pattern>I AM FEELING *</pattern>
         <template>
@@ -118,7 +117,7 @@
         <template>
         I will surprise you! This track is based on the mood from our conversation.
         <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                play_track_positiviy , '<get name="positivity"/>'
+                play_track_positivity , '<get name="positivity"/>'
         </extension></srai></template>
     </category>
 
