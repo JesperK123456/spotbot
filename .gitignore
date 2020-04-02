@@ -110,3 +110,4 @@ storage/conversations
 
 .cache-*
 session.pickle
+uname.txt

@@ -32,7 +32,7 @@
     <category>
         <pattern>YES</pattern>
         <that> would you like to login now </that>
-        <template> what is your spotify username? </template>
+        <template> what's your spotify username? </template>
     </category> 
 
     <category>
@@ -64,21 +64,21 @@
     <!-- catch and handle spotify username prompt -->
     <category>
         <pattern>*</pattern>
-        <that> what is your spotify username </that>
+        <that> what s your spotify username </that>
         <template>
             <srai>LOGIN <star/></srai>
         </template>
     </category>
     <category>
         <pattern>MY USERNAME IS *</pattern>
-        <that> what is your spotify username </that>
+        <that> what s your spotify username </that>
         <template>
             <srai>LOGIN <star/></srai>
         </template>
     </category>
     <category>
         <pattern>MY SPOTIFY USERNAME IS *</pattern>
-        <that> what is your spotify username </that>
+        <that> what s your spotify username </that>
         <template>
             <srai>LOGIN <star/></srai>
         </template>

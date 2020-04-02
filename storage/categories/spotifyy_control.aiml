@@ -117,4 +117,13 @@
             </extension></srai>
         </template>
     </category>
+
+    <category>
+        <pattern>CURRENTLY PLAYING</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                CURRENT_PLAYBACK
+            </extension></srai>
+        </template>
+    </category>
 </aiml>
