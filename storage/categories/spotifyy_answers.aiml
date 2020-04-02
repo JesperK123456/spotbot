@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0" encoding="UTF-8">
+    <!-- GENERAL PYOK -->
+    <category><pattern>PYOK *</pattern>
+    <template>That worked, yay!</template></category>
 
     <!-- LOGIN -->
     <category>
-        <pattern>LOGINOK</pattern>
+        <pattern>PYOK LOGIN</pattern>
         <template>
             <think>
                 <set name="item-type">track</set>
@@ -20,7 +23,7 @@
 
     <!-- PLAYBACK -->
     <category>
-        <pattern>PLAYBOK</pattern>
+        <pattern>PYOK PLAYB</pattern>
         <template>
             <random>
                 <li> enjoy it! </li>
@@ -32,7 +35,7 @@
     </category>
 
     <category>
-        <pattern>PAUSEOK</pattern>
+        <pattern>PYOK PAUSE</pattern>
         <template>
             <random>
                 <li> i've paused your music </li>
@@ -44,16 +47,17 @@
     </category>
 
     <category>
-        <pattern>PLAYBOK *</pattern>
-        <template>
-            Alright, playing <star/>!
-        </template>
+        <pattern>PYOK CURRPLAYB *</pattern>
+        <template><random>
+        <li>You're currently listening to <star/>!</li>
+        <li>This song is called <star/></li>
+        </random></template>
     </category>
 
 
     <!-- SHUFFLE -->
     <category>
-        <pattern>SHUFFLEOK *</pattern>
+        <pattern>PYOK PAUSE *</pattern>
         <template>
             <random>
                 <li> shuffle is now <star/> </li>
@@ -66,7 +70,7 @@
 
     <!-- REPEAT -->
     <category>
-        <pattern>REPEATOK TRACK</pattern>
+        <pattern>PYOK REPEAT TRACK</pattern>
         <template>
             <think><srai>IS CURR ON SAVED</srai></think>
             <condition name="is-curr-on-saved">
@@ -95,7 +99,7 @@
     </category>
 
     <category>
-        <pattern>REPEATOK CONTEXT</pattern>
+        <pattern>PYOK REPEAT CONTEXT</pattern>
         <template>
             <random>
                 <li> repeat is now set to context </li>
@@ -106,7 +110,7 @@
     </category>
 
     <category>
-        <pattern>REPEATOK OFF</pattern>
+        <pattern>PYOK REPEAT OFF</pattern>
         <template>
             <random>
                 <li> repeat is now off </li>
@@ -119,7 +123,7 @@
 
     <!-- ADD TO SAVED -->
     <category>
-        <pattern>ADDOK *</pattern>
+        <pattern>PYOK ADD *</pattern>
         <template>
             <random>
                 <li> <star/> has been added to your music library </li>
@@ -133,7 +137,7 @@
 
     <!-- FIND / PLAY ITEM -->
     <category>
-        <pattern>FINDOK *</pattern>
+        <pattern>PYOK FIND *</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 PRINT_QUERY_RESULT
@@ -142,7 +146,7 @@
     </category>
 
     <category>
-        <pattern>PRINTRESULTSOK</pattern>
+        <pattern>PYOK PRINTRESULTS</pattern>
         <template>
             Which item would you like to hear?
         </template>
@@ -176,7 +180,7 @@
     </category>
 
     <category>
-        <pattern>PLAYOK *</pattern>
+        <pattern>PYOK PLAY *</pattern>
         <template>
             Alright, playing <star/>!
         </template>

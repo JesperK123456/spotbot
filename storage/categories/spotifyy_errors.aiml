@@ -26,7 +26,7 @@
     -->
 
     <category>
-        <pattern>ERRFAIL</pattern>
+        <pattern>PYFAIL ERROR</pattern>
         <template>
             <random>
                 <li> i'm so confused, I don't even know what went wrong </li>
@@ -50,14 +50,14 @@
         </template>
     </category>
     <category>
-        <pattern>LOGINFAIL</pattern>
+        <pattern>PYFAIL LOGIN</pattern>
         <template>
             Trying to log you in failed, sorry.
             Would you like to try to login again?
         </template>
     </category>
     <category>
-        <pattern>LOGINFAIL *</pattern>
+        <pattern>PYFAIL LOGIN *</pattern>
         <template>
             <think>
                 <set name="logged-in">No</set>
@@ -67,7 +67,7 @@
         </template>
     </category>
     <category>
-        <pattern>LOGINFAILNONAME</pattern>
+        <pattern>PYFAIL LOGIN NONAME</pattern>
         <template>
             <think>
                 <set name="logged-in">No</set>
@@ -77,41 +77,77 @@
         </template>
     </category>
 
+<!-- SPOTIFYY PYFAILS -->
+
+    <!-- GENERIC -->
+    <category>
+        <pattern>PYFAIL SPOTIFYY *</pattern>
+        <template>
+            Oops! Spotify didn't like that...
+        </template>
+    </category>
+
+    <!-- NODEVICE -->
+    <category><pattern>PYFAIL SPOTIFYY NODEVICE *</pattern>
+    <template>TODO srai select device</template></category>
+
+    <!-- RESTRICTIONVIOLATED -->
+    <category><pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED *</pattern>
+    <template>That's not possible at the moment</template></category>
+
+    <category><pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED PAUSE</pattern>
+    <template>It seems like your music is already paused</template></category>
+
+    <category><pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED PLAY</pattern>
+    <template>It seems like your music is already playing!</template></category>
+
+    <category><pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED PREVTRACK</pattern>
+    <template>This seems to be the first song of the queue</template></category>
+
+    <!-- INVALIDREQUEST -->
+    <!-- TODO verschillende errors bij verschillende requests -->
+    <category><pattern>PYFAIL SPOTIFYY INVALIDREQUEST *</pattern>
+    <template>That didn't work. It's my fault, not yours...</template></category>
+
+    <!-- TOKENEXPIRED -->
+    <category><template>PYFAIL SPOTIFYY TOKENEXPIRED *</template>
+    <template>TODO srai refresh token</template></category>
+
 
     <category>
-        <pattern>PLAYBFAIL</pattern>
+        <pattern>PYFAIL PLAYB</pattern>
         <template>
             too bad! Something went wrong with your playback.
         </template>
     </category>
     <category>
-        <pattern>PLAYBFAIL *</pattern>
+        <pattern>PYFAIL PLAYB *</pattern>
         <template>
             too bad! Something went wrong with your playback: <star/>
         </template>
     </category>
 
     <category>
-        <pattern>PMODFAIL</pattern>
+        <pattern>PMODPYFAIL</pattern>
         <template>
             shoot. modifiying your playback was not so easy as it seemed.
         </template>
     </category>
     <category>
-        <pattern>PMODFAIL *</pattern>
+        <pattern>PMODPYFAIL *</pattern>
         <template>
             shoot. modifiying your playback was not so easy as it seemed: <star/>
         </template>
     </category>
 
     <category>
-        <pattern>ADDFAIL</pattern>
+        <pattern>ADDPYFAIL</pattern>
         <template>
             i'm sorry, Something went wrong trying to add this song to your library.
         </template>
     </category>
     <category>
-        <pattern>ADDFAIL *</pattern>
+        <pattern>ADDPYFAIL *</pattern>
         <template>
             i'm sorry, Something went wrong trying to add this song to your library: <star/>
         </template>
@@ -119,39 +155,39 @@
 
 
     <category>
-        <pattern>FINDFAIL</pattern>
+        <pattern>PYFAIL FIND</pattern>
         <template>
             finding this item didn't go quite right
         </template>
     </category>
     <category>
-        <pattern>FINDFAIL *</pattern>
+        <pattern>PYFAIL FIND *</pattern>
         <template>
             finding this item didn't go quite right, this is what went wrong: <star/>
         </template>
     </category>
     <category>
-        <pattern>FINDFAILTYPE</pattern>
+        <pattern>PYFAIL FIND INVALIDTYPE</pattern>
         <template>
             i did not quite understand what you meant with <get name="item-type"/>. 
             Please only ask me to look for a track, an album, an artist or a playlist
         </template>
     </category>
     <category>
-        <pattern>FINDFAILNORESULTS</pattern>
+        <pattern>PYFAIL FIND NORESULTS</pattern>
         <template>
             oh no, I could not find any results for that :(
         </template>
     </category>
 
     <category>
-        <pattern>PLAYFAIL</pattern>
+        <pattern>PLAYPYFAIL</pattern>
         <template>
             i didn't do that quite right, my bad.
         </template>
     </category>
     <category>
-        <pattern>PLAYFAIL *</pattern>
+        <pattern>PLAYPYFAIL *</pattern>
         <template>
             i didn't do that quite right, this is what went wrong: <star/>
         </template>
