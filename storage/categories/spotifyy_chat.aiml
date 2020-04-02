@@ -279,11 +279,6 @@
     </category>
 
     <category>
-        <pattern>SET VOLUME TO *</pattern>
-        <template><srai>SET VOLUME <star/></srai></template>
-    </category>
-
-    <category>
         <pattern>^ SET VOLUME TO * ^</pattern>
         <template><srai>SET VOLUME <star index="2"/></srai></template>
     </category>
@@ -612,6 +607,38 @@
         </template>
 	</category>
 
+    <category>
+        <pattern>^ SET TYPE TRACK ^</pattern>
+        <template>
+            <think><set name="item-type">track</set></think>
+            Setting item type to track
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ SET TYPE ALBUM ^</pattern>
+        <template>
+            <think><set name="item-type">album</set></think>
+            Setting item type to track
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ SET TYPE ARTIST ^</pattern>
+        <template>
+            <think><set name="item-type">artist</set></think>
+            Setting item type to track
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ SET TYPE PLAYLIST ^</pattern>
+        <template>
+            <think><set name="item-type">playlist</set></think>
+            Setting item type to track
+        </template>
+	</category>
+
 
     <!-- ============== -->
     <!-- DEVICE CONTROL -->
@@ -623,6 +650,21 @@
             Or you can [select device] and then [device [device_number]]/[item [device_number]] to select the new playback device.
             With [reset device] you can set the playback device to the default playback.
         </template>
+	</category>
+
+    <category>
+        <pattern>^ CURRENT ^ DEVICE ^</pattern>
+        <template><srai>CURRENT DEVICE</srai></template>
+	</category>
+
+    <category>
+        <pattern>^ SELECT ^ DEVICE ^</pattern>
+        <template><srai>SELECT DEVICE</srai></template>
+	</category>
+
+    <category>
+        <pattern>^ RESET ^ DEVICE ^</pattern>
+        <template><srai>RESET DEVICE</srai></template>
 	</category>
 
 
