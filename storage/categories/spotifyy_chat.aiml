@@ -249,6 +249,21 @@
     </category>
 
     <category>
+        <pattern>^ VOLUME MAX ^</pattern>
+        <template><srai>SET VOLUME 100</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ VOLUME MIN ^</pattern>
+        <template><srai>SET VOLUME 0</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ MUTE ^</pattern>
+        <template><srai>SET VOLUME 0</srai></template>
+    </category>
+
+    <category>
         <pattern>^ SET VOLUME TO * ^</pattern>
         <template><srai>SET VOLUME <star index="2"/></srai></template>
     </category>
@@ -529,7 +544,7 @@
 
     <!--play-->
     <category>
-        <pattern>^ WHAT CAN I DO WITH PLAY ITEM ^</pattern>
+        <pattern>^ WHAT CAN I DO WITH PLAY ^</pattern>
         <template><srai>HELP PLAY AND FIND</srai></template>
 	</category>
 
