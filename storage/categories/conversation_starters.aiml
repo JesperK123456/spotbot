@@ -37,9 +37,9 @@
       <pattern>_</pattern>
       <that>Which genre do you like</that>
       <template>Ok! Let's play some: <set name = "genre"> <star/>! </set>
-      <extension path="spotifyy.spotifyy.SpotifyExtension">
+      <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 play_track_genre, <get name = "genre"></get>
-        </extension>
+        </extension></srai>
       </template>
    </category>
 
@@ -94,7 +94,7 @@
       <pattern>YES</pattern>
       <that>Ok No problem, do you want me to surprise you</that>
       <template>OK! I will surprise you! This track is based the mood from our conversation.
-        <extension path="spotifyy.spotifyy.SpotifyExtension">
+        <extension path="spotifyy.extensions.SpotifyExtension">
                 play_track_positiviy, '<get name="positivity"/>'
         </extension>
       </template>
