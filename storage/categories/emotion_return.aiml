@@ -16,6 +16,13 @@
         </template>
 </category>
 
+<category>
+        <pattern>POSITIVITYOK</pattern>
+        <template>
+            Do you like this track?
+        </template>
+</category>
+
 <!-- To handle: Do you like this track -->
 <category>
       <pattern>YES</pattern>
