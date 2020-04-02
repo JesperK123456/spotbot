@@ -609,6 +609,13 @@
         </template>
 	</category>
 
+    <category>
+        <pattern>^ TYPE ^</pattern>
+        <template>
+            Currently set item type is <get name="item-type">playlist</get>
+        </template>
+	</category>
+
 
     <!-- ============== -->
     <!-- DEVICE CONTROL -->

@@ -1,1 +1,1 @@
-self.session.play()
+self.session.find(' distant early warning rio live ',' track ',play=1)
