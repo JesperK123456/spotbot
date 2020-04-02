@@ -199,6 +199,24 @@
         </template>
     </category>
 
+    <category>
+        <pattern>ENQUEUE ITEM *</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                FIND , '<star/>' , '<get name="item-type"/>' , enqueue=1 
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUERY NEXTPAGE</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                PRINT_NEXT_QUERY_PAGE
+            </extension></srai>
+        </template>
+    </category>
+
     <!-- DEVICE SELECTION AND CONTROL -->
     <category>
         <pattern>CURRENT DEVICE</pattern>
@@ -242,7 +260,7 @@
                 </li>
                 <li>
                     <srai>
-                        <extension path="spotifyy.extensions.SpotifyExtension">RETRY, SET_DEVICE , <star/>
+                        <extension path="spotifyy.extensions.SpotifyExtension">SET_DEVICE , <star/>
                         </extension>
                     </srai>
                 </li>

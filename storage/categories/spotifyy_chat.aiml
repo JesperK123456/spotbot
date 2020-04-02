@@ -484,7 +484,7 @@
 	</category>
 
     <category>
-        <pattern>^ HELP FIND ^</pattern>
+        <pattern>^ HELP ^ FIND ^</pattern>
         <template><srai>HELP PLAY AND FIND</srai></template>
 	</category>
 
@@ -527,6 +527,70 @@
         </template>
 	</category>
 
+    <category>
+        <pattern>^ FIND THE TRACK *</pattern>
+        <template>
+            <think><set name="item-type">track</set></think>
+            <srai>FIND ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ FIND THE ALBUM *</pattern>
+        <template>
+            <think><set name="item-type">album</set></think>
+            <srai>FIND ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ FIND THE ARTIST *</pattern>
+        <template>
+            <think><set name="item-type">artist</set></think>
+            <srai>FIND ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ FIND THE PLAYLIST *</pattern>
+        <template>
+            <think><set name="item-type">playlist</set></think>
+            <srai>FIND ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ FIND ME THE TRACK *</pattern>
+        <template>
+            <think><set name="item-type">track</set></think>
+            <srai>FIND ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ FIND ME THE ALBUM *</pattern>
+        <template>
+            <think><set name="item-type">album</set></think>
+            <srai>FIND ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ FIND ME THE ARTIST *</pattern>
+        <template>
+            <think><set name="item-type">artist</set></think>
+            <srai>FIND ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ FIND ME THE PLAYLIST *</pattern>
+        <template>
+            <think><set name="item-type">playlist</set></think>
+            <srai>FIND ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
     <!--play-->
     <category>
         <pattern>^ WHAT CAN I DO WITH PLAY ITEM ^</pattern>
@@ -534,49 +598,179 @@
 	</category>
 
     <category>
-        <pattern>^ HELP PLAY ^</pattern>
+        <pattern>^ HELP ^ PLAY ^</pattern>
         <template><srai>HELP PLAY AND FIND</srai></template>
 	</category>
 
     <category>
-        <pattern>^ PLAY *</pattern>
+        <pattern>^ PLAY TRACK *</pattern>
+        <template>
+            <think><set name="item-type">track</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY ALBUM *</pattern>
+        <template>
+            <think><set name="item-type">album</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY ARTIST *</pattern>
+        <template>
+            <think><set name="item-type">artist</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY PLAYLIST *</pattern>
+        <template>
+            <think><set name="item-type">playlist</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY THE TRACK *</pattern>
+        <template>
+            <think><set name="item-type">track</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY THE ALBUM *</pattern>
+        <template>
+            <think><set name="item-type">album</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY THE ARTIST *</pattern>
+        <template>
+            <think><set name="item-type">artist</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY ME THE PLAYLIST *</pattern>
+        <template>
+            <think><set name="item-type">playlist</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY ME THE TRACK *</pattern>
+        <template>
+            <think><set name="item-type">track</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY ME THE ALBUM *</pattern>
+        <template>
+            <think><set name="item-type">album</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY ME THE ARTIST *</pattern>
+        <template>
+            <think><set name="item-type">artist</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY ME THE PLAYLIST *</pattern>
+        <template>
+            <think><set name="item-type">playlist</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>^ PLAY ME A PLAYLIST *</pattern>
+        <template>
+            <think><set name="item-type">playlist</set></think>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+    <category>
+        <pattern>* PLAY *</pattern>
         <template>
             <srai>PLAY ITEM <star index="2"/></srai>
         </template>
 	</category>
-    
+
     <category>
-        <pattern>^ PLAY ^ TRACK *</pattern>
+        <pattern>* PLAY ME *</pattern>
+        <template>
+            <srai>PLAY ITEM <star index="2"/></srai>
+        </template>
+	</category>
+
+
+    <!-- ENQUEUE -->
+    <category>
+        <pattern>^ WHAT CAN I DO WITH ENQUEUE ITEM ^</pattern>
+        <template><srai>HELP PLAY AND FIND</srai></template>
+	</category>
+
+    <category>
+        <pattern>^ HELP ^ ENQUEUE ^</pattern>
+        <template><srai>HELP PLAY AND FIND</srai></template>
+	</category>
+
+    <category>
+        <pattern>^ ENQUEUE *</pattern>
         <template>
             <think><set name="item-type">track</set></think>
-            <srai>PLAY ITEM <star index="3"/></srai>
+            <srai>ENQUEUE ITEM <star index="2"/></srai>
         </template>
 	</category>
 
     <category>
-        <pattern>^ PLAY ^ ALBUM *</pattern>
+        <pattern>^ ENQUEUE ^ TRACK *</pattern>
         <template>
-            <think><set name="item-type">album</set></think>
-            <srai>PLAY ITEM <star index="3"/></srai>
+            <think><set name="item-type">track</set></think>
+            <srai>ENQUEUE ITEM <star index="3"/></srai>
         </template>
 	</category>
 
     <category>
-        <pattern>^ PLAY ^ ARTIST *</pattern>
+        <pattern>^ ENQUEUE ^ ALBUM *</pattern>
         <template>
-            <think><set name="item-type">artist</set></think>
-            <srai>PLAY ITEM <star index="3"/></srai>
+            I can only enqueue tracks...
         </template>
 	</category>
 
     <category>
-        <pattern>^ PLAY ^ PLAYLIST *</pattern>
+        <pattern>^ ENQUEUE ^ ARTIST *</pattern>
         <template>
-            <think><set name="item-type">playlist</set></think>
-            <srai>PLAY ITEM <star index="3"/></srai>
+            I can only enqueue tracks...
         </template>
 	</category>
 
+    <category>
+        <pattern>^ ENQUEUE ^ PLAYLIST *</pattern>
+        <template>
+            I can only enqueue tracks...
+        </template>
+	</category>
+
+
+    <!-- SET TYPE -->
     <category>
         <pattern>^ SET ^ TYPE ^ TRACK ^</pattern>
         <template>
