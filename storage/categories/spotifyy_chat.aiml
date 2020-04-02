@@ -60,12 +60,7 @@
     </category>
 
     <category>
-        <pattern>HELP ME</pattern>
-        <template><srai>HELP</srai></template>
-    </category>
-
-    <category>
-        <pattern>PLEASE HELP ME</pattern>
+        <pattern>^ HELP ^</pattern>
         <template><srai>HELP</srai></template>
     </category>
 
@@ -99,27 +94,37 @@
         <template><srai>HELP FUNCTIONS</srai></template>
     </category>
 
+    <category>
+        <pattern>WHAT DO YOU DO</pattern>
+        <template><srai>HELP</srai></template>
+    </category>
+
 
     <!-- =================== -->
     <!-- LOGIN / USER CHANGE -->
     <!-- =================== -->
     <category>
-        <pattern>I WANT TO LOGIN</pattern>
+        <pattern>^ LOGIN ^</pattern>
         <template><srai>LOGIN</srai></template>
     </category>
 
     <category>
-        <pattern>I WANT TO LOGIN *</pattern>
-        <template><srai>LOGIN <star/></srai></template>
+        <pattern>^ LOGIN * ^</pattern>
+        <template><srai>LOGIN <star index="2"/></srai></template>
     </category>
 
     <category>
-        <pattern>CAN YOU LOG ME IN</pattern>
+        <pattern>^ LOGIN AS * ^</pattern>
+        <template><srai>LOGIN <star index="2"/></srai></template>
+    </category>
+
+    <category>
+        <pattern>^ LOG ME IN ^</pattern>
         <template><srai>LOGIN</srai></template>
     </category>
 
     <category>
-        <pattern>CAN YOU LOG ME OUT</pattern>
+        <pattern>^ LOG ME OUT ^</pattern>
         <template><srai>LOGOUT</srai></template>
     </category>
 
@@ -137,6 +142,7 @@
     <!-- ======== -->
     <!-- PLAYBACK -->
     <!-- ======== -->
+    <!--playback-->
     <category>
         <pattern>^ WHAT CAN I DO WITH PLAYBACK ^</pattern>
         <template>
@@ -148,7 +154,32 @@
     </category>
 
     <category>
-        <pattern>PLEASE PLAY</pattern>
+        <pattern>^ WHAT CAN I DO WITH PLAY ^</pattern>
+        <template><srai>WHAT CAN I DO WITH PLAYBACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ WHAT CAN I DO WITH PAUSE ^</pattern>
+        <template><srai>WHAT CAN I DO WITH PLAYBACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ WHAT CAN I DO WITH NEXT ^</pattern>
+        <template><srai>WHAT CAN I DO WITH PLAYBACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ WHAT CAN I DO WITH PREVIOUS ^</pattern>
+        <template><srai>WHAT CAN I DO WITH PLAYBACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ WHAT CAN I DO WITH REWIND ^</pattern>
+        <template><srai>WHAT CAN I DO WITH PLAYBACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ PLAY ^</pattern>
         <template><srai>PLAY</srai></template>
     </category>
 
@@ -194,15 +225,38 @@
         </template>
     </category>
 
+    <!--volume-->
     <category>
         <pattern>^ VOLUME ^</pattern>
         <template>
-            You can [increase], [decrease] or [set volume to].
+            You can [decrease], [increase], [decrease with [percentage]], [increase with [percentage]] or [set volume to].
             What do you want me to do with the volume.
         </template>
     </category>
 
+    <category>
+        <pattern>^ DECREASE ^</pattern>
+        <that>what do you want me to do with the volume</that>
+        <template><srai>DECREASE VOLUME</srai></template>
+    </category>
 
+    <category>
+        <pattern>^ INCREASE ^</pattern>
+        <that>what do you want me to do with the volume</that>
+        <template><srai>INCREASE VOLUME</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ DECREASE WITH * ^</pattern>
+        <that>what do you want me to do with the volume</that>
+        <template><srai>DECREASE VOLUME <star index="2"/></srai></template>
+    </category>
+
+    <category>
+        <pattern>^ INCREASE WITH * ^</pattern>
+        <that>what do you want me to do with the volume</that>
+        <template><srai>INCREASE VOLUME <star index="2"/></srai></template>
+    </category>
 
     <category>
         <pattern>^ VOLUME * ^</pattern>
@@ -215,7 +269,7 @@
     </category>
 
     <category>
-        <pattern>^ VOLUME TO * ^</pattern>
+        <pattern>^ SET VOLUME TO * ^</pattern>
         <template><srai>SET VOLUME <star index="2"/></srai></template>
     </category>
 
@@ -253,9 +307,13 @@
     <!-- ================ -->
     <!-- SHUFFLE / REPEAT -->
     <!-- ================ -->
+    <!--shuffle-->
     <category>
         <pattern>^ WHAT CAN I DO WITH SHUFFLE ^</pattern>
-        <template>shuffle can be set to either [on] or [off]</template>
+        <template>
+            Shuffle can be set to either [on] or [off].
+            Do you want shuffle on or off?
+        </template>
     </category>
 
     <category>
@@ -285,9 +343,75 @@
         <template><srai>SHUFFLE ON</srai></template>
     </category>
 
+    <!--repeat-->
+    <category>
+        <pattern>^ WHAT CAN I DO WITH REPEAT ^</pattern>
+        <template>
+            Repeat can be set to either [track] or [context] or [off].
+            Do you want repeat set on track, context or off?
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ REPEAT ^</pattern>
+        <template>Do you want repeat set on track, context or off?</template>
+    </category>
+
+    <category>
+        <pattern>^ TRACK ^</pattern>
+        <that>do you want repeat set on track context or off</that>
+        <template><srai>REPEAT TRACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ CONTEXT ^</pattern>
+        <that>do you want repeat set on track context or off</that>
+        <template><srai>REPEAT CONTEXT</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ OFF ^</pattern>
+        <that>do you want repeat set on track context or off</that>
+        <template><srai>REPEAT OFF</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ REPEAT TRACK ^</pattern>
+        <template><srai>REPEAT TRACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ REPEAT CONTEXT ^</pattern>
+        <template><srai>REPEAT CONTEXT</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ REPEAT OFF ^</pattern>
+        <template><srai>REPEAT OFF</srai></template>
+    </category>
+
     <!-- ========================================== -->
     <!-- ADD SONG / ALBUM TO SAVED SONGS / PLAYLIST -->
     <!-- ========================================== -->
+    <category>
+        <pattern>^ CURRENT ^</pattern>
+        <template><srai>CURRENTLY PLAYING</srai></template>
+	</category>
+
+    <category>
+        <pattern>^ NOW PLAYING ^</pattern>
+        <template><srai>CURRENTLY PLAYING</srai></template>
+	</category>
+
+    <category>
+        <pattern>^ CURRENTLY PLAYING ^</pattern>
+        <template><srai>CURRENTLY PLAYING</srai></template>
+	</category>
+
+
+    <!-- ================= -->
+    <!-- ADD SONG TO QUEUE -->
+    <!-- ================= -->
 
     <!-- ========================================= -->
     <!-- PLAY SONGS / ALBUMS / ARTISTS / PLAYLISTS -->
