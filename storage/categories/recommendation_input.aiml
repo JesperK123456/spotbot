@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0" encoding="UTF-8">
+
+    <category>
+        <pattern>^ genre ^</pattern>
+        <template>
+            I know a lot of genre's. Which genre do you prefer?
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ i prefer * ^</pattern>
+        <that>which genre do you prefer</that>
+        <template>THE GENRE IS <star index="2"/></template>
+    </category>
+
+    <category>
+        <pattern>THE GENRE IS *</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                recommendations , '<star/>'
+            </extension>></srai>
+        </template>
+    </category>
+</aiml>

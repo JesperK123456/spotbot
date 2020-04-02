@@ -49,6 +49,7 @@
             you are not logged in yet. Would you like to login now?
         </template>
     </category>
+
     <category>
         <pattern>PYFAIL LOGIN</pattern>
         <template>
@@ -56,6 +57,7 @@
             Would you like to try to login again?
         </template>
     </category>
+
     <category>
         <pattern>PYFAIL LOGIN *</pattern>
         <template>
@@ -66,6 +68,7 @@
             Would you like to try to login again?
         </template>
     </category>
+
     <category>
         <pattern>PYFAIL LOGIN NONAME</pattern>
         <template>
@@ -74,6 +77,17 @@
             </think>
             you first need to give me your username.
             What's your spotify username?
+        </template>
+    </category>
+
+    <category>
+        <pattern>PYFAIL LOGOUT BROWSER *</pattern>
+        <template>
+            <think>
+                <set name="logged-in">No</set>
+            </think>
+            Something went wrong trying to open Spotify in your browser. 
+            You have to manually go to the website and remove me from there: <star/>
         </template>
     </category>
 

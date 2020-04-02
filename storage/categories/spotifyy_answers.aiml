@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0" encoding="UTF-8">
-    <!-- GENERAL PYOK -->
+    <!-- GENERAL -->
+    <category>
+        <pattern>YES</pattern>
+        <template>
+            <random>
+                <li> Ok! </li>
+                <li> Nice </li>
+                <li> Good to hear </li>
+                <li> I'm glad </li>
+                <li> You're welcome</li>
+                <li> Cool! </li>
+                
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <template>
+            <random>
+                <li> To bad </li>
+                <li> I'm sorry </li>
+                <li> Oops </li>
+                <li> Won't happen again! </li>
+                <li> I apologize </li>
+                <li> Sorry </li>
+            </random>
+        </template>
+    </category>
+
     <category><pattern>PYOK *</pattern>
     <template>That worked, yay!</template></category>
 
@@ -17,6 +45,59 @@
                 <li> Login succesful, what would you like to hear?</li>
                 <li> Login succeeded, how are you feeling today?</li>
             </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>would you like to try to login again</that>
+        <template>
+            Ok here we go agian.
+            <srai>LOGIN</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>would you like to try to login again</that>
+        <template>
+            <random>
+                <li>Ok, no problem</li>
+                <li>I'm sorry it did not work</li>
+                <li>Ok</li>
+                <li>No problem</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PYOK LOGOUT</pattern>
+        <template>
+            <think>
+                <set name="logged-in">No</set>
+                <set name="user-to-logout"/>
+            </think>
+            You have been succesfully logged out
+        </template>
+    </category>
+    <category>
+        <pattern>PYOK LOGOUT ALL</pattern>
+        <template>
+            <think>
+                <set name="logged-in">No</set>
+                <set name="user-to-logout"/>
+                </think>
+            You have been succesfully logged out and escaped from my powers (assuming you removed me from your authorized apps as well).
+        </template>
+    </category>
+    <category>
+        <pattern>PYOK LOGOUT ALREADYLOGGEDOUT</pattern>
+        <template>
+            <think>
+                <set name="logged-in">No</set>
+                <set name="user-to-logout"/>
+            </think>
+            The username you provided is already logged out. 
+            Give me another username if you meant to log out another user.
         </template>
     </category>
 
@@ -49,9 +130,20 @@
     <category>
         <pattern>PYOK CURRPLAYB *</pattern>
         <template><random>
-        <li>You're currently listening to <star/>!</li>
-        <li>This song is called <star/></li>
+            <li>You're currently listening to <star/>!</li>
+            <li>This song is called <star/></li>
         </random></template>
+    </category>
+
+    <category>
+        <pattern>PYOK VOLUME *</pattern>
+        <template>
+            <random>
+                <li> your volume is now set to <star/>% </li>
+                <li> i hope <star/>% is a better volume for you </li>
+                <li> better? </li>
+            </random>
+        </template>
     </category>
 
 
@@ -119,26 +211,21 @@
             </random>
         </template>
     </category>
+    
 
-
-    <!-- ADD TO SAVED -->
+    <!-- CURRENT TRACK AND SAVED MUSIC-->
     <category>
-        <pattern>PYOK ADD *</pattern>
+        <pattern>PYOK CURRPLAYB *</pattern>
         <template>
-            <random>
-                <li> <star/> has been added to your music library </li>
-                <li> i have saved <star/> for you </li>
-                <li> done </li>
-                <li> no problem </li>
-            </random>
+            The currently playing track is <star/>
         </template>
     </category>
-    <!-- CURRENT TRACK AND SAVED MUSIC-->
+
     <category>
         <pattern>PYOK ISONSAVED YES</pattern>
         <template>
             <think><set name="is-curr-on-saved">YES</set></think>
-            The currently playing track is already in you music library. 
+            The currently playing track is already in your music library. 
             Would you like to delete it from your library?
         </template>
     </category>
@@ -146,6 +233,8 @@
         <pattern>PYOK ISONSAVED NO</pattern>
         <template>
             <think><set name="is-curr-on-saved">NO</set></think>
+            The currently playing track is not in your music library.
+            Would you like to add it to you library now?
         </template>
     </category>
 
@@ -165,31 +254,41 @@
     </category>
 
     <category>
-        <pattern>PYOK ISONSAVED YES</pattern>
-        <template>
-            <think><set name="is-curr-on-saved">YES</set></think>
-            The currently playing track is already in you music library. 
-            Would you like to delete it from your library?
-        </template>
-    </category>
-    <category>
-        <pattern>PYOK ISONSAVED NO</pattern>
-        <template>
-            <think><set name="is-curr-on-saved">NO</set></think>
-        </template>
-    </category>
-
-    <category>
         <pattern>YES</pattern>
-        <that>would you like to delete it from your library</that>
+        <that>would you like to add it to you library now</that>
         <template>
-
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                ADD_CURR_TO_SAVED
+            </extension></srai>
         </template>
     </category>
     <category>
         <pattern>NO</pattern>
-        <that>would you like to delete it from your library</that>
+        <that>would you like to add it to you library now</that>
         <template>ok no problem, enjoy the song!</template>
+    </category>
+
+    <category>
+        <pattern>PYOK ADDTOSAVED *</pattern>
+        <template>
+            <random>
+                <li> <star/> has been added to your music library </li>
+                <li> i have saved <star/> for you </li>
+                <li> done </li>
+                <li> no problem </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>PYOK REMOVEFROMSAVED *</pattern>
+        <template>
+            <random>
+                <li> <star/> has been removed from your music library </li>
+                <li> i have removed <star/> for you </li>
+                <li> done </li>
+                <li> it is removed </li>
+            </random>
+        </template>
     </category>
 
 

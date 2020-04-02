@@ -55,7 +55,7 @@
             <extension path="spotifyy.extensions.SpotifyExtension">
                 HELP_FUNCTIONS
             </extension>
-            i hope this will understand what I can and what I do.
+            i hope this has helped you understand what I can and what I do.
         </template>
     </category>
 
@@ -103,14 +103,187 @@
     <!-- =================== -->
     <!-- LOGIN / USER CHANGE -->
     <!-- =================== -->
+    <category>
+        <pattern>I WANT TO LOGIN</pattern>
+        <template><srai>LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO LOGIN *</pattern>
+        <template><srai>LOGIN <star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>CAN YOU LOG ME IN</pattern>
+        <template><srai>LOGIN</srai></template>
+    </category>
+
+    <category>
+        <pattern>CAN YOU LOG ME OUT</pattern>
+        <template><srai>LOGOUT</srai></template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO REMOVE YOU</pattern>
+        <template><srai>LOGOUT ALL</srai></template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO REMOVE *</pattern>
+        <template><srai>LOGOUT ALL <star/></srai></template>
+    </category>
+
 
     <!-- ======== -->
     <!-- PLAYBACK -->
     <!-- ======== -->
+    <category>
+        <pattern>^ WHAT CAN I DO WITH PLAYBACK ^</pattern>
+        <template>
+            You can [play] or [pause] the playback. 
+            Go to the [next] or [previous] track.
+            [rewind] the track, or put it on [shuffle] or [repeat].
+            You can also change the [volume]
+        </template>
+    </category>
+
+    <category>
+        <pattern>PLEASE PLAY</pattern>
+        <template><srai>PLAY</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ RESUME ^</pattern>
+        <template><srai>PLAY</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ PAUSE ^</pattern>
+        <template><srai>PAUSE</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ NEXT ^</pattern>
+        <template><srai>NEXT TRACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ SKIP ^</pattern>
+        <template><srai>NEXT TRACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ PREV ^</pattern>
+        <template><srai>PREV TRACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ PREVIOUS ^</pattern>
+        <template><srai>PREV TRACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ REWIND ^</pattern>
+        <template><srai>REWIND</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ WHAT CAN I DO WITH VOLUME ^</pattern>
+        <template>
+            You can [set volume to] [percentage], [increase volume] or [decrease volume]
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ VOLUME ^</pattern>
+        <template>
+            You can [increase], [decrease] or [set volume to].
+            What do you want me to do with the volume.
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>^ VOLUME * ^</pattern>
+        <template><srai>SET VOLUME <star index="2"/></srai></template>
+    </category>
+
+    <category>
+        <pattern>^ SET VOLUME * ^</pattern>
+        <template><srai>SET VOLUME <star index="2"/></srai></template>
+    </category>
+
+    <category>
+        <pattern>^ VOLUME TO * ^</pattern>
+        <template><srai>SET VOLUME <star index="2"/></srai></template>
+    </category>
+
+    <category>
+        <pattern>^ DECREASE VOLUME ^</pattern>
+        <template><srai>DECREASE VOLUME</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ INCREASE VOLUME ^</pattern>
+        <template><srai>INCREASE VOLUME</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ DECREASE VOLUME * ^</pattern>
+        <template><srai>DECREASE VOLUME <star index="2"/></srai></template>
+    </category>
+
+    <category>
+        <pattern>^ INCREASE VOLUME * ^</pattern>
+        <template><srai>INCREASE VOLUME <star index="2"/></srai></template>
+    </category>
+
+    <category>
+        <pattern>^ DECREASE VOLUME WITH * ^</pattern>
+        <template><srai>DECREASE VOLUME <star index="2"/></srai></template>
+    </category>
+
+    <category>
+        <pattern>^ INCREASE VOLUME WITH * ^</pattern>
+        <template><srai>INCREASE VOLUME <star index="2"/></srai></template>
+    </category>
+
 
     <!-- ================ -->
     <!-- SHUFFLE / REPEAT -->
     <!-- ================ -->
+    <category>
+        <pattern>^ WHAT CAN I DO WITH SHUFFLE ^</pattern>
+        <template>shuffle can be set to either [on] or [off]</template>
+    </category>
+
+    <category>
+        <pattern>^ SHUFFLE ^</pattern>
+        <template>Do you want shuffle on or off?</template>
+    </category>
+
+    <category>
+        <pattern>^ ON ^</pattern>
+        <that>do you want shuffle on or off</that>
+        <template><srai>SHUFFLE ON</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ OFF ^</pattern>
+        <that>do you want shuffle on or off</that>
+        <template><srai>SHUFFLE OFF</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ SHUFFLE OFF ^</pattern>
+        <template><srai>SHUFFLE OFF</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ SHUFFLE ON ^</pattern>
+        <template><srai>SHUFFLE ON</srai></template>
+    </category>
 
     <!-- ========================================== -->
     <!-- ADD SONG / ALBUM TO SAVED SONGS / PLAYLIST -->
