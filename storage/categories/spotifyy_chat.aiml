@@ -544,41 +544,41 @@
             <srai>PLAY ITEM <star index="2"/></srai>
         </template>
 	</category>
-
+    
     <category>
-        <pattern>^ PLAY TRACK *</pattern>
+        <pattern>^ PLAY ^ TRACK *</pattern>
         <template>
             <think><set name="item-type">track</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <srai>PLAY ITEM <star index="3"/></srai>
         </template>
 	</category>
 
     <category>
-        <pattern>^ PLAY ALBUM *</pattern>
+        <pattern>^ PLAY ^ ALBUM *</pattern>
         <template>
             <think><set name="item-type">album</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <srai>PLAY ITEM <star index="3"/></srai>
         </template>
 	</category>
 
     <category>
-        <pattern>^ PLAY ARTIST *</pattern>
+        <pattern>^ PLAY ^ ARTIST *</pattern>
         <template>
             <think><set name="item-type">artist</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <srai>PLAY ITEM <star index="3"/></srai>
         </template>
 	</category>
 
     <category>
-        <pattern>^ PLAY PLAYLIST *</pattern>
+        <pattern>^ PLAY ^ PLAYLIST *</pattern>
         <template>
             <think><set name="item-type">playlist</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <srai>PLAY ITEM <star index="3"/></srai>
         </template>
 	</category>
 
     <category>
-        <pattern>^ SET TYPE TRACK ^</pattern>
+        <pattern>^ SET ^ TYPE ^ TRACK ^</pattern>
         <template>
             <think><set name="item-type">track</set></think>
             Setting item type to track
@@ -586,7 +586,7 @@
 	</category>
 
     <category>
-        <pattern>^ SET TYPE ALBUM ^</pattern>
+        <pattern>^ SET ^ TYPE ^ ALBUM ^</pattern>
         <template>
             <think><set name="item-type">album</set></think>
             Setting item type to album
@@ -594,7 +594,7 @@
 	</category>
 
     <category>
-        <pattern>^ SET TYPE ARTIST ^</pattern>
+        <pattern>^ SET ^ TYPE ^ ARTIST ^</pattern>
         <template>
             <think><set name="item-type">artist</set></think>
             Setting item type to artist
@@ -602,7 +602,7 @@
 	</category>
 
     <category>
-        <pattern>^ SET TYPE PLAYLIST ^</pattern>
+        <pattern>^ SET ^ TYPE ^ PLAYLIST ^</pattern>
         <template>
             <think><set name="item-type">playlist</set></think>
             Setting item type to playlist

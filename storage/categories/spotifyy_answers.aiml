@@ -211,6 +211,38 @@
             </random>
         </template>
     </category>
+
+    <category>
+        <pattern>PYOK SHUFFLE OFF</pattern>
+        <template>
+            <random>
+                <li> shuffle is now off </li>
+                <li> i have turned shuffle off for you </li>
+                <li> Sure, let's keep things predictable! </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>PYOK SHUFFLE ON</pattern>
+        <template>
+            <random>
+                <li> shuffle is now on </li>
+                <li> i have turned shuffle on for you </li>
+                <li> Your playlist is now just as unpredictable as your life! </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PYOK ENQUEUE *</pattern>
+        <template>
+            <random>
+                <li>Enqueued <star/>. Looking forward to it yet?</li>
+                <li><star/> will be the next song to play (or skip this one!)</li>
+                <li>I've added <star/> to the queue.</li>
+            </random>
+        </template>
+    </category>
     
 
     <!-- CURRENT TRACK AND SAVED MUSIC-->
