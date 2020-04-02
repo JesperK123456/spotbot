@@ -169,36 +169,6 @@
     </category>
 
     <category>
-        <pattern>^ WHAT CAN I DO WITH PLAY ^</pattern>
-        <template><srai>WHAT CAN I DO WITH PLAYBACK</srai></template>
-    </category>
-
-    <category>
-        <pattern>^ WHAT CAN I DO WITH PAUSE ^</pattern>
-        <template><srai>WHAT CAN I DO WITH PLAYBACK</srai></template>
-    </category>
-
-    <category>
-        <pattern>^ WHAT CAN I DO WITH NEXT ^</pattern>
-        <template><srai>WHAT CAN I DO WITH PLAYBACK</srai></template>
-    </category>
-
-    <category>
-        <pattern>^ WHAT CAN I DO WITH PREVIOUS ^</pattern>
-        <template><srai>WHAT CAN I DO WITH PLAYBACK</srai></template>
-    </category>
-
-    <category>
-        <pattern>^ WHAT CAN I DO WITH REWIND ^</pattern>
-        <template><srai>WHAT CAN I DO WITH PLAYBACK</srai></template>
-    </category>
-
-    <category>
-        <pattern>^ PLAY ^</pattern>
-        <template><srai>PLAY</srai></template>
-    </category>
-
-    <category>
         <pattern>^ RESUME ^</pattern>
         <template><srai>PLAY</srai></template>
     </category>
@@ -519,14 +489,14 @@
 	</category>
 
     <category>
-        <pattern>^ FIND * ^</pattern>
+        <pattern>^ FIND *</pattern>
         <template>
             <srai>FIND ITEM <star index="2"/></srai>
         </template>
 	</category>
 
     <category>
-        <pattern>^ FIND TRACK * ^</pattern>
+        <pattern>^ FIND TRACK *</pattern>
         <template>
             <think><set name="item-type">track</set></think>
             <srai>FIND ITEM <star index="2"/></srai>
@@ -534,7 +504,7 @@
 	</category>
 
     <category>
-        <pattern>^ FIND ALBUM * ^</pattern>
+        <pattern>^ FIND ALBUM *</pattern>
         <template>
             <think><set name="item-type">album</set></think>
             <srai>FIND ITEM <star index="2"/></srai>
@@ -542,7 +512,7 @@
 	</category>
 
     <category>
-        <pattern>^ FIND ARTIST * ^</pattern>
+        <pattern>^ FIND ARTIST *</pattern>
         <template>
             <think><set name="item-type">artist</set></think>
             <srai>FIND ITEM <star index="2"/></srai>
@@ -550,7 +520,7 @@
 	</category>
 
     <category>
-        <pattern>^ FIND PLAYLIST * ^</pattern>
+        <pattern>^ FIND PLAYLIST *</pattern>
         <template>
             <think><set name="item-type">playlist</set></think>
             <srai>FIND ITEM <star index="2"/></srai>
@@ -559,7 +529,7 @@
 
     <!--play-->
     <category>
-        <pattern>^ WHAT CAN I DO WITH PLAY ^</pattern>
+        <pattern>^ WHAT CAN I DO WITH PLAY ITEM ^</pattern>
         <template><srai>HELP PLAY AND FIND</srai></template>
 	</category>
 
@@ -569,14 +539,14 @@
 	</category>
 
     <category>
-        <pattern>^ PLAY * ^</pattern>
+        <pattern>^ PLAY *</pattern>
         <template>
             <srai>PLAY ITEM <star index="2"/></srai>
         </template>
 	</category>
 
     <category>
-        <pattern>^ PLAY TRACK * ^</pattern>
+        <pattern>^ PLAY TRACK *</pattern>
         <template>
             <think><set name="item-type">track</set></think>
             <srai>PLAY ITEM <star index="2"/></srai>
@@ -584,7 +554,7 @@
 	</category>
 
     <category>
-        <pattern>^ PLAY ALBUM * ^</pattern>
+        <pattern>^ PLAY ALBUM *</pattern>
         <template>
             <think><set name="item-type">album</set></think>
             <srai>PLAY ITEM <star index="2"/></srai>
@@ -592,7 +562,7 @@
 	</category>
 
     <category>
-        <pattern>^ PLAY ARTIST * ^</pattern>
+        <pattern>^ PLAY ARTIST *</pattern>
         <template>
             <think><set name="item-type">artist</set></think>
             <srai>PLAY ITEM <star index="2"/></srai>
@@ -600,7 +570,7 @@
 	</category>
 
     <category>
-        <pattern>^ PLAY PLAYLIST * ^</pattern>
+        <pattern>^ PLAY PLAYLIST *</pattern>
         <template>
             <think><set name="item-type">playlist</set></think>
             <srai>PLAY ITEM <star index="2"/></srai>
@@ -619,7 +589,7 @@
         <pattern>^ SET TYPE ALBUM ^</pattern>
         <template>
             <think><set name="item-type">album</set></think>
-            Setting item type to track
+            Setting item type to album
         </template>
 	</category>
 
@@ -627,7 +597,7 @@
         <pattern>^ SET TYPE ARTIST ^</pattern>
         <template>
             <think><set name="item-type">artist</set></think>
-            Setting item type to track
+            Setting item type to artist
         </template>
 	</category>
 
@@ -635,7 +605,7 @@
         <pattern>^ SET TYPE PLAYLIST ^</pattern>
         <template>
             <think><set name="item-type">playlist</set></think>
-            Setting item type to track
+            Setting item type to playlist
         </template>
 	</category>
 
@@ -666,6 +636,4 @@
         <pattern>^ RESET ^ DEVICE ^</pattern>
         <template><srai>RESET DEVICE</srai></template>
 	</category>
-
-
 </aiml>
