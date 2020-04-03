@@ -27,7 +27,7 @@
     </category>
 
     <category>
-        <pattern>THE GENRE IS *</pattern>
+        <pattern>FIND GENRE *</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
                 recommendations , '<star/>'

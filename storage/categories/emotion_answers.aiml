@@ -32,7 +32,8 @@
 <category>
       <pattern>NO</pattern>
       <that>Do you like this track</that>
-      <template>Too bad! Maybe this is better NEXT SONG!</template>
+      <template>Too bad! Maybe the next song is better: <srai>^ NEXT ^</srai>
+      </template>
 </category>
 
 </aiml>
