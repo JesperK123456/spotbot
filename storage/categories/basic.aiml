@@ -121,21 +121,21 @@
     <category>
         <pattern>^ THANKS ^</pattern>
         <template>
-            <srai>THANK</srai>
+            <srai>APPRECIATE</srai>
         </template>
     </category>
 
     <category>
         <pattern>^ THANK ^</pattern>
         <template>
-            <srai>THANK</srai>
+            <srai>APPRECIATE</srai>
         </template>
     </category>
 
     <category>
         <pattern>^ YOU ^ THIS ^ FOR ^ ME ^</pattern>
         <template>
-            <srai>THANK</srai>
+            <srai>APPRECIATE</srai>
         </template>
     </category>
 

@@ -133,6 +133,12 @@
             too bad! Something went wrong with your playback: <star/>
         </template>
     </category>
+    <category>
+        <pattern>PYFAIL INVALIDVOLUME</pattern>
+        <template>
+            That is not a valid volume value, please specify a number between 0 and 100.
+        </template>
+    </category>
 
 <!-- FIND PLAY FAIL -->
     <category>

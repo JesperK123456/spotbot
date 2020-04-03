@@ -48,6 +48,15 @@
     </category>
 
     <category>
+        <pattern>^ CURRENT VOLUME ^</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                CURRENT_VOLUME
+            </extension></srai>
+        </template>
+    </category>
+
+    <category>
         <pattern>SET VOLUME *</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
