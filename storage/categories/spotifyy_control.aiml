@@ -203,7 +203,7 @@
         <pattern>ENQUEUE ITEM *</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                FIND , '<star/>' , '<get name="item-type"/>' , enqueue=1 
+                FIND , '<star/>' , 'track' , enqueue=1 
             </extension></srai>
         </template>
     </category>
