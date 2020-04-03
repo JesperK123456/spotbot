@@ -229,17 +229,17 @@
     <category>
         <pattern>PYRECOMMEND NOW</pattern>
         <template>
-            <input/>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                RECOMMEND
+                RECOMMEND , PLAY=<get name="playrecomm"/>
             </extension></srai>
+            <think><set name="playrecomm">0</set></think> 
         </template>
     </category>
     <category>
         <pattern>PYRECOMMEND KIND * NAME *</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                RECOMMEND , '<star index="1"/>' , '<star index="2"/>' , LIMIT=<get name="querylimit"/>, PLAY=<get name="playrecomm"/>
+                RECOMMEND , '<star index="2"/>' , '<star index="1"/>' , LIMIT=<get name="querylimit"/>, PLAY=<get name="playrecomm"/>
             </extension></srai>
             <think><set name="playrecomm">0</set></think> 
         </template>

@@ -155,12 +155,12 @@
 
     <!-- RECOMMEND BASED ON, ENTRY POINT-->
     <category>
-        <pattern>^ RECOMMEND ^ $FROM *</pattern>
-        <template><srai>RECOMMEND BASED ON <star index="3"/></srai></template>
+        <pattern>* RECOMMEND ^ $BASED $ON *</pattern>
+        <template>Is <star index="3"/> a track, an artist or a genre?</template>
     </category>
     <category>
-        <pattern>^ RECOMMEND ^ $BASED $ON *</pattern>
-        <template>Is <star index="3"/>a track, an artist or a genre?</template>
+        <pattern>RECOMMEND ^ $BASED $ON *</pattern>
+        <template>Is <star index="2"/> a track, an artist or a genre?</template>
     </category>
     <category>
         <pattern>^ TRACK ^</pattern>
