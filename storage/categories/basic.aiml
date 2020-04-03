@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>YINITIALQUESTION</pattern>
+        <template>
+            <!-- <srai>LOGIN</srai> -->
+            <think>
+                <set name="artistsrecomm"></set>
+                <set name="genresrecomm"></set>
+                <set name="tracksrecomm">between the wheels</set>
+                <set name="querylimit">20</set>
+            </think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ YES ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ YEAH ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ SURE ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ GREAT ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ NO ^</pattern>
+        <template>
+            <srai>DENY</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ NOT ^</pattern>
+        <template>
+            <srai>DENY</srai>
+        </template>
+    </category>
+</aiml>

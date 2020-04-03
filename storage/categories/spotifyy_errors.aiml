@@ -112,26 +112,38 @@
     </category>
 
     <!-- RESTRICTIONVIOLATED -->
-    <category><pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED *</pattern>
-    <template>That's not possible at the moment</template></category>
+    <category>
+        <pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED *</pattern>
+        <template>That's not possible at the moment</template>
+    </category>
 
-    <category><pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED PAUSE</pattern>
-    <template>It seems like your music is already paused</template></category>
+    <category>
+        <pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED PAUSE</pattern>
+        <template>It seems like your music is already paused</template>
+    </category>
 
-    <category><pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED PLAY</pattern>
-    <template>It seems like your music is already playing!</template></category>
+    <category>
+        <pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED PLAY</pattern>
+        <template>It seems like your music is already playing!</template>
+    </category>
 
-    <category><pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED PREVTRACK</pattern>
-    <template>This seems to be the first song of the queue</template></category>
+    <category>
+        <pattern>PYFAIL SPOTIFYY RESTRICTIONVIOLATED PREVTRACK</pattern>
+        <template>This seems to be the first song of the queue</template>
+    </category>
 
     <!-- INVALIDREQUEST -->
     <!-- TODO verschillende errors bij verschillende requests -->
-    <category><pattern>PYFAIL SPOTIFYY INVALIDREQUEST *</pattern>
-    <template>That didn't work. It's my fault, not yours...</template></category>
+    <category>
+        <pattern>PYFAIL SPOTIFYY INVALIDREQUEST *</pattern>
+        <template>That didn't work. It's my fault, not yours...</template>
+    </category>
 
     <!-- TOKENEXPIRED -->
-    <category><template>PYFAIL SPOTIFYY TOKENEXPIRED *</template>
-    <template>TODO srai refresh token</template></category>
+    <category>
+        <template>PYFAIL SPOTIFYY TOKENEXPIRED *</template>
+        <template>TODO srai refresh token</template>
+    </category>
 
 <!-- PLAYBACK FAIL -->
     <category>
@@ -171,6 +183,12 @@
         <pattern>PYFAIL FIND NORESULTS</pattern>
         <template>
             oh no, I could not find any results for that :(
+        </template>
+    </category>
+    <category>
+        <pattern>PYFAIL NEGATIVEPAGE</pattern>
+        <template>
+            This is the first page already! Which item would you like to hear?
         </template>
     </category>
 

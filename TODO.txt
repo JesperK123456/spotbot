@@ -55,6 +55,7 @@ AIML:
 - emotions
 - spotifyy_chat
 - device control in spotifyy_control
+- pagination interface
 
 === DISCUSSIESTRUCTUUR ===
 
@@ -78,8 +79,6 @@ AIML:
 andere mood: party/chill/dance (meer emotions)
 find genre
 
-=======
->>>>>>> c2ca30f6cf186e38e8c1c04fec0db012f8e6daa8
 ======================
 === RECOMMENDATION ===
 ======================
