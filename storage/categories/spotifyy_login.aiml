@@ -4,18 +4,7 @@
     <!-- ===== -->
     <!-- LOGIN -->
     <!-- ===== -->
-    <category>
-        <pattern>YINITIALQUESTION</pattern>
-        <template>
-            <!-- <srai>LOGIN</srai> -->
-            <think>
-                <set name="artistsrecomm"></set>
-                <set name="genresrecomm">rock</set>
-                <set name="tracksrecomm"></set>
-                <set name="querylimit">20</set>
-            </think>
-        </template>
-    </category>
+    
 
     <!--LOGIN -->
     <category>

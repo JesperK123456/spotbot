@@ -112,3 +112,4 @@ storage/conversations
 session.pickle
 uname.txt
 latestfail.txt
+.vscode/
