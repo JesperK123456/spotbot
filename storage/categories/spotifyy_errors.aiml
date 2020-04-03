@@ -173,10 +173,23 @@
         </template>
     </category>
     <category>
-        <pattern>PYFAIL FIND INVALIDTYPE</pattern>
+        <pattern>PYFAIL FIND INVALIDTYPE *</pattern>
         <template>
-            i did not quite understand what you meant with <get name="item-type"/>. 
+            i did not quite understand what you meant with <star/>. 
             Please only ask me to look for a track, an album, an artist or a playlist
+        </template>
+    </category>
+    <category>
+        <pattern>PYFAIL RECOMMEND INVALIDTYPE *</pattern>
+        <template>
+            I did not quite understand what you meant with <star/>. 
+            I can only make recommendations based on tracks, artists or genres.
+        </template>
+    </category>
+    <category>
+        <pattern>PYFAIL ENQUEUE INVALIDTYPE</pattern>
+        <template>
+            I can only enqueue tracks. This is spotify's fault!
         </template>
     </category>
     <category>

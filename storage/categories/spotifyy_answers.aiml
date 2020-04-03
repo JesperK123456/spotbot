@@ -384,7 +384,7 @@
         </template>
     </category>  
     <category>
-        <pattern>^ NO * ^</pattern>
+        <pattern>^ NO. * ^</pattern>
         <that>which item would you like to hear</that>
         <template>
             <srai>PLAY ITEM QUERY <star index="2"/></srai>

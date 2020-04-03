@@ -1,17 +1,349 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0" encoding="UTF-8">
 
-<category><pattern>^ MUSIC ^</pattern>
-    <template><srai>^ track ^</srai></template>
-  </category>
+    <!-- ================== -->
+    <!--   RECOMMENDATION   -->
+    <!-- ================== -->
 
-  <category><pattern>^ TRACK ^</pattern>
-    <template><random>
-      <li>Do you have a certain genre in mind?</li>
-      <li>Do you want a track of a specific artist?</li>
-      <li>Do you know a specific track?</li>
-    </random></template>
-  </category>
+    <!-- GET RECOMMEND TYPE -->
+    <category>
+        <pattern>^ GENRE ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            Great. Do you have a good genre in mind?
+        </template>
+    </category>
+    <category>
+        <pattern>^ ARTIST ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            Great. Do you have a good artist in mind?
+        </template>
+    </category>
+    <category>
+        <pattern>^ TRACK ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            Great. Do you have a good track in mind?
+        </template>
+    </category>
+    <category>
+        <pattern>^ SONG ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            Great. Do you have a good track in mind?
+        </template>
+    </category>
+    <category>
+        <pattern>^ NO ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            I'll give you a recommendation based on your top tracks then!
+            <srai>PYRECOMMEND NOW</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ NOT ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            I'll give you a recommendation based on your top tracks then!
+            <srai>PYRECOMMEND NOW</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ NONE ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            I'll give you a recommendation based on your top tracks then!
+            <srai>PYRECOMMEND NOW</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>^ THE GENRE * ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            <srai>
+                PYRECOMMEND KIND GENRE NAME <star index="2"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ THE ARTIST * ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            <srai>
+                PYRECOMMEND KIND ARTIST NAME <star index="2"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ THE TRACK * ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            <srai>
+                PYRECOMMEND KIND TRACK NAME <star index="2"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ THE SONG * ^</pattern>
+        <that>would you like to get a recommendation based on a specific track artist or genre</that>
+        <template>
+            <srai>
+                PYRECOMMEND KIND TRACK NAME <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
+    <!-- GET NAME OF [TYPE] TO RECOMMEND -->
+    <category>
+        <pattern>^ $CALLED * ^</pattern>
+        <that>do you have a good * in mind</that>
+        <template>
+            <srai>
+                PYRECOMMEND KIND <thatstar/> NAME <star index="2"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ $NOT ^</pattern>
+        <that>do you have a good * in mind</that>
+        <template>
+            That's too bad!
+            Would you like to get a recommendation based on a specific track, artist or genre?
+        </template>
+    </category>
+    <category>
+        <pattern>^ $NO ^</pattern>
+        <that>do you have a good * in mind</that>
+        <template>
+            That's too bad!
+            Would you like to get a recommendation based on a specific track, artist or genre?
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ $TRACK * ^</pattern>
+        <that>do you have a good track in mind</that>
+        <template>
+            <srai>
+                PYRECOMMEND KIND TRACK NAME <star index="2"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ $ARTIST * ^</pattern>
+        <that>do you have a good artist in mind</that>
+        <template>
+            <srai>
+                PYRECOMMEND KIND ARTIST NAME <star index="2"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ $GENRE * ^</pattern>
+        <that>do you have a good genre in mind</that>
+        <template>
+            <srai>
+                PYRECOMMEND KIND GENRE NAME <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
+
+    <!-- RECOMMEND BASED ON, ENTRY POINT-->
+    <category>
+        <pattern>^ RECOMMEND ^ $FROM *</pattern>
+        <template><srai>RECOMMEND BASED ON <star index="3"/></srai></template>
+    </category>
+    <category>
+        <pattern>^ RECOMMEND ^ $BASED $ON *</pattern>
+        <template>Is <star index="3"/>a track, an artist or a genre?</template>
+    </category>
+    <category>
+        <pattern>^ TRACK ^</pattern>
+        <that>is * a track an artist or a genre</that>
+        <template>
+            <srai>PYRECOMMEND KIND TRACK NAME <thatstar/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ ARTIST ^</pattern>
+        <that>is * a track an artist or a genre</that>
+        <template>
+            <srai>PYRECOMMEND KIND ARTIST NAME <thatstar/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ GENRE ^</pattern>
+        <that>is * a track an artist or a genre</that>
+        <template>
+            <srai>PYRECOMMEND KIND GENRE NAME <thatstar/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ ALBUM ^</pattern>
+        <that>is * a track an artist or a genre</that>
+        <template>
+            I can't make any recommendations based on albums... But that's spotify's fault!
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ RECOMMEND ^ $BASED $ON $THE $GENRE *</pattern>
+        <template>
+            <srai>PYRECOMMEND KIND GENRE NAME <star index="3"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ RECOMMEND ^ $BASED $ON $THE $ARTIST *</pattern>
+        <template>
+            <srai>PYRECOMMEND KIND ARTIST NAME <star index="3"/>
+            </srai>
+        </template>
+    </category>
+   <category>
+        <pattern>^ RECOMMEND ^ $BASED $ON $THE $TRACK *</pattern>
+        <template>
+            <srai>PYRECOMMEND KIND TRACK NAME <star index="3"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ RECOMMEND ^ $BASED $ON $THE $SONG *</pattern>
+        <template>
+            <srai>PYRECOMMEND KIND TRACK NAME <star index="3"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ RECOMMEND ^ $BASED $ON $THE $ALBUM *</pattern>
+        <template>
+            I can't make any recommendations based on albums... But that's spotify's fault!
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ RECOMMEND ^</pattern>
+        <template>
+            <srai>RECOMMEND RESET</srai>
+            <random>
+                <li>Up for some new music I see.</li>
+                <li>Great idea.</li>
+            </random>
+            Would you like to get a recommendation based on a specific track, artist or genre?
+        </template>
+    </category>
+    <category>
+        <pattern>^ RECOMMENDATION ^</pattern>
+        <template>
+            <srai>RECOMMEND <star index="2"/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ RECOMMENDATIONS ^</pattern>
+        <template>
+            <srai>RECOMMEND <star index="2"/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ RECOMMENDS ^</pattern>
+        <template>
+            <srai>RECOMMEND <star index="2"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern> ^ PLAY ^ RECOMMEND ^</pattern>
+        <template>
+            <srai>RECOMMEND RESET</srai>
+            <think><set name="playrecomm">1</set></think>
+            <random>
+                <li>Up for some new music are we?</li>
+                <li>Great idea!</li>
+            </random>
+            Would you like to get a recommendation based on a specific track, artist or genre?
+        </template>
+    </category>
+    <category>
+        <pattern>^ PLAY ^ RECOMMENDATION ^</pattern>
+        <template>
+            <srai>PLAY RECOMMEND</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ RECOMMENDATION ^ PLAY ^ </pattern>
+        <template>
+            <srai>PLAY RECOMMEND</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ RECOMMEND ^ PLAY ^ </pattern>
+        <template>
+            <srai>RECOMMEND</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ PLAY ^ SOMETHING ^</pattern>
+        <template> Would you like to listen to something specific? </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that> would you like to listen to something specific </that>
+        <template><srai>PYRECOMMEND NOW</srai></template>
+    </category>
+    <category>
+        <pattern>YES</pattern>
+        <that> would you like to listen to something specific </that>
+        <template><srai>PLAY RECOMMEND</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ PLAY ^ SOMETHING ^ $BASED $ON *</pattern>
+        <template>
+            <think>
+                <set name="playrecomm">1</set>
+            </think>
+            <srai>RECOMMEND BASED ON <star index="4"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ PLAY ^ SOMETHING ^ $FROM *</pattern>
+        <template>
+            <think>
+                <set name="playrecomm">1</set>
+            </think>
+            <srai>RECOMMEND BASED ON <star index="4"/>
+            </srai>
+        </template>
+    </category>
+
+
+
+    <!-- REST -->
+<!-- 
+    <category>
+        <pattern>^ MUSIC ^</pattern>
+        <template>
+            <srai>^ track ^</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ TRACK ^</pattern>
+        <template>
+            <random>
+                <li>Do you have a certain genre in mind?</li>
+                <li>Do you want a track of a specific artist?</li>
+                <li>Do you know a specific track?</li>
+            </random>
+        </template>
+    </category>
 
     <category>
         <pattern>^ genre ^</pattern>
@@ -23,15 +355,19 @@
     <category>
         <pattern>^ i prefer * ^</pattern>
         <that>which genre do you prefer</that>
-        <template>THE GENRE IS <star index="2"/></template>
+        <template>THE GENRE IS <star index="2"/>
+        </template>
     </category>
 
     <category>
         <pattern>FIND GENRE *</pattern>
         <template>
-            <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                recommendations , '<star/>'
-            </extension>></srai>
+            <srai>
+                <extension path="spotifyy.extensions.SpotifyExtension">
+                recommendations , '<star/>
+'
+                </extension>>
+            </srai>
         </template>
-    </category>
+    </category> -->
 </aiml>
