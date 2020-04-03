@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+
+<!-- For handeling the emotions of the user -->
     <category>
         <pattern>I AM FEELING *</pattern>
         <template>
@@ -112,11 +114,11 @@
         </template>
     </category>
 
+    <!-- WHEN THE USER WANTS TO BE SURPRISED, RETURN SONG BASED ON HER/HIS MOOD -->
     <category>
         <pattern>^ SURPRISE ME ^</pattern>
         <template>
-        I will surprise you! This track is based on the mood from our conversation. 
-        your positivity score is <get name="positivity"/>
+        I will surprise you! This track is based on the mood from our conversation.
         <srai><extension path="spotifyy.extensions.SpotifyExtension"> 
                 play_track_positivity , '<get name="positivity"/>'
         </extension></srai></template>
@@ -128,7 +130,7 @@
         </template>
     </category>
 
-    <!-- WHEN THE USER IS ON A ROADTRUP/HOLIDAY -->
+    <!-- WHEN THE USER IS ON A ROADTRIP/HOLIDAY -->
     <category>
         <pattern>^ HOLIDAY ^</pattern>
         <template>Lucky you! Are you on a roadtrip?</template>
