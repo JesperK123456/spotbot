@@ -1276,6 +1276,7 @@
             <srai>QUERY NEXTPAGE</srai>
         </template>
     </category>
+
     <category>
         <pattern>^ PREVIOUS ^</pattern>
         <that>which item would you like to hear</that>
@@ -1283,13 +1284,23 @@
             <srai>QUERY PREVPAGE</srai>
         </template>
     </category>
+
     <category>
-        <pattern>^ HAVE ^ MORE ^</pattern>
+        <pattern>^ LESS ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>QUERY PREVPAGE</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ MORE ^</pattern>
         <that>which item would you like to hear</that>
         <template>
             <srai>QUERY NEXTPAGE</srai>
         </template>
     </category>
+
     <category>
         <pattern>^ DO NOT ^</pattern>
         <that>which item would you like to hear</that>
@@ -1297,6 +1308,7 @@
             <srai>QUERY NEXTPAGE</srai>
         </template>
     </category>
+
     <category>
         <pattern>^ DOES NOT ^</pattern>
         <that>which item would you like to hear</that>
@@ -1304,6 +1316,7 @@
             <srai>QUERY NEXTPAGE</srai>
         </template>
     </category>
+
     <category>
         <pattern>^ NOTHING ^</pattern>
         <that>which item would you like to hear</that>
@@ -1311,6 +1324,7 @@
             <srai>QUERY NEXTPAGE</srai>
         </template>
     </category>
+
     <category>
         <pattern>^ ELSE ^</pattern>
         <that>which item would you like to hear</that>
@@ -1318,6 +1332,7 @@
             <srai>QUERY NEXTPAGE</srai>
         </template>
     </category>
+
     <category>
         <pattern>^ IS NOT ^</pattern>
         <that>which item would you like to hear</that>
