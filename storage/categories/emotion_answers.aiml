@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0" encoding="UTF-8">
 
+<!-- TO HANDLE THE EMOTION-FUNCTIONS -->
 <category>
         <pattern>EMOTIONFAIL</pattern>
         <template>

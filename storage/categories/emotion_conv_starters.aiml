@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
+    <!-- When the user just want to talk -->
     <category>
         <pattern>TALK</pattern>
         <template>
@@ -17,7 +18,7 @@
     <category>
         <pattern>YES</pattern>
         <that>Do you have a certain genre in mind</that>
-        <template>Which genre do you like?</template> <!-- Pop, Rock, Dance, Hip-Hop, Classic, RandB, Soul or Metal? -->
+        <template>Which genre do you like?</template> 
     </category>
 
     <category>

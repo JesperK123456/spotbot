@@ -2,21 +2,27 @@
 <aiml version="2.0" encoding="UTF-8">
     <!-- GENERAL -->
     <category>
-        <pattern>^YES ^</pattern>
+        <pattern>^ CONFIRM ^</pattern>
         <template>
             <random>
                 <li> Ok! </li>
                 <li> Nice </li>
+                <li> Good </li>
                 <li> Good to hear </li>
+                <li> Glad to hear </li>
+                <li> Very good </li>
+                <li> Very well </li>
                 <li> I'm glad </li>
-                <li> You're welcome</li>
                 <li> Cool! </li>
-                
+                <li> Perfect </li>
+                <li> Awesome </li>           
+                <li> I got you </li>
+                <li> Sure </li>          
             </random>
         </template>
     </category>
     <category>
-        <pattern>^ NO ^</pattern>
+        <pattern>^ DENY ^</pattern>
         <template>
             <random>
                 <li> To bad </li>
