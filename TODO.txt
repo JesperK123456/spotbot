@@ -62,7 +62,11 @@ AIML:
 
 (escape path: Just want to hear music) ==> What would you like to hear
 
-
+======================
+======== NINA ========
+======================
+andere mood: party/chill/dance (meer emotions)
+find genre
 
 ======================
 === RECOMMENDATION ===
