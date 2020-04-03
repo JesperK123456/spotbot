@@ -3,7 +3,7 @@
 
 <!-- TO HANDLE THE EMOTION-FUNCTIONS -->
 <category>
-        <pattern>EMOTIONFAIL</pattern>
+        <pattern>PYFAIL EMOTION</pattern>
         <template>
             I do not know this emotion! All the emotions I have are:
             Happy, Sad, Relax, Angry, Sleepy, Energetic and Study. 
@@ -11,14 +11,14 @@
 </category>
 
 <category>
-        <pattern>EMOTIONOK</pattern>
+        <pattern>PYOK EMOTION</pattern>
         <template>
             Do you like this track?
         </template>
 </category>
 
 <category>
-        <pattern>POSITIVITYOK</pattern>
+        <pattern>PYOK POSITIVITY</pattern>
         <template>
             Do you like this track?
         </template>
