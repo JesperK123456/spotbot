@@ -139,23 +139,31 @@
     </category>
 
     <category>
-        <pattern>^ SAD ^</pattern>
-        <that>are you feeling okay</that>
+        <pattern>WHY ^ YOU ^ THIS ^ FOR ^ ME ^</pattern>
         <template>
-            <srai>
-                USERFEELSWEL <star index="1"/> YES <star index="2"/>
-            </srai>
+            <srai>DENY</srai>
         </template>
     </category>
 
-    <category>
-        <pattern>USERFEELSWELL *</pattern>
-        <template>That's great my friend.</template>
-    </category>
 
     <category>
-        <pattern>USERFEELSBAD *</pattern>
-        <template>Ojee...</template>
+        <pattern>^ WHY ^</pattern>
+        <template>
+            <srai>INQUIRY</srai>
+        </template>
+    </category>
+
+    <!-- ANSWERS TO DO YOU LIKE IT -->
+    <category>
+        <pattern>DYLI YES</pattern>
+        <random>
+            <li>That's great, enjoy!</li>
+            <li>'Tis what my algorithm foretold</li>
+            <li>I'm so smart!</li>
+            <li>Awesome!</li>
+            <li>Cool</li>
+            <li>Alright then!</li>
+        </random>
     </category>
 
 </aiml>

@@ -52,6 +52,21 @@
         </template>
     </category>
 
+    <category>
+        <pattern>^ INQUIRY ^</pattern>
+        <template>
+            <random>
+                <li> I don't know, really </li>
+                <li> You tell me </li>
+                <li> What? </li>
+                <li> Wait, what? </li>
+                <li> Wut </li>
+                <li> Huh? </li>
+            </random>
+        </template>
+    </category>
+
+
     <category><pattern>PYOK *</pattern>
     <template>That worked, yay!</template></category>
 
