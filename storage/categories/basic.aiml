@@ -5,11 +5,22 @@
         <template>
             <!-- <srai>LOGIN</srai> -->
             <think>
+                <set name="querylimit">20</set>
+
                 <set name="artistsrecomm"></set>
                 <set name="genresrecomm"></set>
                 <set name="tracksrecomm">between the wheels</set>
-                <set name="querylimit">20</set>
+
+                <set name="recomm-artist"></set>
             </think>
+        </template>
+    </category>
+
+    <!--CONFIRM-->
+    <category>
+        <pattern>^ CONFIRMED ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
         </template>
     </category>
 
@@ -41,6 +52,78 @@
         </template>
     </category>
 
+    <category>
+        <pattern>^ INDEED ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ AKNOWLEDGE ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ AKNOWLEDGED ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ UNDERSTOOD ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ UNDERSTAND ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ ACCEPT ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ ACCEPTED ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <!--THANK-->
+    <category>
+        <pattern>^ THANKS ^</pattern>
+        <template>
+            <srai>THANK</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ THANK ^</pattern>
+        <template>
+            <srai>THANK</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ YOU ^ THIS ^ FOR ^ ME ^</pattern>
+        <template>
+            <srai>THANK</srai>
+        </template>
+    </category>
+
+    <!--DENY-->
     <category>
         <pattern>^ NO ^</pattern>
         <template>

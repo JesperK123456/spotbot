@@ -21,16 +21,33 @@
             </random>
         </template>
     </category>
+    
+    <category>
+        <pattern>^ THANK ^</pattern>
+        <template>
+            <random>
+                <li> You're welcome </li>
+                <li> No problem </li>
+                <li> I did it for you </li>
+                <li> You don't need to thank me </li>
+            </random>
+        </template>
+    </category>
+
     <category>
         <pattern>^ DENY ^</pattern>
         <template>
             <random>
-                <li> To bad </li>
+                <li> Too bad </li>
                 <li> I'm sorry </li>
                 <li> Oops </li>
                 <li> Won't happen again! </li>
                 <li> I apologize </li>
                 <li> Sorry </li>
+                <li> I'm so so sorry </li>
+                <li> My bad </li>
+                <li> Ouch, sorry </li>
+                <li> Shoot, I apologize </li>
             </random>
         </template>
     </category>
