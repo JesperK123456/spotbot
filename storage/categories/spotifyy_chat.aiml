@@ -414,6 +414,20 @@
     </category>
 
     <category>
+        <pattern>^ VOLUME DOWN ^</pattern>
+        <template>
+            <srai>DECREASE VOLUME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ VOLUME UP ^</pattern>
+        <template>
+            <srai>INCREASE VOLUME</srai>
+        </template>
+    </category>
+
+    <category>
         <pattern>^ DECREASE VOLUME ^</pattern>
         <template>
             <srai>DECREASE VOLUME</srai>
@@ -972,6 +986,50 @@
     </category>
 
     <category>
+        <pattern>^ SEARCH TRACK *</pattern>
+        <template>
+            <think>
+                <set name="item-type">track</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ SEARCH ALBUM *</pattern>
+        <template>
+            <think>
+                <set name="item-type">album</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ SEARCH ARTIST *</pattern>
+        <template>
+            <think>
+                <set name="item-type">artist</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ SEARCH PLAYLIST *</pattern>
+        <template>
+            <think>
+                <set name="item-type">playlist</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
+    <category>
         <pattern>^ PLAY THE TRACK *</pattern>
         <template>
             <think>
@@ -1005,7 +1063,7 @@
     </category>
 
     <category>
-        <pattern>^ PLAY ME THE PLAYLIST *</pattern>
+        <pattern>^ PLAY THE PLAYLIST *</pattern>
         <template>
             <think>
                 <set name="item-type">playlist</set>
@@ -1236,7 +1294,7 @@
     <!-- DEVICE CONTROL -->
     <!-- ============== -->
     <category>
-        <pattern>^ WHAT CAN I DO WITH DEVICE ^</pattern>
+        <pattern>WHAT CAN I DO WITH DEVICE</pattern>
         <template>
             You can get [current device] to get information about the currently selected deivce.
             Or you can [select device] and then [device [device_number]]/[item [device_number]] to select the new playback device.
