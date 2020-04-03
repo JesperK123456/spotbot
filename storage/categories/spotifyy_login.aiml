@@ -5,7 +5,7 @@
     <!-- LOGIN -->
     <!-- ===== -->
     <category>
-        <pattern>YINITIALQUESTION</pattern>
+        <pattern>YINITIALQUESTION NO DONT DO IT NO NO NO</pattern>
         <template>
             <!-- <srai>LOGIN</srai> -->
             <set name="that">are you feeling okay</set>

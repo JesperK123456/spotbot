@@ -132,7 +132,7 @@ console:
     bot:
       initial_question: Hey there! My name is Spotbot. Are you feeling okay?
       initial_question_srai: YINITIALQUESTION
-      default_response: Sorry, I don't have an answer for that!
+      default_response: I didn't quite catch you there, come again?
       default_response_srai: YEMPTY
       empty_string: YEMPTY
       exit_response: See you next time!

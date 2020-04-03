@@ -1,1 +1,1 @@
-self.session.find(' the album rush ',' album ',play=1)
+self.session.play_from_query(i would like)

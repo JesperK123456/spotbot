@@ -1,3 +1,19 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!! COMMENTS COMMENTS COMMENTS !!!!!!!!!!
+!!!!!!!!!! COMMENTS COMMENTS COMMENTS !!!!!!!!!!
+!!!!!!!!!! COMMENTS COMMENTS COMMENTS !!!!!!!!!!
+!!!!!!!!!! COMMENTS COMMENTS COMMENTS !!!!!!!!!!
+!!!!!!!!!! COMMENTS COMMENTS COMMENTS !!!!!!!!!!
+!!!!!!!!!! COMMENTS COMMENTS COMMENTS !!!!!!!!!!
+!!!!!!!!!! COMMENTS COMMENTS COMMENTS !!!!!!!!!!
+!!!!!!!!!! COMMENTS COMMENTS COMMENTS !!!!!!!!!!
+!!!!!!!!!! COMMENTS COMMENTS COMMENTS !!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 =============
 === BASIC ===
 =============
@@ -27,7 +43,6 @@
 - now playing command maken
 - error handling in python code
 
-
 SPOTIFYY:
 - devices
 - refreshtoken
@@ -40,11 +55,6 @@ AIML:
 - emotions
 - spotifyy_chat
 - device control in spotifyy_control
-<<<<<<< HEAD
-- add to queue
-- add song to playlist
-=======
-
 
 === DISCUSSIESTRUCTUUR ===
 
@@ -68,6 +78,8 @@ AIML:
 andere mood: party/chill/dance (meer emotions)
 find genre
 
+=======
+>>>>>>> c2ca30f6cf186e38e8c1c04fec0db012f8e6daa8
 ======================
 === RECOMMENDATION ===
 ======================
@@ -92,4 +104,3 @@ OBV WAT:
 ==========================
 HOE VOELT USER ZICH?
     - Text/score
->>>>>>> 662e768378da001a5e9d5a6c59f9111c257e95f8
