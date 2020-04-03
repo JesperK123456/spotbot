@@ -393,12 +393,12 @@
     </category>
 
     <category>
-        <pattern>^ SHUFFLE OFF ^</pattern>
+        <pattern>^ SHUFFLE ^ OFF ^</pattern>
         <template><srai>SHUFFLE OFF</srai></template>
     </category>
 
     <category>
-        <pattern>^ SHUFFLE ON ^</pattern>
+        <pattern>^ SHUFFLE ^ ON ^</pattern>
         <template><srai>SHUFFLE ON</srai></template>
     </category>
 
@@ -435,17 +435,37 @@
     </category>
 
     <category>
-        <pattern>^ REPEAT TRACK ^</pattern>
+        <pattern>^ REPEAT ^ TRACK ^</pattern>
         <template><srai>REPEAT TRACK</srai></template>
     </category>
 
     <category>
-        <pattern>^ REPEAT CONTEXT ^</pattern>
+        <pattern>^ REPEAT ^ SINGLE ^</pattern>
+        <template><srai>REPEAT TRACK</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ REPEAT ^ CONTEXT ^</pattern>
         <template><srai>REPEAT CONTEXT</srai></template>
     </category>
 
     <category>
-        <pattern>^ REPEAT OFF ^</pattern>
+        <pattern>^ REPEAT ^ ON ^</pattern>
+        <template><srai>REPEAT CONTEXT</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ REPEAT ^ OFF ^</pattern>
+        <template><srai>REPEAT OFF</srai></template>
+    </category>
+
+    <category>
+        <pattern>TURN ON ^ REPEAT ^</pattern>
+        <template><srai>REPEAT CONTEXT</srai></template>
+    </category>
+
+    <category>
+        <pattern>TURN OFF ^ REPEAT ^</pattern>
         <template><srai>REPEAT OFF</srai></template>
     </category>
 
@@ -916,4 +936,14 @@
         <pattern>^ RESET ^ DEVICE ^</pattern>
         <template><srai>RESET DEVICE</srai></template>
 	</category>
+
+    <!-- ================== -->
+    <!--   RECOMMENDATION   -->
+    <!-- ================== -->  
+    
+
+    <!-- ============== -->
+    <!--   PAGINATION   -->
+    <!-- ============== -->    
+
 </aiml>

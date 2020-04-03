@@ -5,10 +5,15 @@
     <!-- LOGIN -->
     <!-- ===== -->
     <category>
-        <pattern>YINITIALQUESTION NO DONT DO IT NO NO NO</pattern>
+        <pattern>YINITIALQUESTION</pattern>
         <template>
             <!-- <srai>LOGIN</srai> -->
-            <set name="that">are you feeling okay</set>
+            <think>
+                <set name="artistsrecomm"></set>
+                <set name="genresrecomm">rock</set>
+                <set name="tracksrecomm"></set>
+                <set name="querylimit">20</set>
+            </think>
         </template>
     </category>
 

@@ -5,13 +5,4 @@
         <pattern>^ REWIND ^</pattern>
         <template><srai>REWIND</srai></template>
     </category>
-    
-    <category>
-        <pattern>RECOMMEND NOW</pattern>
-        <template>
-            <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                RECOMMEND , '<get name="artis_seed"/>' , 'g'
-            </extension></srai>
-        </template>
-    </category>
 </aiml>

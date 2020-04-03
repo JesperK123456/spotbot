@@ -222,7 +222,7 @@
         <pattern>RECOMMEND NOW</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                RECOMMEND , ARTISTS='<get name="artists-recomm"/>' , GENRES='<get name="genres-recomm"/>' , TRACKS='<get name="tracks-recomm"/>' , LIMIT=<get name="query-limit"/>
+                RECOMMEND , ARTISTS='<get name="artistsrecomm"/>' , GENRES='<get name="genresrecomm"/>' , TRACKS='<get name="tracksrecomm"/>' , LIMIT=<get name="querylimit"/>
             </extension></srai>
         </template>
     </category>
@@ -230,7 +230,7 @@
         <pattern>RECOMMEND PLAY NOW</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                RECOMMEND , ARTISTS='<get name="artists-recomm"/>' , GENRES='<get name="genres-recomm"/>' , TRACKS='<get name="tracks-recomm"/>' , LIMIT=<get name="query-limit"/> , PLAY=1
+                RECOMMEND , ARTISTS='<get name="artistsrecomm"/>' , GENRES='<get name="genresrecomm"/>' , TRACKS='<get name="tracksrecomm"/>' , LIMIT=<get name="querylimit"/> , PLAY=1
             </extension></srai>
         </template>
     </category>
