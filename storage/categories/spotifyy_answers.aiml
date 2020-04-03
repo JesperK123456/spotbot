@@ -23,7 +23,7 @@
     </category>
     
     <category>
-        <pattern>^ THANK ^</pattern>
+        <pattern>^ APPRECIATE ^</pattern>
         <template>
             <random>
                 <li> You're welcome </li>
