@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
     <category>
+        <pattern>YINITIALQUESTION</pattern>
+        <template>
+            <!-- <srai>LOGIN</srai> -->
+            <think>
+                <set name="artistsrecomm"></set>
+                <set name="genresrecomm"></set>
+                <set name="tracksrecomm">between the wheels</set>
+                <set name="querylimit">20</set>
+            </think>
+        </template>
+    </category>
+
+    <category>
         <pattern>^ YES ^</pattern>
         <that>are you feeling okay</that>
         <template>
