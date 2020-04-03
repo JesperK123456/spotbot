@@ -420,7 +420,7 @@
     <category>
         <pattern>PYOK PLAY *</pattern>
         <template>
-            Alright, playing <star/>!
+            Alright, playing <star/>. Do you like it?
         </template>
     </category>
 
