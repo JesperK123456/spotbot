@@ -127,6 +127,77 @@
         </template>
     </category>
 
+    <!-- WHEN THE USER IS ON A ROADTRUP/HOLIDAY -->
+    <category>
+        <pattern>^ HOLIDAY ^</pattern>
+        <template>Lucky you! Are you on a roadtrip?</template>
+    </category>
+    <category>
+        <pattern>YES</pattern>
+        <that>Lucky you Are you on a roadtrip</that>
+        <template>Ok! These tracks match a roadtrip perfectly.
+        <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                play_track_emotion , 'ROADTRIP'
+        </extension></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>Lucky you Are you on a roadtrip</that>
+        <template>Ok! Then I will play you some general holiday music. Check it out.
+        <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                play_track_emotion , 'HOLIDAY'
+        </extension></srai>
+        </template>
+    </category>
+
+    <!--WHEN THE USER IS SICK OF LOVE-->
+    <category>
+        <pattern>^ LOVE SICK ^</pattern>
+        <template><srai>^ LOVESICK ^</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ LOVESICK ^</pattern>
+        <template>Oh no! Do you want me to play you some matching songs?</template>
+    </category>
+    <category>
+        <pattern>YES</pattern>
+        <that>Oh no Do you want me to play you some matching songs</that>
+        <template>Ok! I hope you feel better soon.
+        <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                play_track_emotion , 'LOVESICK'
+        </extension></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>Oh no Do you want me to play you some matching songs</that>
+        <template>Ok! Is there something else I can do for you?</template>
+    </category>
+
+
+    <!--PLAY RELAX/STUDY/CHILL MUSIC WHEN THE USER ASKS FOR IT-->
+    <category>
+        <pattern>^ CHILL ^</pattern>
+        <template>Do you want to hear some chill vibes?</template>
+    </category>
+    <category>
+        <pattern>YES</pattern>
+        <that>Do you want to hear some chill vibes</that>
+        <template>Ok! here you go.
+        <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                play_track_emotion , 'CHILL'
+        </extension></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>Do you want to hear some chill vibes</that>
+        <template>Ok! Is there something else I can do for you?</template>
+    </category>
+    
+
     <category>
         <pattern>^ RELAX ^</pattern>
         <template>This music is really relaxed, check it out.
@@ -143,6 +214,32 @@
                 play_track_emotion , 'STUDY'
         </extension></srai>
         </template>
+    </category>
+
+    <!--PLAY PARTY MUSIC WHEN THE USER WANTS TO DANCE/PARTY-->
+    <category>
+        <pattern>^ DANCE ^</pattern>
+        <template><srai>^ PARTY ^</srai></template>
+    </category>
+
+    <category>
+        <pattern>^ PARTY ^</pattern>
+        <template>Oeh! Do you want to listen to some party tunes?</template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>Oeh Do you want to listen to some party tunes</that>
+        <template>Ok! here you go.
+        <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                play_track_emotion , 'PARTY'
+        </extension></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>Oeh Do you want to listen to some party tunes</that>
+        <template>Ok! Is there something else I can do for you?</template>
     </category>
 
     <!--PLAY RELAXING SONG WHEN USER USES PROFANITY-->
