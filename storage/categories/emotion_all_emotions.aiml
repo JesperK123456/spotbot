@@ -115,8 +115,9 @@
     <category>
         <pattern>^ SURPRISE ME ^</pattern>
         <template>
-        I will surprise you! This track is based on the mood from our conversation.
-        <srai><extension path="spotifyy.extensions.SpotifyExtension">
+        I will surprise you! This track is based on the mood from our conversation. 
+        your positivity score is <get name="positivity"/>
+        <srai><extension path="spotifyy.extensions.SpotifyExtension"> 
                 play_track_positivity , '<get name="positivity"/>'
         </extension></srai></template>
     </category>
