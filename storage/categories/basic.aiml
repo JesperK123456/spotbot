@@ -17,14 +17,6 @@
         </template>
     </category>
 
-    <category>
-        <pattern>YEMPTY</pattern>
-        <template>
-            I didn't quite catch that. 
-            <that/>
-        </template>
-    </category>
-
     <!--CONFIRM-->
     <category>
         <pattern>^ CONFIRMED ^</pattern>
@@ -118,7 +110,7 @@
     </category>
 
     <!--THANK-->
-    <category>
+    <!-- <category>
         <pattern>^ THANKS ^</pattern>
         <template>
             <srai>APPRECIATE</srai>
@@ -130,7 +122,7 @@
         <template>
             <srai>APPRECIATE</srai>
         </template>
-    </category>
+    </category> -->
 
     <category>
         <pattern>^ YOU ^ THIS ^ FOR ^ ME ^</pattern>
