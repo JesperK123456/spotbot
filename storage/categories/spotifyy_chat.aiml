@@ -116,6 +116,15 @@
     </category>
 
     <category>
+        <pattern>^ WHAT CAN I DO WITH FUNCTIONS ^</pattern>
+        <template>
+            <srai>
+                HELP FUNCTIONS
+            </srai>
+        </template>
+    </category>
+
+    <category>
         <pattern>^ HELP ^</pattern>
         <template>
             <srai>HELP</srai>
@@ -298,6 +307,13 @@
 
     <category>
         <pattern>^ PREVIOUS ^</pattern>
+        <template>
+            <srai>PREV TRACK</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ GO BACK ^</pattern>
         <template>
             <srai>PREV TRACK</srai>
         </template>
@@ -702,16 +718,40 @@
         </template>
     </category>
 
+    <category>
+        <pattern>^ DELETE CURRENT FROM SAVED ^</pattern>
+        <template>
+            <srai>REMOVE CURR FROM SAVED</srai>
+        </template>
+    </category>
 
-    <!-- ================= -->
-    <!-- ADD SONG TO QUEUE -->
-    <!-- ================= -->
+    <category>
+        <pattern>^ DELETE CURRENT TRACK FROM SAVED ^</pattern>
+        <template>
+            <srai>REMOVE CURR FROM SAVED</srai>
+        </template>
+    </category>
 
+    <category>
+        <pattern>^ DELETE TRACK ^</pattern>
+        <template>
+            <srai>REMOVE CURR FROM SAVED</srai>
+        </template>
+    </category>
 
-    <!-- ==================== -->
-    <!-- ADD SONG TO PLAYLSIT -->
-    <!-- ==================== -->
+    <category>
+        <pattern>^ DELETE CURRENT ^</pattern>
+        <template>
+            <srai>REMOVE CURR FROM SAVED</srai>
+        </template>
+    </category>
 
+    <category>
+        <pattern>^ DELETE CURRENT TRACK ^</pattern>
+        <template>
+            <srai>REMOVE CURR FROM SAVED</srai>
+        </template>
+    </category>
 
 
     <!-- ========================================= -->
@@ -1049,7 +1089,7 @@
 
     <!-- ENQUEUE -->
     <category>
-        <pattern>^ WHAT CAN I DO WITH ENQUEUE ITEM ^</pattern>
+        <pattern>^ WHAT CAN I DO WITH ENQUEUE ^</pattern>
         <template>
             <srai>HELP PLAY AND FIND</srai>
         </template>
@@ -1285,5 +1325,4 @@
             <srai>QUERY NEXTPAGE</srai>
         </template>
     </category>
-
 </aiml>
