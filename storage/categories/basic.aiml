@@ -34,6 +34,13 @@
     </category>
 
     <category>
+        <pattern>NICE ^</pattern>
+        <template>
+            <srai>CONFIRM</srai>
+        </template>
+    </category>
+
+    <category>
         <pattern>^ YES ^</pattern>
         <template>
             <srai>CONFIRM</srai>
