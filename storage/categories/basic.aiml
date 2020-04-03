@@ -137,4 +137,25 @@
             <srai>DENY</srai>
         </template>
     </category>
+
+    <category>
+        <pattern>^ SAD ^</pattern>
+        <that>are you feeling okay</that>
+        <template>
+            <srai>
+                USERFEELSWEL <star index="1"/> YES <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>USERFEELSWELL *</pattern>
+        <template>That's great my friend.</template>
+    </category>
+
+    <category>
+        <pattern>USERFEELSBAD *</pattern>
+        <template>Ojee...</template>
+    </category>
+
 </aiml>
