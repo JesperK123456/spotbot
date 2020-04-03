@@ -1,1 +1,1 @@
-self.session.recommend(artists=' ',genres=' rock ',tracks=' ',limit= 20)
+self.session.find(' all my exes live in texas ',' track ',play=1)

@@ -347,24 +347,10 @@
         <template>
             <srai>PLAY ITEM QUERY <star index="2"/></srai>
         </template>
-    </category>  
-    <category>
-        <pattern>^ ITEM * ^</pattern>
-        <that>which one will it be</that>
-        <template>
-            <srai>PLAY ITEM QUERY <star index="2"/></srai>
-        </template>
-    </category>  
+    </category>   
     <category>
         <pattern>^ ALBUM * ^</pattern>
         <that>which item would you like to hear</that>
-        <template>
-            <srai>PLAY ITEM QUERY <star index="2"/></srai>
-        </template>
-    </category>  
-    <category>
-        <pattern>^ ALBUM * ^</pattern>
-        <that>which one will it be</that>
         <template>
             <srai>PLAY ITEM QUERY <star index="2"/></srai>
         </template>
@@ -377,33 +363,34 @@
         </template>
     </category>  
     <category>
-        <pattern>^ TRACK * ^</pattern>
-        <that>which one will it be</that>
+        <pattern>^ ARTIST * ^</pattern>
+        <that>which item would you like to hear</that>
         <template>
             <srai>PLAY ITEM QUERY <star index="2"/></srai>
         </template>
     </category>  
     <category>
         <pattern>^ PLAYLIST * ^</pattern>
-        <that>which one will it be</that>
-        <template>
-            <srai>PLAY ITEM QUERY <star index="2"/></srai>
-        </template>
-    </category>  
-    <category>
-        <pattern>^ ARTIST * ^</pattern>
         <that>which item would you like to hear</that>
         <template>
             <srai>PLAY ITEM QUERY <star index="2"/></srai>
         </template>
     </category>  
     <category>
-        <pattern>^ ARTIST * ^</pattern>
-        <that>which one will it be</that>
+        <pattern>^ NUMBER * ^</pattern>
+        <that>which item would you like to hear</that>
         <template>
             <srai>PLAY ITEM QUERY <star index="2"/></srai>
         </template>
     </category>  
+    <category>
+        <pattern>^ NO * ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>PLAY ITEM QUERY <star index="2"/></srai>
+        </template>
+    </category> 
+
 
     <category>
         <pattern>PLAY ITEM QUERY *</pattern>
@@ -434,7 +421,7 @@
     <category>
         <pattern>PYOK NOMORERESULTS</pattern>
         <template>
-            This is all I have to show you. Which one will it be?
+            This is all I have to show you. Which item would you like to hear?
         </template>
     </category>
 

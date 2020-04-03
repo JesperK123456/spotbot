@@ -79,7 +79,7 @@
                 Want to know more about my other functions?</li>
                 <li value="No">It seems you are not logged in yet. 
                 Do you want to know how to login?</li>
-            </condition>           
+            </condition>
         </template>
     </category>
 
@@ -99,7 +99,9 @@
     <category>
         <pattern>YES</pattern>
         <that>do you want to know how to login</that>
-        <template><srai>HELP LOGIN</srai></template>
+        <template>
+            <srai>HELP LOGIN</srai>
+        </template>
     </category>
     <category>
         <pattern>NO</pattern>
@@ -110,7 +112,9 @@
     <category>
         <pattern>YES</pattern>
         <that>want to know more about my other functions</that>
-        <template><srai>HELP FUNCTIONS</srai></template>
+        <template>
+            <srai>HELP FUNCTIONS</srai>
+        </template>
     </category>
 
     <category>
@@ -125,42 +129,58 @@
 
     <category>
         <pattern>^ HELP ^</pattern>
-        <template><srai>HELP</srai></template>
+        <template>
+            <srai>HELP</srai>
+        </template>
     </category>
 
     <category>
         <pattern>WHAT ARE YOU</pattern>
-        <template><srai>HELP</srai></template>
+        <template>
+            <srai>HELP</srai>
+        </template>
     </category>
 
     <category>
         <pattern>WHO ARE YOU</pattern>
-        <template><srai>HELP</srai></template>
+        <template>
+            <srai>HELP</srai>
+        </template>
     </category>
 
     <category>
         <pattern>HOW TO LOG IN</pattern>
-        <template><srai>HELP LOGIN</srai></template>
+        <template>
+            <srai>HELP LOGIN</srai>
+        </template>
     </category>
 
     <category>
         <pattern>HOW TO LOGIN</pattern>
-        <template><srai>HELP LOGIN</srai></template>
+        <template>
+            <srai>HELP LOGIN</srai>
+        </template>
     </category>
 
     <category>
         <pattern>HELP ME LOGIN</pattern>
-        <template><srai>HELP LOGIN</srai></template>
+        <template>
+            <srai>HELP LOGIN</srai>
+        </template>
     </category>
 
     <category>
         <pattern>WHAT CAN YOU DO</pattern>
-        <template><srai>HELP FUNCTIONS</srai></template>
+        <template>
+            <srai>HELP FUNCTIONS</srai>
+        </template>
     </category>
 
     <category>
         <pattern>WHAT DO YOU DO</pattern>
-        <template><srai>HELP</srai></template>
+        <template>
+            <srai>HELP</srai>
+        </template>
     </category>
 
     <category>
@@ -179,44 +199,65 @@
     <!-- =================== -->
     <category>
         <pattern>^ LOGIN ^</pattern>
-        <template><srai>LOGIN</srai></template>
+        <template>
+            <srai>LOGIN</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ LOGIN * ^</pattern>
-        <template><srai>LOGIN <star index="2"/></srai></template>
+        <template>
+            <srai>LOGIN <star index="2"/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ LOGIN AS * ^</pattern>
-        <template><srai>LOGIN <star index="2"/></srai></template>
+        <template>
+            <srai>LOGIN <star index="2"/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ LOG ME IN ^</pattern>
-        <template><srai>LOGIN</srai></template>
+        <template>
+            <srai>LOGIN</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ LOG ME OUT ^</pattern>
-        <template><srai>LOGOUT</srai></template>
+        <template>
+            <srai>LOGOUT</srai>
+        </template>
     </category>
 
     <category>
         <pattern>I WANT TO REMOVE YOU</pattern>
-        <template><srai>LOGOUT ALL <star/></srai></template>
+        <template>
+            <srai>LOGOUT ALL <star/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>I WANT TO REMOVE ME</pattern>
-        <template><srai>LOGOUT ALL <star/></srai></template>
+        <template>
+            <srai>LOGOUT ALL <star/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>I WANT TO REMOVE MYSELF</pattern>
-        <template><srai>LOGOUT ALL <star/></srai></template>
+        <template>
+            <srai>LOGOUT ALL <star/>
+            </srai>
+        </template>
     </category>
-    
+
 
     <!-- ======== -->
     <!-- PLAYBACK -->
@@ -234,37 +275,51 @@
 
     <category>
         <pattern>^ RESUME ^</pattern>
-        <template><srai>PLAY</srai></template>
+        <template>
+            <srai>PLAY</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ PAUSE ^</pattern>
-        <template><srai>PAUSE</srai></template>
+        <template>
+            <srai>PAUSE</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ NEXT ^</pattern>
-        <template><srai>NEXT TRACK</srai></template>
+        <template>
+            <srai>NEXT TRACK</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ SKIP ^</pattern>
-        <template><srai>NEXT TRACK</srai></template>
+        <template>
+            <srai>NEXT TRACK</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ PREV ^</pattern>
-        <template><srai>PREV TRACK</srai></template>
+        <template>
+            <srai>PREV TRACK</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ PREVIOUS ^</pattern>
-        <template><srai>PREV TRACK</srai></template>
+        <template>
+            <srai>PREV TRACK</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ REWIND ^</pattern>
-        <template><srai>REWIND</srai></template>
+        <template>
+            <srai>REWIND</srai>
+        </template>
     </category>
 
     <category>
@@ -286,80 +341,118 @@
     <category>
         <pattern>^ DECREASE ^</pattern>
         <that>what do you want me to do with the volume</that>
-        <template><srai>DECREASE VOLUME</srai></template>
+        <template>
+            <srai>DECREASE VOLUME</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ INCREASE ^</pattern>
         <that>what do you want me to do with the volume</that>
-        <template><srai>INCREASE VOLUME</srai></template>
+        <template>
+            <srai>INCREASE VOLUME</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ DECREASE WITH * ^</pattern>
         <that>what do you want me to do with the volume</that>
-        <template><srai>DECREASE VOLUME <star index="2"/></srai></template>
+        <template>
+            <srai>DECREASE VOLUME <star index="2"/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ INCREASE WITH * ^</pattern>
         <that>what do you want me to do with the volume</that>
-        <template><srai>INCREASE VOLUME <star index="2"/></srai></template>
+        <template>
+            <srai>INCREASE VOLUME <star index="2"/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ VOLUME * ^</pattern>
-        <template><srai>SET VOLUME <star index="2"/></srai></template>
+        <template>
+            <srai>SET VOLUME <star index="2"/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ VOLUME MAX ^</pattern>
-        <template><srai>SET VOLUME 100</srai></template>
+        <template>
+            <srai>SET VOLUME 100</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ VOLUME MIN ^</pattern>
-        <template><srai>SET VOLUME 0</srai></template>
+        <template>
+            <srai>SET VOLUME 0</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ MUTE ^</pattern>
-        <template><srai>SET VOLUME 0</srai></template>
+        <template>
+            <srai>SET VOLUME 0</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ SET VOLUME TO * ^</pattern>
-        <template><srai>SET VOLUME <star index="2"/></srai></template>
+        <template>
+            <srai>SET VOLUME <star index="2"/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ DECREASE VOLUME ^</pattern>
-        <template><srai>DECREASE VOLUME</srai></template>
+        <template>
+            <srai>DECREASE VOLUME</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ INCREASE VOLUME ^</pattern>
-        <template><srai>INCREASE VOLUME</srai></template>
+        <template>
+            <srai>INCREASE VOLUME</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ DECREASE VOLUME * ^</pattern>
-        <template><srai>DECREASE VOLUME <star index="2"/></srai></template>
+        <template>
+            <srai>DECREASE VOLUME <star index="2"/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ INCREASE VOLUME * ^</pattern>
-        <template><srai>INCREASE VOLUME <star index="2"/></srai></template>
+        <template>
+            <srai>INCREASE VOLUME <star index="2"/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ DECREASE VOLUME WITH * ^</pattern>
-        <template><srai>DECREASE VOLUME <star index="2"/></srai></template>
+        <template>
+            <srai>DECREASE VOLUME <star index="2"/>
+            </srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ INCREASE VOLUME WITH * ^</pattern>
-        <template><srai>INCREASE VOLUME <star index="2"/></srai></template>
+        <template>
+            <srai>INCREASE VOLUME <star index="2"/>
+            </srai>
+        </template>
     </category>
 
 
@@ -383,23 +476,31 @@
     <category>
         <pattern>^ ON ^</pattern>
         <that>do you want shuffle on or off</that>
-        <template><srai>SHUFFLE ON</srai></template>
+        <template>
+            <srai>SHUFFLE ON</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ OFF ^</pattern>
         <that>do you want shuffle on or off</that>
-        <template><srai>SHUFFLE OFF</srai></template>
+        <template>
+            <srai>SHUFFLE OFF</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ SHUFFLE ^ OFF ^</pattern>
-        <template><srai>SHUFFLE OFF</srai></template>
+        <template>
+            <srai>SHUFFLE OFF</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ SHUFFLE ^ ON ^</pattern>
-        <template><srai>SHUFFLE ON</srai></template>
+        <template>
+            <srai>SHUFFLE ON</srai>
+        </template>
     </category>
 
     <!--repeat-->
@@ -419,54 +520,74 @@
     <category>
         <pattern>^ TRACK ^</pattern>
         <that>do you want repeat set on track context or off</that>
-        <template><srai>REPEAT TRACK</srai></template>
+        <template>
+            <srai>REPEAT TRACK</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ CONTEXT ^</pattern>
         <that>do you want repeat set on track context or off</that>
-        <template><srai>REPEAT CONTEXT</srai></template>
+        <template>
+            <srai>REPEAT CONTEXT</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ OFF ^</pattern>
         <that>do you want repeat set on track context or off</that>
-        <template><srai>REPEAT OFF</srai></template>
+        <template>
+            <srai>REPEAT OFF</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ REPEAT ^ TRACK ^</pattern>
-        <template><srai>REPEAT TRACK</srai></template>
+        <template>
+            <srai>REPEAT TRACK</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ REPEAT ^ SINGLE ^</pattern>
-        <template><srai>REPEAT TRACK</srai></template>
+        <template>
+            <srai>REPEAT TRACK</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ REPEAT ^ CONTEXT ^</pattern>
-        <template><srai>REPEAT CONTEXT</srai></template>
+        <template>
+            <srai>REPEAT CONTEXT</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ REPEAT ^ ON ^</pattern>
-        <template><srai>REPEAT CONTEXT</srai></template>
+        <template>
+            <srai>REPEAT CONTEXT</srai>
+        </template>
     </category>
 
     <category>
         <pattern>^ REPEAT ^ OFF ^</pattern>
-        <template><srai>REPEAT OFF</srai></template>
+        <template>
+            <srai>REPEAT OFF</srai>
+        </template>
     </category>
 
     <category>
         <pattern>TURN ON ^ REPEAT ^</pattern>
-        <template><srai>REPEAT CONTEXT</srai></template>
+        <template>
+            <srai>REPEAT CONTEXT</srai>
+        </template>
     </category>
 
     <category>
         <pattern>TURN OFF ^ REPEAT ^</pattern>
-        <template><srai>REPEAT OFF</srai></template>
+        <template>
+            <srai>REPEAT OFF</srai>
+        </template>
     </category>
 
     <!-- ======================================= -->
@@ -479,87 +600,119 @@
             With this you can also ask me [is current track on saved].
             I can then [add current track to saved] or [remove current track from saved].
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ CURRENT ^</pattern>
-        <template><srai>CURRENTLY PLAYING</srai></template>
-	</category>
+        <template>
+            <srai>CURRENTLY PLAYING</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ NOW PLAYING ^</pattern>
-        <template><srai>CURRENTLY PLAYING</srai></template>
-	</category>
+        <template>
+            <srai>CURRENTLY PLAYING</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ CURRENTLY PLAYING ^</pattern>
-        <template><srai>CURRENTLY PLAYING</srai></template>
-	</category>
+        <template>
+            <srai>CURRENTLY PLAYING</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ IS CURRENT ON SAVED ^</pattern>
-        <template><srai>IS CURR ON SAVED</srai></template>
-	</category>
+        <template>
+            <srai>IS CURR ON SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ IS CURRENT TRACK ON SAVED ^</pattern>
-        <template><srai>IS CURR ON SAVED</srai></template>
-	</category>
+        <template>
+            <srai>IS CURR ON SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ CURRENT SAVED ^</pattern>
-        <template><srai>IS CURR ON SAVED</srai></template>
-	</category>
+        <template>
+            <srai>IS CURR ON SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ ADD CURRENT TO SAVED ^</pattern>
-        <template><srai>ADD CURR TO SAVED</srai></template>
-	</category>
+        <template>
+            <srai>ADD CURR TO SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ ADD CURRENT TRACK TO SAVED ^</pattern>
-        <template><srai>ADD CURR TO SAVED</srai></template>
-	</category>
+        <template>
+            <srai>ADD CURR TO SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ SAVE TRACK ^</pattern>
-        <template><srai>ADD CURR TO SAVED</srai></template>
-	</category>
+        <template>
+            <srai>ADD CURR TO SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ SAVE CURRENT ^</pattern>
-        <template><srai>ADD CURR TO SAVED</srai></template>
-	</category>
+        <template>
+            <srai>ADD CURR TO SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ SAVE CURRENT TRACK ^</pattern>
-        <template><srai>ADD CURR TO SAVED</srai></template>
-	</category>
+        <template>
+            <srai>ADD CURR TO SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ REMOVE CURRENT FROM SAVED ^</pattern>
-        <template><srai>REMOVE CURR FROM SAVED</srai></template>
-	</category>
+        <template>
+            <srai>REMOVE CURR FROM SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ REMOVE CURRENT TRACK FROM SAVED ^</pattern>
-        <template><srai>REMOVE CURR FROM SAVED</srai></template>
-	</category>
+        <template>
+            <srai>REMOVE CURR FROM SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ REMOVE TRACK ^</pattern>
-        <template><srai>REMOVE CURR FROM SAVED</srai></template>
-	</category>
+        <template>
+            <srai>REMOVE CURR FROM SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ REMOVE CURRENT ^</pattern>
-        <template><srai>REMOVE CURR FROM SAVED</srai></template>
-	</category>
+        <template>
+            <srai>REMOVE CURR FROM SAVED</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ REMOVE CURRENT TRACK ^</pattern>
-        <template><srai>REMOVE CURR FROM SAVED</srai></template>
-	</category>
+        <template>
+            <srai>REMOVE CURR FROM SAVED</srai>
+        </template>
+    </category>
 
 
     <!-- ================= -->
@@ -579,335 +732,439 @@
     <!--find-->
     <category>
         <pattern>^ WHAT CAN I DO WITH FIND ^</pattern>
-        <template><srai>HELP PLAY AND FIND</srai></template>
-	</category>
+        <template>
+            <srai>HELP PLAY AND FIND</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ HELP ^ FIND ^</pattern>
-        <template><srai>HELP PLAY AND FIND</srai></template>
-	</category>
+        <template>
+            <srai>HELP PLAY AND FIND</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ FIND *</pattern>
         <template>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND TRACK *</pattern>
         <template>
-            <think><set name="item-type">track</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">track</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND ALBUM *</pattern>
         <template>
-            <think><set name="item-type">album</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">album</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND ARTIST *</pattern>
         <template>
-            <think><set name="item-type">artist</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">artist</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND PLAYLIST *</pattern>
         <template>
-            <think><set name="item-type">playlist</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">playlist</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND THE TRACK *</pattern>
         <template>
-            <think><set name="item-type">track</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">track</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND THE ALBUM *</pattern>
         <template>
-            <think><set name="item-type">album</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">album</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND THE ARTIST *</pattern>
         <template>
-            <think><set name="item-type">artist</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">artist</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND THE PLAYLIST *</pattern>
         <template>
-            <think><set name="item-type">playlist</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">playlist</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND ME THE TRACK *</pattern>
         <template>
-            <think><set name="item-type">track</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">track</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND ME THE ALBUM *</pattern>
         <template>
-            <think><set name="item-type">album</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">album</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND ME THE ARTIST *</pattern>
         <template>
-            <think><set name="item-type">artist</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">artist</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ FIND ME THE PLAYLIST *</pattern>
         <template>
-            <think><set name="item-type">playlist</set></think>
-            <srai>FIND ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">playlist</set>
+            </think>
+            <srai>FIND ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <!--play-->
     <category>
         <pattern>^ WHAT CAN I DO WITH PLAY ^</pattern>
-        <template><srai>HELP PLAY AND FIND</srai></template>
-	</category>
+        <template>
+            <srai>HELP PLAY AND FIND</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ HELP ^ PLAY ^</pattern>
-        <template><srai>HELP PLAY AND FIND</srai></template>
-	</category>
+        <template>
+            <srai>HELP PLAY AND FIND</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ PLAY TRACK *</pattern>
         <template>
-            <think><set name="item-type">track</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">track</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY ALBUM *</pattern>
         <template>
-            <think><set name="item-type">album</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">album</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY ARTIST *</pattern>
         <template>
-            <think><set name="item-type">artist</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">artist</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY PLAYLIST *</pattern>
         <template>
-            <think><set name="item-type">playlist</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">playlist</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY THE TRACK *</pattern>
         <template>
-            <think><set name="item-type">track</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">track</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY THE ALBUM *</pattern>
         <template>
-            <think><set name="item-type">album</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">album</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY THE ARTIST *</pattern>
         <template>
-            <think><set name="item-type">artist</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">artist</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY ME THE PLAYLIST *</pattern>
         <template>
-            <think><set name="item-type">playlist</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">playlist</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY ME THE TRACK *</pattern>
         <template>
-            <think><set name="item-type">track</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">track</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY ME THE ALBUM *</pattern>
         <template>
-            <think><set name="item-type">album</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">album</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY ME THE ARTIST *</pattern>
         <template>
-            <think><set name="item-type">artist</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">artist</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY ME THE PLAYLIST *</pattern>
         <template>
-            <think><set name="item-type">playlist</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">playlist</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ PLAY ME A PLAYLIST *</pattern>
         <template>
-            <think><set name="item-type">playlist</set></think>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">playlist</set>
+            </think>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>* PLAY *</pattern>
         <template>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>* PLAY ME *</pattern>
         <template>
-            <srai>PLAY ITEM <star index="2"/></srai>
+            <srai>PLAY ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
 
     <!-- ENQUEUE -->
     <category>
         <pattern>^ WHAT CAN I DO WITH ENQUEUE ITEM ^</pattern>
-        <template><srai>HELP PLAY AND FIND</srai></template>
-	</category>
+        <template>
+            <srai>HELP PLAY AND FIND</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ HELP ^ ENQUEUE ^</pattern>
-        <template><srai>HELP PLAY AND FIND</srai></template>
-	</category>
+        <template>
+            <srai>HELP PLAY AND FIND</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ ENQUEUE *</pattern>
         <template>
-            <think><set name="item-type">track</set></think>
-            <srai>ENQUEUE ITEM <star index="2"/></srai>
+            <think>
+                <set name="item-type">track</set>
+            </think>
+            <srai>ENQUEUE ITEM <star index="2"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ ENQUEUE ^ TRACK *</pattern>
         <template>
-            <think><set name="item-type">track</set></think>
-            <srai>ENQUEUE ITEM <star index="3"/></srai>
+            <think>
+                <set name="item-type">track</set>
+            </think>
+            <srai>ENQUEUE ITEM <star index="3"/>
+            </srai>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ ENQUEUE ^ ALBUM *</pattern>
         <template>
             I can only enqueue tracks...
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ ENQUEUE ^ ARTIST *</pattern>
         <template>
             I can only enqueue tracks...
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ ENQUEUE ^ PLAYLIST *</pattern>
         <template>
             I can only enqueue tracks...
         </template>
-	</category>
+    </category>
 
 
     <!-- SET TYPE -->
     <category>
         <pattern>^ SET ^ TYPE ^ TRACK ^</pattern>
         <template>
-            <think><set name="item-type">track</set></think>
+            <think>
+                <set name="item-type">track</set>
+            </think>
             Setting item type to track
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ SET ^ TYPE ^ ALBUM ^</pattern>
         <template>
-            <think><set name="item-type">album</set></think>
+            <think>
+                <set name="item-type">album</set>
+            </think>
             Setting item type to album
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ SET ^ TYPE ^ ARTIST ^</pattern>
         <template>
-            <think><set name="item-type">artist</set></think>
+            <think>
+                <set name="item-type">artist</set>
+            </think>
             Setting item type to artist
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ SET ^ TYPE ^ PLAYLIST ^</pattern>
         <template>
-            <think><set name="item-type">playlist</set></think>
+            <think>
+                <set name="item-type">playlist</set>
+            </think>
             Setting item type to playlist
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ TYPE ^</pattern>
         <template>
             Currently set item type is <get name="item-type">playlist</get>
         </template>
-	</category>
+    </category>
 
 
     <!-- ============== -->
@@ -920,30 +1177,92 @@
             Or you can [select device] and then [device [device_number]]/[item [device_number]] to select the new playback device.
             With [reset device] you can set the playback device to the default playback.
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^ CURRENT ^ DEVICE ^</pattern>
-        <template><srai>CURRENT DEVICE</srai></template>
-	</category>
+        <template>
+            <srai>CURRENT DEVICE</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ SELECT ^ DEVICE ^</pattern>
-        <template><srai>SELECT DEVICE</srai></template>
-	</category>
+        <template>
+            <srai>SELECT DEVICE</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>^ RESET ^ DEVICE ^</pattern>
-        <template><srai>RESET DEVICE</srai></template>
-	</category>
+        <template>
+            <srai>RESET DEVICE</srai>
+        </template>
+    </category>
 
     <!-- ================== -->
     <!--   RECOMMENDATION   -->
-    <!-- ================== -->  
-    
+    <!-- ================== -->
+
 
     <!-- ============== -->
     <!--   PAGINATION   -->
-    <!-- ============== -->    
+    <!-- ============== -->
+    <category>
+        <pattern>^ NEXT ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>QUERY NEXTPAGE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ PREVIOUS ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>QUERY PREVPAGE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ HAVE ^ MORE ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>QUERY NEXTPAGE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ DO NOT ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>QUERY NEXTPAGE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ DOES NOT ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>QUERY NEXTPAGE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ NOTHING ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>QUERY NEXTPAGE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ ELSE ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>QUERY NEXTPAGE</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ IS NOT ^</pattern>
+        <that>which item would you like to hear</that>
+        <template>
+            <srai>QUERY NEXTPAGE</srai>
+        </template>
+    </category>
 
 </aiml>

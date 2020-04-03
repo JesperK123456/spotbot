@@ -216,6 +216,14 @@
             </extension></srai>
         </template>
     </category>
+    <category>
+        <pattern>QUERY PREVPAGE</pattern>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                PRINT_PREV_QUERY_PAGE
+            </extension></srai>
+        </template>
+    </category>
 
     <!-- RECOMMENDATION -->
     <category>
@@ -314,7 +322,7 @@
     </category>
 
     <category>
-        <pattern>SET * TO *</pattern>
+        <pattern>SET _ TO *</pattern>
         <template>
             setting <star index="1"/> to: <set><name><star index="1"/></name><star index="2"/></set>
         </template>
