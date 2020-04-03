@@ -1,0 +1,17 @@
+------------------------------------------------
+###############Required packages################
+Spotifyy (custom package)
+Spotipy
+program-y
+NLTK
+-----------------------------------------------
+###############To run the spotbot###############
+
+When using a Linux-device:
+go to: spotbot/scripts/xnix
+and run: ./spotbot.sh
+
+When using a windows-device:
+go to: spotbot/windows/xnix
+and run: ./spotbot.bat
+------------------------------------------------
