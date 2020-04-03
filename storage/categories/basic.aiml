@@ -12,7 +12,16 @@
                 <set name="tracksrecomm">between the wheels</set>
 
                 <set name="recomm-artist"></set>
+                <set name="playrecomm">0</set>
             </think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YEMPTY</pattern>
+        <template>
+            I didn't quite catch that. 
+            <that/>
         </template>
     </category>
 
@@ -46,7 +55,7 @@
     </category>
 
     <category>
-        <pattern>^ GREAT ^</pattern>
+        <pattern>GREAT</pattern>
         <template>
             <srai>CONFIRM</srai>
         </template>
@@ -139,23 +148,106 @@
     </category>
 
     <category>
-        <pattern>^ SAD ^</pattern>
-        <that>are you feeling okay</that>
+        <pattern>WHY ^ YOU ^ THIS ^ FOR ^ ME ^</pattern>
         <template>
+            <srai>DENY</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>^ WHY ^</pattern>
+        <template>
+            <srai>INQUIRY</srai>
+        </template>
+    </category>
+
+    <!-- ANSWERS TO DO YOU LIKE IT -->
+    <category>
+        <pattern>DYLIYES</pattern>
+        <template>
+            <random>
+                <li>That's great, enjoy!</li>
+                <li>'Tis as my algorithm foretold.</li>
+                <li>I'm so smart!</li>
+                <li>Awesome!</li>
+                <li>Cool</li>
+                <li>Alright then!</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>DYLINO</pattern>
+        <template>
+            <random>
+                <li>Oh no, my bad. Let's try something else.</li>
+                <li>Hmm, perhaps this suits your better.</li>
+                <li>Well then, let's try something else!</li>
+                <li>Shoot! I'll quickly put on a different tune.</li>
+                <li>I can be so dumb sometimes, bear with me...</li>
+            </random>
             <srai>
-                USERFEELSWEL <star index="1"/> YES <star index="2"/>
+                <extension path="spotifyy.extensions.SpotifyExtension">PLAY_NEXT_FROM_QUERY</extension>
             </srai>
         </template>
     </category>
 
     <category>
-        <pattern>USERFEELSWELL *</pattern>
-        <template>That's great my friend.</template>
+        <pattern>^ YES ^</pattern>
+        <that>do you like it</that>
+        <template>
+            <srai>DYLIYES</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ YEAH ^</pattern>
+        <that>do you like it</that>
+        <template>
+            <srai>DYLIYES</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ SURE ^</pattern>
+        <that>do you like it</that>
+        <template>
+            <srai>DYLIYES</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ MUCH ^</pattern>
+        <that>do you like it</that>
+        <template>
+            <srai>DYLIYES</srai>
+        </template>
     </category>
 
     <category>
-        <pattern>USERFEELSBAD *</pattern>
-        <template>Ojee...</template>
+        <pattern>^ NO ^</pattern>
+        <that>do you like it</that>
+        <template>
+            <srai>DYLINO</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ NOT ^</pattern>
+        <that>do you like it</that>
+        <template>
+            <srai>DYLINO</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ NAH ^</pattern>
+        <that>do you like it</that>
+        <template>
+            <srai>DYLINO</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>^ NOPE ^</pattern>
+        <that>do you like it</that>
+        <template>
+            <srai>DYLINO</srai>
+        </template>
     </category>
 
 </aiml>
