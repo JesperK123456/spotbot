@@ -2,6 +2,70 @@
 <aiml version="2.0" encoding="UTF-8">
 
     <!-- ==== -->
+    <!-- GENERAL -->
+    <!-- ==== -->
+    <category>
+        <pattern>_ BUT _</pattern>
+        <template>
+            <srai>
+                <star index="1"/>
+            </srai>
+            <br></br>
+            <srai>
+                <star index="2"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ AND _</pattern>
+        <template>
+            <srai>
+                <star index="1"/>
+            </srai>
+            <br></br>
+            <srai>
+                <star index="2"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ HOWEVER _</pattern>
+        <template>
+            <srai>
+                <star index="1"/>
+            </srai>
+            <br></br>
+            <srai>
+                <star index="2"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ WITH _</pattern>
+        <template>
+            <srai>
+                <star index="1"/>
+            </srai>
+            <br></br>
+            <srai>
+                <star index="2"/>
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern> WITH _ COMMA _</pattern>
+        <template>
+            <srai>
+                <star index="1"/>
+            </srai>
+            <br></br>
+            <srai>
+                <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
+    <!-- ==== -->
     <!-- HELP -->
     <!-- ==== -->
     <category>

@@ -182,4 +182,27 @@
             <srai>SELECT DEVICE</srai>
         </template>
     </category>
+
+<!-- RECOMMENDATIONS -->
+    <category>
+        <pattern>PYFAIL RECOMMEND NORESULTS</pattern>
+        <template>
+            Oh snap! I didn't find any recommendations for you... You're so unique!
+        </template>
+    </category>
+
+    <category>
+        <pattern>PYFAIL RECOMMENDARTIST ARTISTNOTFOUND *</pattern>
+        <template>
+            Hmm, this '<star/>' you're talking about, are you sure it exists?
+        </template>
+    </category>
+
+    <category>
+        <pattern>PYFAIL RECOMMENDARTIST NORELATEDFOUND *</pattern>
+        <template>
+            I couldn't find any related artists to <star/>... I'm so sorry!
+        </template>
+    </category>
+
 </aiml>
