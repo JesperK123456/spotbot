@@ -380,6 +380,15 @@
     </category>
 
     <category>
+        <pattern>PYOK PRINTRESULTS *</pattern>
+        <template>
+            Here they are:<br/>
+            <star/>
+            Which item would you like to hear?
+        </template>
+    </category>
+
+    <category>
         <pattern>^ ITEM * ^</pattern>
         <that>which item would you like to hear</that>
         <template>
@@ -434,7 +443,7 @@
         <pattern>PLAY ITEM QUERY *</pattern>
         <template>
             <srai><extension path="spotifyy.extensions.SpotifyExtension">
-                PLAY_FROM_QUERY , <star/>
+                PLAY_FROM_QUERY , '<star/>'
             </extension></srai>
         </template>
     </category>

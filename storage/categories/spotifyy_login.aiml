@@ -25,6 +25,15 @@
         </template>
     </category>
 
+    <category>
+        <pattern>_ LOG IN _</pattern>
+        <template>
+            <srai>
+                <star index="1"/> LOGIN <star index="2"/>
+            </srai>
+        </template>
+    </category>
+
     <!-- not logged in yet -->
     <category>
         <pattern>YES</pattern>
@@ -81,6 +90,24 @@
         </template>
     </category>
 
+    <!-- let user paste url to browser -->
+    <category>
+        <pattern>PYOK AUTHURL *</pattern>
+        <template>
+            <button><text>Please log in here</text><url><star/></url></button>
+            After that paste the url here.
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>After that paste the url here.</that>
+        <template>
+            <srai><extension path="spotifyy.extensions.SpotifyExtension">
+                LOGIN_FROM_URL , <star/>
+            </extension></srai>
+        </template>
+    </category>
 
     <!-- ====== -->
     <!-- LOGOUT -->

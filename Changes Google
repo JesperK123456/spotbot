@@ -1,0 +1,31 @@
+programy\clients\restful\flask\google\client.py:
+    regel 41:
+
+        def _ask_question(self, client_context, question):
+            response = ""
+            try:
+                self._questions += 1
+                response = client_context.bot.ask_question(client_context, question, responselogger=self)
+                # print("response", response)
+                # reply = self.renderer.render(client_context, response)
+                # print('rendered', reply)
+
+            except Exception as e:
+                YLogger.exception(client_context, "Error getting reply from bot", e)
+
+            return response
+
+    regel ~85:
+    
+        def _handle_query_intent(self, client_context, query_result):
+
+            if 'queryText' not in query_result:
+                raise Exception("Invalid http queryResult, queryText missing!")
+            query_text = query_result['queryText']
+
+            response = self._ask_question(client_context, query_text)
+            print("formatted response: ", response)
+
+            return self._to_json({"fulfillmentText": response})
+
+

@@ -17,6 +17,20 @@
         </template>
     </category>
 
+    <category>
+        <pattern>QUERY _</pattern>
+        <template>
+            <srai><star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SPOTBOT _</pattern>
+        <template>
+            <srai><star/></srai>
+        </template>
+    </category>
+
     <!--CONFIRM-->
     <category>
         <pattern>^ CONFIRMED ^</pattern>
