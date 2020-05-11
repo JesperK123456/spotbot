@@ -12,6 +12,6 @@ go to: spotbot/scripts/xnix
 and run: ./spotbot.sh
 
 When using a windows-device:
-go to: spotbot/windows/xnix
+go to: spotbot/scripts/windows
 and run: ./spotbot.bat
 ------------------------------------------------
